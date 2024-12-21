@@ -19,6 +19,7 @@
   min-height: 56px;
   .logo {
     margin-right: 16px;
+    @include flex;
   }
   .menu-wrap {
     .main-menu {
@@ -78,10 +79,10 @@
 .main {
   @include flex;
   @include dir-col;
-  height: calc(100vh - 56px);
+  height: 100vh;
   .main-info {
     display: flex;
-    flex-grow: 1;
+    height: calc(100vh - 60px);
     .left-info {
       flex-grow: 1;
       @include flex;
@@ -218,6 +219,11 @@
         0px 0px 0px 0px rgba(20, 20, 20, 0.04),
         0px 0px 0px 1px rgba(255, 255, 255, 0.02) inset;
       padding: 12px 10px;
+      height: calc(100vh - 60px);
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        width: 0;
+      }
       .top-buttons {
         display: grid;
         grid-template-columns: 1fr 1fr;

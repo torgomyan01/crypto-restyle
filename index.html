@@ -288,18 +288,10 @@
               <div class="tab-content active" id="tab1">
                 <form>
                   <div class="switch">
-                    <button
-                      class="switch-button active"
-                      data-mode="buy"
-                      type="button"
-                    >
+                    <button class="switch-button active" type="button">
                       Buy / Long
                     </button>
-                    <button
-                      class="switch-button"
-                      data-mode="sell"
-                      type="button"
-                    >
+                    <button class="switch-button" type="button">
                       Sell / Short
                     </button>
                   </div>
@@ -311,26 +303,26 @@
                     <span class="grey">Current position</span>
                     <span class="white">0,0000 ETH</span>
                   </div>
-                  <div class="select-wrap style2">
-                    <select>
-                      <option value="1">Entry price</option>
-                      <option value="2">Entry price 2</option>
-                      <option value="3">Entry price 3</option>
-                    </select>
+                  <div class="input-wrap">
+                    <input type="number" placeholder="Entry price" />
+                    <div class="select-wrap">
+                      <select>
+                        <option value="1">%</option>
+                        <option value="2">$</option>
+                      </select>
+                    </div>
                   </div>
                   <div class="range-wrap">
                     <div id="slider-range"></div>
                     <div class="input-wrap">
-                      <input type="number" placeholder="0" />
+                      <input
+                        type="text"
+                        id="slider-value1"
+                        readonly
+                        placeholder="0"
+                      />
                       <span class="persent">%</span>
                     </div>
-                  </div>
-                  <div class="checkbox-wrap">
-                    <label>
-                      <input type="checkbox" checked />
-                      <span></span>
-                      Take profit / Stop loss
-                    </label>
                   </div>
                   <div class="selects-info">
                     <div class="input-wrap">
@@ -424,18 +416,10 @@
               <div class="tab-content" id="tab2">
                 <form>
                   <div class="switch">
-                    <button
-                      class="switch-button active"
-                      data-mode="buy"
-                      type="button"
-                    >
+                    <button class="switch-button active" type="button">
                       Buy / Long 2
                     </button>
-                    <button
-                      class="switch-button"
-                      data-mode="sell"
-                      type="button"
-                    >
+                    <button class="switch-button" type="button">
                       Sell / Short 2
                     </button>
                   </div>
@@ -447,26 +431,26 @@
                     <span class="grey">Current position</span>
                     <span class="white">0,0000 ETH</span>
                   </div>
-                  <div class="select-wrap style2">
-                    <select>
-                      <option value="1">Entry price</option>
-                      <option value="2">Entry price 2</option>
-                      <option value="3">Entry price 3</option>
-                    </select>
+                  <div class="input-wrap">
+                    <input type="number" placeholder="Entry price" />
+                    <div class="select-wrap">
+                      <select>
+                        <option value="1">%</option>
+                        <option value="2">$</option>
+                      </select>
+                    </div>
                   </div>
                   <div class="range-wrap">
                     <div id="slider-range2"></div>
                     <div class="input-wrap">
-                      <input type="number" placeholder="0" />
+                      <input
+                        type="text"
+                        id="slider-value2"
+                        readonly
+                        placeholder="0"
+                      />
                       <span class="persent">%</span>
                     </div>
-                  </div>
-                  <div class="checkbox-wrap">
-                    <label>
-                      <input type="checkbox" checked />
-                      <span></span>
-                      Take profit / Stop loss
-                    </label>
                   </div>
                   <div class="selects-info">
                     <div class="input-wrap">

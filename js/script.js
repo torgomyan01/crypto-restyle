@@ -26,24 +26,54 @@ $(document).ready(function () {
 
   const buttons = document.querySelectorAll(".switch-button");
 
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
       // Убираем активный класс у всех кнопок
       buttons.forEach((btn) => btn.classList.remove("active"));
 
       // Добавляем активный класс к нажатой кнопке
-      button.classList.add("active");
+      this.classList.add("active");
 
       // Логика в зависимости от выбранного режима
-      const mode = button.dataset.mode;
-      console.log(`Выбран режим: ${mode}`); // Пример
+      const mode = this.dataset.mode;
+      console.log(`Выбран режим: ${mode}`);
     });
   });
 
+  // $(function () {
+  //   $("#slider-range").slider();
+  // });
+  // $(function () {
+  //   $("#slider-range2").slider();
+  // });
+
   $(function () {
-    $("#slider-range").slider();
-  });
-  $(function () {
-    $("#slider-range2").slider();
+    // Слайдер 1
+    $("#slider-range").slider({
+      range: "min",
+      value: 0, // Начальное значение
+      min: 0,
+      max: 100,
+      slide: function (event, ui) {
+        // Обновляем значение в поле ввода
+        $("#slider-value1").val(ui.value);
+      },
+    });
+    // Устанавливаем начальное значение
+    $("#slider-value1").val($("#slider-range").slider("value"));
+
+    // Слайдер 2
+    $("#slider-range2").slider({
+      range: "min",
+      value: 20, // Начальное значение
+      min: 0,
+      max: 200,
+      slide: function (event, ui) {
+        // Обновляем значение в поле ввода
+        $("#slider-value2").val(ui.value);
+      },
+    });
+    // Устанавливаем начальное значение
+    $("#slider-value2").val($("#slider-range2").slider("value"));
   });
 });
