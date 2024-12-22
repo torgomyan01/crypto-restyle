@@ -3,6 +3,25 @@ $(document).ready(function () {
     minimumResultsForSearch: 6,
   });
 
+  $(".drop-btn").on("click", function (event) {
+    event.stopPropagation(); // Остановить всплытие события
+    $(".drop-hide").toggleClass("show");
+    $(this).find("img").toggleClass("rotate");
+  });
+
+  // Закрытие меню при клике вне него
+  $(document).on("click", function () {
+    if ($(".drop-hide").hasClass("show")) {
+      $(".drop-hide").removeClass("show");
+      $(".drop-btn img").removeClass("rotate");
+    }
+  });
+
+  // Остановить всплытие события при клике внутри меню
+  $(".drop-hide").on("click", function (event) {
+    event.stopPropagation();
+  });
+
   const tabGroups = document.querySelectorAll(".tabs");
 
   tabGroups.forEach((tabs) => {
@@ -36,16 +55,8 @@ $(document).ready(function () {
 
       // Логика в зависимости от выбранного режима
       const mode = this.dataset.mode;
-      console.log(`Выбран режим: ${mode}`);
     });
   });
-
-  // $(function () {
-  //   $("#slider-range").slider();
-  // });
-  // $(function () {
-  //   $("#slider-range2").slider();
-  // });
 
   $(function () {
     // Слайдер 1

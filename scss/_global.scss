@@ -420,7 +420,7 @@ a {
         border-radius: 4px;
         border: 1px solid #404041;
         @include placeholder {
-          color: #f5f5f7;
+          color: #e6e7ea;
           font-size: 12px;
           font-weight: 500;
         }
@@ -460,7 +460,7 @@ a {
         font-weight: 500;
         padding-right: 56px;
         @include placeholder {
-          color: #7d7d80;
+          color: #e6e7ea;
           font-size: 12px;
           font-weight: 500;
         }
@@ -522,7 +522,7 @@ a {
       font-weight: 500;
       padding-right: 56px;
       @include placeholder {
-        color: #7d7d80;
+        color: #e6e7ea;
         font-size: 12px;
         font-weight: 500;
       }
@@ -578,6 +578,12 @@ a {
 .switch-button.active {
   background: #6a5acd;
   color: #f5f5f7;
+  &.green {
+    background: #16b364;
+  }
+  &.red {
+    background: #de4d4d;
+  }
 }
 
 .checkbox-wrap {
