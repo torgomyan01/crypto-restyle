@@ -414,13 +414,13 @@ a {
         background: transparent;
         padding-left: 10px;
         padding-right: 30px;
-        color: #7d7d80;
+        color: #f5f5f7;
         font-size: 12px;
         font-weight: 500;
         border-radius: 4px;
         border: 1px solid #404041;
         @include placeholder {
-          color: #7d7d80;
+          color: #f5f5f7;
           font-size: 12px;
           font-weight: 500;
         }
@@ -440,10 +440,8 @@ a {
     }
   }
   .selects-info {
-    padding-top: 16px;
     margin-top: 16px;
     margin-bottom: 16px;
-    border-top: 1px solid #292929;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px 8px;

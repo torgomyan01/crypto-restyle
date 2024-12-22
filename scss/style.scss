@@ -4,6 +4,8 @@
 .header {
   padding: 10px;
   margin-bottom: 4px;
+  position: relative;
+  z-index: 2;
   background: linear-gradient(
       0deg,
       rgba(119, 106, 230, 0.08) 0%,
@@ -18,7 +20,7 @@
   @include align-center;
   min-height: 56px;
   .logo {
-    margin-right: 16px;
+    margin-right: 32px;
     @include flex;
   }
   .menu-wrap {
@@ -27,6 +29,17 @@
       @include align-center;
       li {
         margin-right: 10px;
+        position: relative;
+        z-index: 0;
+        @include flex;
+        &:after {
+          content: "";
+          padding-bottom: 12px;
+          bottom: -12px;
+          left: 0;
+          width: 100%;
+          position: absolute;
+        }
         a {
           font-size: 12px;
           color: #7d7d80;
@@ -54,6 +67,46 @@
             }
           }
         }
+        .more {
+          font-size: 12px;
+          color: #7d7d80;
+          font-weight: normal;
+          img {
+            margin-left: 5px;
+          }
+        }
+        .drop-menu-wrap {
+          position: absolute;
+          top: calc(100% + 12px);
+          left: 0;
+          z-index: 10;
+          border-radius: 4px;
+          transform: scale(0);
+          transition: 0.3s;
+          border: 1px solid var(--Grey-10, #141414);
+          background: #211f29;
+          box-shadow: 2px 4px 8px 0px rgba(20, 20, 20, 0.06),
+            1px 2px 4px 0px rgba(20, 20, 20, 0.06),
+            1px 1px 2px 0px rgba(20, 20, 20, 0.06),
+            0.5px 0px 1px 0px rgba(20, 20, 20, 0.06),
+            0.25px 0px 0.5px 0px rgba(20, 20, 20, 0.06),
+            0px 0px 0px 0px rgba(20, 20, 20, 0.05),
+            0px 0px 0px 1px rgba(255, 255, 255, 0.02) inset;
+          padding: 4px;
+          min-width: 190px;
+          a {
+            padding: 6px 10px;
+            &:hover {
+              color: #f5f5f7;
+              background: #27252f;
+            }
+          }
+        }
+        &:hover {
+          .drop-menu-wrap {
+            transform: scale(1);
+          }
+        }
       }
     }
   }
@@ -63,6 +116,11 @@
     margin-left: auto;
     .select-wrap {
       margin-right: 12px;
+    }
+
+    .purple-btn {
+      min-width: 150px;
+      text-align: center;
     }
     .setting-btn {
       width: 34px;
@@ -103,7 +161,8 @@
         margin-top: 4px;
         padding: 12px 10px;
         margin-top: auto;
-        padding-bottom: 15px;
+        padding-bottom: 79px;
+        min-height: 200px;
         .tab-content {
           margin-top: 16px;
           .text {
@@ -144,6 +203,11 @@
       .wrap {
         @include flex;
         flex-grow: 1;
+        height: calc(100vh - 200px);
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+          width: 0;
+        }
         .left {
           flex-grow: 1;
           .top-info {
@@ -179,6 +243,21 @@
               0px 0px 0px 1px rgba(255, 255, 255, 0.02) inset;
             margin-bottom: 4px;
             padding: 10px;
+            @media (max-height: 975px) {
+              height: auto;
+            }
+            .graphic {
+              @include flex;
+              background-color: #141414;
+              height: 620px;
+              width: 870px;
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: center center;
+              img {
+                width: 100%;
+              }
+            }
           }
         }
         .right {
@@ -186,6 +265,7 @@
           margin-left: 4px;
           min-width: 288px;
           border-radius: 4px;
+          min-height: 710px;
           border: 1px solid rgba(41, 33, 133, 0.12);
           background: linear-gradient(
               0deg,
@@ -199,6 +279,9 @@
             0px 0px 0px 1px rgba(255, 255, 255, 0.02) inset;
           margin-bottom: 4px;
           padding: 10px;
+          .tabs {
+            margin-bottom: 0;
+          }
         }
       }
     }
