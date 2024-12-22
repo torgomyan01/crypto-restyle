@@ -685,6 +685,105 @@ a:focus {
   background: #594dc5;
 }
 
+.graphic-info .selects-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.graphic-info .items {
+  width: 100%;
+}
+.graphic-info .items .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 24px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 4px;
+  position: relative;
+  z-index: 0;
+  padding: 5px 10px;
+}
+.graphic-info .items .item:after {
+  content: "";
+  width: 20%;
+  height: 100%;
+  border-radius: 4px;
+  background: rgba(222, 77, 77, 0.12);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.graphic-info .items .item:nth-child(1):after {
+  width: 90%;
+}
+.graphic-info .items .item:nth-child(2):after {
+  width: 60%;
+}
+.graphic-info .items .item:nth-child(3):after {
+  width: 40%;
+}
+.graphic-info .items .item span {
+  font-size: 12px;
+  font-weight: 500;
+  color: #e6e7ea;
+  width: 50px;
+}
+.graphic-info .items .item span.red {
+  color: #de4d4d;
+}
+.graphic-info .items .item span.green {
+  color: #37b358;
+}
+.graphic-info .items.green-style .item:after {
+  background: rgba(55, 179, 88, 0.12);
+}
+.graphic-info .top-title {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.graphic-info .top-title span {
+  font-size: 12px;
+  font-weight: 500;
+  color: #7d7d80;
+  min-width: 50px;
+}
+.graphic-info .black-style {
+  background: #141414;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.graphic-info .black-style span {
+  font-size: 12px;
+  font-weight: 500;
+  color: #f5f5f7;
+  min-width: 50px;
+}
+.graphic-info .black-style span.purple {
+  color: #9a8eed;
+}
+
 .header {
   padding: 10px;
   margin-bottom: 4px;
@@ -800,7 +899,7 @@ a:focus {
   margin-top: 4px;
   padding: 12px 10px;
   margin-top: auto;
-  padding-bottom: 130px;
+  padding-bottom: 15px;
 }
 .main .main-info .left-info .bottom .tab-content {
   margin-top: 16px;
