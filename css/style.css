@@ -962,7 +962,7 @@ a:focus {
   padding: 12px 10px;
   margin-top: auto;
   padding-bottom: 79px;
-  min-height: 200px;
+  min-height: 300px;
 }
 .main .main-info .left-info .bottom .tab-content {
   margin-top: 16px;
@@ -1307,12 +1307,8 @@ a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #141414;
   height: 620px;
   width: 870px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 .main .main-info .left-info .wrap .left .bottom-info .graphic img {
   width: 100%;
