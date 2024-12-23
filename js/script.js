@@ -88,3 +88,27 @@ $(document).ready(function () {
     $("#slider-value2").val($("#slider-range2").slider("value"));
   });
 });
+
+
+const tabsButtons = $('.tabs-buttons button');
+const tabsButtonsActive = $('.tabs-buttons button.active');
+
+tabsButtons.on('click', function (e){
+  const btnInfo = this.getBoundingClientRect();
+
+  $(this).parent().css({
+    '--solidWidth': `${btnInfo.width}px`,
+    '--solidLeft': `${this.offsetLeft}px`,
+  })
+
+})
+
+tabsButtonsActive.each((index, element) => {
+  const btnInfo = element.getBoundingClientRect();
+
+  $(element).parent().css({
+    '--solidWidth': `${btnInfo.width}px`,
+    '--solidLeft': `${element.offsetLeft}px`,
+  })
+})
+
