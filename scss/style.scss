@@ -114,6 +114,17 @@
     @include flex;
     @include align-center;
     margin-left: auto;
+    .login {
+      @include flex;
+      @include align-center;
+      font-size: 14px;
+      font-weight: 500;
+      color: #c2c2c6;
+      margin-right: 20px;
+      img {
+        margin-left: 10px;
+      }
+    }
     .select-wrap {
       margin-right: 12px;
     }
@@ -163,6 +174,10 @@
         margin-top: auto;
         padding-bottom: 79px;
         min-height: 300px;
+        @media (max-height: 1075px) {
+          min-height: auto;
+          padding-bottom: 30px;
+        }
         .tab-content {
           margin-top: 16px;
           .text {
@@ -189,6 +204,45 @@
                     transform: rotate(180deg);
                   }
                 }
+              }
+            }
+          }
+          .list-wrapper {
+            @include flex;
+            @include justify-between;
+            padding-right: 290px;
+            @media (max-width: 1700px) {
+              padding-right: 50px;
+            }
+            .text-info {
+              @include flex;
+              @include dir-col;
+              span,
+              a {
+                font-size: 12px;
+                font-weight: 500;
+              }
+              .grey {
+                color: #7d7d80;
+                margin-bottom: 5px;
+              }
+              .red {
+                color: #de4d4d;
+              }
+              .white {
+                color: #f5f5f7;
+              }
+              .purple {
+                color: #776ae6;
+                margin-bottom: 5px;
+              }
+              .green {
+                color: #16b364;
+              }
+              a {
+                margin-bottom: 5px;
+                color: #7d7d80;
+                text-decoration: underline;
               }
             }
           }
@@ -249,11 +303,11 @@
               .drop-hide {
                 position: absolute;
                 top: 105%;
-                left: 0;
+                left: -2px;
                 z-index: 10;
                 padding: 12px;
-                min-width: 236px;
-                width: 236px;
+                min-width: 267px;
+                width: 267px;
                 border-radius: 8px;
                 border: 1px solid var(--Grey-10, #141414);
                 background: #211f29;
@@ -320,7 +374,7 @@
                     }
                   }
                   .items {
-                    max-height: 274px;
+                    max-height: 360px;
                     overflow-y: auto;
                     &::-webkit-scrollbar {
                       width: 0;
