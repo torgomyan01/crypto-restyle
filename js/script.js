@@ -88,11 +88,6 @@ $(document).ready(function () {
     $("#slider-value2").val($("#slider-range2").slider("value"));
   });
 
-  $(".element").priceFormat({
-    prefix: "",
-    centsSeparator: ",",
-    thousandsSeparator: ".",
-  });
 });
 
 const tabsButtons = $(".tabs-buttons button");
@@ -119,3 +114,21 @@ tabsButtonsActive.each((index, element) => {
       "--solidLeft": `${element.offsetLeft}px`,
     });
 });
+
+const inputsPrices = document.querySelectorAll(".element");
+
+inputsPrices.forEach(function (input) {
+  IMask(
+    input,
+    {
+      mask: Number,
+      scale: 2,
+      signed: false,
+      thousandsSeparator: ',',
+      padFractionalZeros: true,
+      normalizeZeros: true,
+      radix: '.',
+      mapToRadix: [','],
+    }
+  )
+})
