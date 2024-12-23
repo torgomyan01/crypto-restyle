@@ -591,12 +591,24 @@ a {
 .switch-button.active {
   background: #6a5acd;
   color: #f5f5f7;
-  &.green {
-    background: #16b364;
-  }
-  &.red {
-    background: #de4d4d;
-  }
+}
+
+.switch-button2 {
+  flex: 1;
+  padding: 10px 20px;
+  border: none;
+  background: transparent;
+  color: #7d7d80;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.switch-button2.active {
+  background: #6a5acd;
+  color: #f5f5f7;
 }
 
 .checkbox-wrap {
