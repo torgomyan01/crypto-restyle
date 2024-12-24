@@ -78,6 +78,16 @@ $(document).ready(function () {
   });
 });
 
+$(".drop-menu").click(function () {
+  $(this).toggleClass("is-active");
+  $(".menu-wrap").toggleClass("open");
+  $("body, html").toggleClass("overflow");
+});
+
+$(".more").on("click", function () {
+  $(".drop-menu-wrap").toggleClass("show");
+});
+
 const tabsButtons = $(".tabs-buttons button");
 const tabsButtonsActive = $(".tabs-buttons button.active");
 
