@@ -1154,6 +1154,11 @@ a:focus {
 .main .main-info .left-info .bottom .tab-content {
   margin-top: 16px;
 }
+@media (max-width: 1024px) {
+  .main .main-info .left-info .bottom .tab-content {
+    min-height: 220px;
+  }
+}
 .main .main-info .left-info .bottom .tab-content .text {
   font-size: 12px;
   padding: 0 10px;
@@ -1225,7 +1230,7 @@ a:focus {
     padding-right: 0;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .main .main-info .left-info .bottom .tab-content .list-wrapper {
     padding: 0 10px;
   }
@@ -1276,18 +1281,23 @@ a:focus {
   text-decoration: underline;
 }
 .main .main-info .left-info .bottom .tabs-buttons {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .main .main-info .left-info .bottom .tabs-buttons button {
   margin-right: 10px;
 }
 @media (max-width: 767px) {
   .main .main-info .left-info .bottom .tabs-buttons button {
-    padding: 4px;
-    margin-right: 4px;
-    font-size: 10px;
+    padding: 0px 2px;
+    margin-right: 12px;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 500px) {
+  .main .main-info .left-info .bottom .tabs-buttons button {
+    font-size: 2.7vw;
   }
 }
 .main .main-info .left-info .wrap {
@@ -1574,6 +1584,49 @@ a:focus {
     -ms-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
+    width: 100%;
+  }
+}
+.main .main-info .left-info .wrap .left .top-info .list .right-info-wrap,
+.main .main-info .left-info .wrap .left .top-info .list .left-info-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 767px) {
+  .main .main-info .left-info .wrap .left .top-info .list .right-info-wrap,
+.main .main-info .left-info .wrap .left .top-info .list .left-info-wrap {
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 767px) {
+  .main .main-info .left-info .wrap .left .top-info .list .left-info-wrap {
+    width: 40%;
+  }
+  .main .main-info .left-info .wrap .left .top-info .list .left-info-wrap .texts:nth-child(1) {
+    width: 60px;
+  }
+  .main .main-info .left-info .wrap .left .top-info .list .left-info-wrap .texts:nth-child(2) {
+    width: 60px;
+  }
+  .main .main-info .left-info .wrap .left .top-info .list .left-info-wrap .texts:nth-child(3) {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .main .main-info .left-info .wrap .left .top-info .list .right-info-wrap {
+    width: 60%;
+  }
+  .main .main-info .left-info .wrap .left .top-info .list .right-info-wrap .texts:nth-child(1) {
+    width: 100%;
+  }
+  .main .main-info .left-info .wrap .left .top-info .list .right-info-wrap .texts:nth-child(2) {
+    width: 85px;
+  }
+  .main .main-info .left-info .wrap .left .top-info .list .right-info-wrap .texts:nth-child(3) {
+    width: 90px;
   }
 }
 .main .main-info .left-info .wrap .left .top-info .list .texts {
@@ -1593,12 +1646,9 @@ a:focus {
 }
 @media (max-width: 767px) {
   .main .main-info .left-info .wrap .left .top-info .list .texts {
-    margin-bottom: 15px;
-    margin-right: 15px;
+    margin-bottom: 10px;
+    margin-right: 10px;
   }
-}
-.main .main-info .left-info .wrap .left .top-info .list .texts:last-child {
-  margin-right: 5px;
 }
 .main .main-info .left-info .wrap .left .top-info .list .texts a {
   font-size: 12px;
@@ -1635,7 +1685,7 @@ a:focus {
 }
 @media (max-width: 1024px) {
   .main .main-info .left-info .wrap .left .bottom-info {
-    min-height: auto;
+    min-height: calc(100vh - 457px);
   }
 }
 .main .main-info .left-info .wrap .left .bottom-info .graphic {
@@ -1657,7 +1707,7 @@ a:focus {
 .main .main-info .left-info .wrap .left .bottom-info .graphic img {
   width: 100%;
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .main .main-info .left-info .wrap .left .bottom-info .tab-content.active {
     min-height: 374px;
   }
@@ -1669,6 +1719,11 @@ a:focus {
   .main .main-info .left-info .wrap .left .bottom-info .tabs-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 500px) {
+  .main .main-info .left-info .wrap .left .bottom-info .tabs-buttons button {
+    font-size: 2.7vw;
   }
 }
 .main .main-info .left-info .wrap .left .bottom-info .order-lists {
