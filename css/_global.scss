@@ -7,6 +7,29 @@ html {
   }
 }
 
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  border-radius: 5px;
+}
+
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(119, 106, 230, 0.08);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #594DC5;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #685ade;
+}
+
 body {
   @include flex;
   @include dir-col;

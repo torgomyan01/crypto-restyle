@@ -128,6 +128,18 @@ inputsPrices.forEach(function (input) {
 });
 
 
+
+
+
+
+
+
+
+
+// --------------------------------------------------------------
+// ------------------- DASHBOARD PAGE ---------------------------
+// --------------------------------------------------------------
+
 const dashboardDiagramType = $('.dashboard-diagram-type button');
 
 
@@ -185,3 +197,22 @@ new Chart(ctx, {
     },
   },
 });
+
+
+const dashboardMenuItem = $('.dashboard-menu-item');
+const dashboardMenuActive = $('.dashboard-menu-active');
+const dashboardContentItem = $('.dashboard-content-item');
+
+
+dashboardMenuItem.on('click', function () {
+  const getTabID = $(this).data('id');
+
+  dashboardMenuItem.removeClass("active");
+  dashboardContentItem.removeClass("active");
+
+
+  $(this).addClass('active');
+  $(`#${getTabID}`).addClass('active');
+
+  dashboardMenuActive.css('top', `${this.offsetTop}px`)
+})
