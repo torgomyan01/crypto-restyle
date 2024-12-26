@@ -129,6 +129,31 @@ a:focus {
 .purple-btn:hover {
   background: #7268ce;
 }
+.purple-btn.transparent {
+  background-color: transparent;
+  border: 0;
+  color: #594DC5;
+  box-shadow: unset;
+}
+
+.btn-gray {
+  color: #F5F5F7;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 125%;
+  height: 32px;
+  padding: 8.5px 12px;
+  border-radius: 4px;
+  background: rgba(252, 252, 252, 0.02);
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.04) inset;
+}
+.btn-gray.disabled, .btn-gray:disabled {
+  cursor: default;
+  opacity: 0.3;
+  color: #F5F5F7;
+  background: rgba(252, 252, 252, 0.02);
+  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.08), 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 0px 0px 0px 0px rgba(255, 255, 255, 0.04) inset;
+}
 
 .select-wrap {
   position: relative;
@@ -2059,6 +2084,7 @@ a:focus {
 .dashboard-table {
   width: 100%;
   height: auto;
+  margin-bottom: 24px;
 }
 .dashboard-table-head {
   width: 100%;
@@ -2078,10 +2104,16 @@ a:focus {
   font-weight: 500;
   line-height: 125%;
   width: 100%;
+  max-width: var(--w);
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 8px;
+}
+.dashboard-table-head-item.start-column {
+  display: flex;
+  justify-content: start;
+  align-items: start;
 }
 .dashboard-table-head-item.center {
   display: flex;
@@ -2108,13 +2140,20 @@ a:focus {
   display: flex;
   justify-content: start;
   align-items: center;
-  border-radius: 0 0 8px 8px;
-  border: 1px solid rgba(64, 64, 65, 0.12);
+  border-bottom: 1px solid rgba(64, 64, 65, 0.12);
   background: linear-gradient(0deg, rgba(119, 106, 230, 0.08) 0%, rgba(119, 106, 230, 0.08) 100%), rgba(245, 245, 247, 0.02);
   padding: 0 10px;
 }
+.dashboard-table-content:hover {
+  background: linear-gradient(0deg, rgba(119, 106, 230, 0.1) 0%, rgba(119, 106, 230, 0.08) 100%), rgba(245, 245, 247, 0.02);
+}
+.dashboard-table-content:last-child {
+  border-radius: 0 0 8px 8px;
+  border-bottom: 0;
+}
 .dashboard-table-content-item {
   width: 100%;
+  max-width: var(--w);
   color: #F5F5F7;
   font-size: 14px;
   font-style: normal;
@@ -2124,6 +2163,11 @@ a:focus {
   justify-content: start;
   align-items: center;
   gap: 8px;
+}
+.dashboard-table-content-item.start-column {
+  display: flex;
+  justify-content: start;
+  align-items: start;
 }
 .dashboard-table-content-item.center {
   display: flex;
@@ -2143,6 +2187,12 @@ a:focus {
 }
 .dashboard-table-content-item.text-12, .dashboard-table-content-item .text-12 {
   font-size: 12px;
+}
+.dashboard-table-content-item .purple-btn {
+  padding: 9px 67px;
+}
+.dashboard-table-content-item .transparent {
+  padding: 9px 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -177,10 +177,15 @@
   &-table{
     width: 100%;
     height: auto;
+    margin-bottom: 24px;
 
     @mixin itemFunction{
       @include f('s', 'c');
       gap: 8px;
+
+      &.start-column{
+        @include f('s', 's');
+      }
 
       &.center{
         @include f('c', 'c');
@@ -219,6 +224,7 @@
         font-weight: 500;
         line-height: 125%;
         width: 100%;
+        max-width: var(--w);
 
         @include itemFunction;
       }
@@ -229,20 +235,39 @@
       width: 100%;
       height: 64px;
       @include f('s', 'c');
-      border-radius: 0 0 8px 8px;
-      border: 1px solid rgba(64, 64, 65, 0.12);
+      border-bottom: 1px solid rgba(64, 64, 65, 0.12);
       background: linear-gradient(0deg, rgba(119, 106, 230, 0.08) 0%, rgba(119, 106, 230, 0.08) 100%), rgba(245, 245, 247, 0.02);
       padding: 0 10px;
 
+      &:hover{
+        background: linear-gradient(0deg, rgba(119, 106, 230, 0.1) 0%, rgba(119, 106, 230, 0.08) 100%), rgba(245, 245, 247, 0.02);
+
+      }
+
+      &:last-child{
+        border-radius: 0 0 8px 8px;
+        border-bottom: 0;
+      }
+
       &-item{
         width: 100%;
+        max-width: var(--w);
         color: #F5F5F7;
         font-size: 14px;
         font-style: normal;
         font-weight: 500;
         line-height: 125%;
 
+
         @include itemFunction;
+
+        .purple-btn{
+          padding: 9px 67px;
+        }
+
+        .transparent{
+          padding: 9px 30px;
+        }
       }
     }
   }
