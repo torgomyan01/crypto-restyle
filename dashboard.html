@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/select2.min.css" />
     <link rel="stylesheet" href="css/jquery-ui.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
 
   <body>
@@ -165,7 +167,165 @@
       </header>
       <div class="main-info">
         <div class="dashboard">
+          <div class="dashboard-menu">
+            <div class="dashboard-menu-item active">
+              <div class="dashboard-menu-item-icon">
+                <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.74194 16.5C5.59981 16.5 2.24194 13.1421 2.24194 9C2.24194 6.90559 3.10043 5.0117 4.48472 3.65102M9.74194 16.5C9.01969 15.9648 9.13497 15.3416 9.49729 14.7185C10.0544 13.7606 10.0544 13.7605 10.0544 12.4833C10.0544 11.206 10.8134 10.6072 13.4919 11.1428C14.6955 11.3836 15.5725 9.72067 17.1349 10.2697M9.74194 16.5C13.4513 16.5 16.5317 13.8072 17.1349 10.2697M4.48472 3.65102C5.12169 3.71824 5.47832 4.05948 6.07066 4.68537C7.19524 5.87364 8.31979 5.97279 9.06957 5.5767C10.1941 4.98257 9.24912 4.02023 10.569 3.49724C11.3781 3.17663 11.5323 2.33699 11.1494 1.63184M4.48472 3.65102C5.83816 2.32066 7.69421 1.5 9.74194 1.5C10.223 1.5 10.6935 1.54529 11.1494 1.63184M17.1349 10.2697C17.2053 9.85702 17.2419 9.43282 17.2419 9C17.2419 5.33893 14.6187 2.29054 11.1494 1.63184" stroke="#7D7D80" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              Overview
+            </div>
+            <div class="dashboard-menu-item ">
+              <div class="dashboard-menu-item-icon">
+                <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.3669 1.5H10.8669C9.83141 1.5 8.99194 2.33947 8.99194 3.375V7.875C8.99194 8.91053 9.83141 9.75 10.8669 9.75H15.3669C16.4025 9.75 17.2419 8.91053 17.2419 7.875V3.375C17.2419 2.33947 16.4025 1.5 15.3669 1.5Z" stroke="#7D7D80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8.99194 4.87537C7.4713 4.8781 6.67501 4.91544 6.16612 5.42432C5.61694 5.9735 5.61694 6.85738 5.61694 8.62515V9.37515C5.61694 11.1429 5.61694 12.0268 6.16612 12.576C6.7153 13.1251 7.59918 13.1251 9.36694 13.1251H10.1169C11.8847 13.1251 12.7686 13.1251 13.3178 12.576C13.8267 12.0671 13.864 11.2708 13.8667 9.75015" stroke="#7D7D80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M5.61694 8.25037C4.0963 8.25307 3.30001 8.29042 2.79112 8.79929C2.24194 9.34852 2.24194 10.2324 2.24194 12.0001V12.7501C2.24194 14.5179 2.24194 15.4018 2.79112 15.951C3.3403 16.5001 4.22418 16.5001 5.99194 16.5001H6.74194C8.50969 16.5001 9.39357 16.5001 9.94279 15.951C10.4517 15.4421 10.489 14.6458 10.4917 13.1251" stroke="#7D7D80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
 
+              </div>
+              Positions
+            </div>
+            <div class="dashboard-menu-item ">
+              <div class="dashboard-menu-item-icon">
+                <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.74194 3.75H15.7419" stroke="#7D7D80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M3.74194 9H15.7419" stroke="#7D7D80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M3.74194 14.25H15.7419" stroke="#7D7D80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              Open orders
+            </div>
+            <div class="dashboard-menu-item ">
+              <div class="dashboard-menu-item-icon">
+                <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.24194 16.5H10.4919C14.2199 16.5 17.2419 13.478 17.2419 9.75C17.2419 6.02208 14.2199 3 10.4919 3C7.01753 3 4.11502 5.62504 3.74194 9" stroke="#7D7D80" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M14.6169 4.125L15.3669 3.375M4.86694 3.375L5.61694 4.125" stroke="#7D7D80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13.1169 6.75003L10.9125 8.95456M10.9125 8.95456C10.7088 8.75093 10.4276 8.62501 10.1169 8.62501C9.49564 8.62501 8.99194 9.12871 8.99194 9.75001C8.99194 10.3714 9.49564 10.875 10.1169 10.875C10.7382 10.875 11.2419 10.3714 11.2419 9.75001C11.2419 9.43936 11.116 9.15811 10.9125 8.95456Z" stroke="#7D7D80" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M10.1169 2.625V1.5" stroke="#7D7D80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8.61694 1.5H11.6169" stroke="#7D7D80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M2.24194 11.25H4.49194" stroke="#7D7D80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M2.24194 14.25H5.99194" stroke="#7D7D80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              Order history
+            </div>
+            <div class="dashboard-menu-item ">
+              <div class="dashboard-menu-item-icon">
+                <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.99194 4.5H16.4919" stroke="#7D7D80" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M8.99194 9H16.4919" stroke="#7D7D80" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M8.99194 13.5H16.4919" stroke="#7D7D80" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M2.99194 5.54464C2.99194 5.54464 3.74194 6.03349 4.11694 6.75C4.11694 6.75 5.24194 3.9375 6.74194 3" stroke="#7D7D80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M2.99194 13.7947C2.99194 13.7947 3.74194 14.2835 4.11694 15C4.11694 15 5.24194 12.1875 6.74194 11.25" stroke="#7D7D80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              Trade history
+            </div>
+            <div class="dashboard-menu-item ">
+              <div class="dashboard-menu-item-icon">
+                <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.3669 9.75C15.0593 9.75 17.2419 9.07843 17.2419 8.25C17.2419 7.42157 15.0593 6.75 12.3669 6.75C9.67456 6.75 7.49194 7.42157 7.49194 8.25C7.49194 9.07843 9.67456 9.75 12.3669 9.75Z" stroke="#7D7D80" stroke-width="1.5"/>
+                  <path d="M17.2419 11.625C17.2419 12.4534 15.0594 13.125 12.3669 13.125C9.67452 13.125 7.49194 12.4534 7.49194 11.625" stroke="#7D7D80" stroke-width="1.5"/>
+                  <path d="M17.2419 8.25V14.85C17.2419 15.7612 15.0594 16.5 12.3669 16.5C9.67452 16.5 7.49194 15.7612 7.49194 14.85V8.25" stroke="#7D7D80" stroke-width="1.5"/>
+                  <path d="M7.11694 4.5C9.80933 4.5 11.9919 3.82843 11.9919 3C11.9919 2.17157 9.80933 1.5 7.11694 1.5C4.42456 1.5 2.24194 2.17157 2.24194 3C2.24194 3.82843 4.42456 4.5 7.11694 4.5Z" stroke="#7D7D80" stroke-width="1.5"/>
+                  <path d="M5.24194 8.25C3.82309 8.07735 2.51938 7.63087 2.24194 6.75M5.24194 12C3.82309 11.8274 2.51938 11.3809 2.24194 10.5" stroke="#7D7D80" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M5.24194 15.75C3.82309 15.5774 2.51938 15.1309 2.24194 14.25V3" stroke="#7D7D80" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M11.9919 4.5V3" stroke="#7D7D80" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              Funding history
+            </div>
+            <div class="dashboard-menu-item ">
+              <div class="dashboard-menu-item-icon">
+                <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.24194 9H5.24194L6.36694 6L7.86694 11.25L10.4919 4.5L12.3669 13.5L14.2419 9H17.2419" stroke="#7D7D80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+              </div>
+              Transfer and rewards
+            </div>
+          </div>
+
+          <div class="dashboard-content">
+            <h3 class="dashboard-title">Portfolio overview</h3>
+
+            <div class="dashboard-equity">
+              <h5 class="dashboard-equity-type">Equity</h5>
+              <div class="dashboard-equity-price">
+                3,611,826,652 USD
+                <span class="green-status">+0.00%</span>
+              </div>
+            </div>
+
+            <div class="dashboard-diagram-type">
+              <button class="active">1d</button>
+              <button>1w</button>
+              <button>1m</button>
+              <button>3m</button>
+              <button>6m</button>
+              <button>1y</button>
+            </div>
+
+            <div class="dashboard-diagram">
+              <canvas width="100%" height="240"></canvas>
+            </div>
+
+            <div class="dashboard-result">
+              <div class="dashboard-result-item">
+                <h5 class="dashboard-result-item-title">Available balance</h5>
+                <div class="dashboard-result-item-value">---</div>
+              </div>
+              <div class="dashboard-result-item">
+                <h5 class="dashboard-result-item-title">Live PnL</h5>
+                <div class="dashboard-result-item-value">---</div>
+              </div>
+              <div class="dashboard-result-item">
+                <h5 class="dashboard-result-item-title">Realized PnL</h5>
+                <div class="dashboard-result-item-value">---</div>
+              </div>
+              <div class="dashboard-result-item">
+                <h5 class="dashboard-result-item-title">Profit factor</h5>
+                <div class="dashboard-result-item-value">---</div>
+              </div>
+              <div class="dashboard-result-item">
+                <h5 class="dashboard-result-item-title">Win rate</h5>
+                <div class="dashboard-result-item-value">---</div>
+              </div>
+            </div>
+
+            <h4 class="dashboard-section-title">Aevo savings collateral</h4>
+
+            <div class="dashboard-table">
+              <div class="dashboard-table-head">
+                <div class="dashboard-table-head-item">Asset</div>
+                <div class="dashboard-table-head-item">APY</div>
+                <div class="dashboard-table-head-item">Composition</div>
+                <div class="dashboard-table-head-item">Value</div>
+                <div class="dashboard-table-head-item">Actions</div>
+              </div>
+              <div class="dashboard-table-content">
+                <div class="dashboard-table-content-item text-12">
+                  <img src="img/usd-blue.svg" alt="usd-blue.svg" width="33" height="32">
+                  ae USD
+                </div>
+                <div class="dashboard-table-content-item text-12">
+                  <div class="green-status">
+                    63%
+                  </div>
+                </div>
+                <div class="dashboard-table-content-item">
+                    0.00%
+                </div>
+                <div class="dashboard-table-content-item column">
+                   <div class="text-12">+0.0000$</div>
+                   <div class="text-12 c-green">+0.0000$</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </main>
