@@ -2075,6 +2075,10 @@ a:focus {
   display: none;
   width: 100%;
   max-width: 544px;
+  overflow-x: auto;
+}
+.dashboard-content .tabs-buttons::-webkit-scrollbar {
+  height: 0;
 }
 @media (max-width: 992px) {
   .dashboard-content .tabs-buttons {

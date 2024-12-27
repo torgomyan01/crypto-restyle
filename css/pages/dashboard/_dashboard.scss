@@ -138,6 +138,11 @@
       display: none;
       width: 100%;
       max-width: 544px;
+      overflow-x: auto;
+
+      &::-webkit-scrollbar{
+        height: 0;
+      }
 
       @media (max-width: 992px){
         display: grid;
