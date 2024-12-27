@@ -249,9 +249,165 @@
             </div>
           </div>
 
+
+
           <div class="dashboard-content">
+            <h1 class="dashboard-content-mobile-title">
+              <span data-mobiletitle="overview" class="active">Portfolio overview</span>
+              <span data-mobiletitle="positions">Positions</span>
+              <span data-mobiletitle="open-orders">Open orders</span>
+              <span data-mobiletitle="order-history">Order history</span>
+              <span data-mobiletitle="trade-history">Trade history</span>
+              <span data-mobiletitle="funding-history">Funding history</span>
+              <span data-mobiletitle="transfer-rewards">Transfer and rewards</span>
+            </h1>
+
+            <div class="tabs-buttons">
+              <button class="tab-button active" data-id="overview" type="button">
+                Summary
+              </button>
+              <button class="tab-button" data-id="positions" type="button">
+                Positions
+              </button>
+              <button class="tab-button" data-id="open-orders" type="button">
+                Orders
+              </button>
+              <button class="tab-button" data-id="order-history" type="button">
+                History
+              </button>
+              <button class="tab-button" data-id="trade-history" type="button">
+                Trade
+              </button>
+              <button class="tab-button" data-id="funding-history" type="button">
+                Funding
+              </button>
+              <button class="tab-button" data-id="transfer-rewards" type="button">
+                Transfers
+              </button>
+            </div>
+
              <div id="overview" class="dashboard-content-item active">
                <h3 class="dashboard-title">Portfolio overview</h3>
+
+               <div class="dashboard-info top">
+                 <div class="dashboard-info-body">
+                   <h4 class="dashboard-info-body-title">Margin health</h4>
+
+                   <div class="dashboard-info-im">
+                     <div class="dashboard-info-im-item">
+                       <b>IM Utilization</b>
+                       <span>---</span>
+                     </div>
+                     <div class="dashboard-info-im-item">
+                       <b>MM Utilization</b>
+                       <span>---</span>
+                     </div>
+                   </div>
+
+                   <div class="dashboard-info-margin">
+                     <div class="dashboard-info-margin-item">
+                       <b>Initial Margin Used</b>
+                       <span>---</span>
+                     </div>
+                     <div class="dashboard-info-margin-item">
+                       <b>Maintenance Margin Used</b>
+                       <span>---</span>
+                     </div>
+                     <div class="dashboard-info-margin-item">
+                       <b>Available Balance</b>
+                       <span>---</span>
+                     </div>
+                   </div>
+                 </div>
+
+                 <div class="dashboard-info-body">
+                   <h4 class="dashboard-info-body-title">Margin health</h4>
+
+                   <div class="dashboard-info-greeks tabs">
+                     <div class="dashboard-info-greeks-tabs">
+                       <button class="tab-button active" data-tab="dashboard-3">ETH</button>
+                       <button class="tab-button" data-tab="dashboard-4">BTC</button>
+                     </div>
+
+                     <div id="dashboard-3" class="dashboard-info-greeks-body tab-content active">
+                       <div class="dashboard-info-greeks-body-item">
+                         <div class="dashboard-info-greeks-body-item-icon">
+                           <img src="img/greeks.svg" alt="greeks.svg" width="16" height="16">
+                         </div>
+                         <div>
+                           <h4 class="dashboard-info-greeks-body-item-title">Delta</h4>
+                           <span>---</span>
+                         </div>
+                       </div>
+                       <div class="dashboard-info-greeks-body-item">
+                         <div class="dashboard-info-greeks-body-item-icon">
+                           <img src="img/greeks.svg" alt="greeks.svg" width="16" height="16">
+                         </div>
+                         <div>
+                           <h4 class="dashboard-info-greeks-body-item-title">Vega</h4>
+                           <span>---</span>
+                         </div>
+                       </div>
+                       <div class="dashboard-info-greeks-body-item">
+                         <div class="dashboard-info-greeks-body-item-icon">
+                           <img src="img/greeks.svg" alt="greeks.svg" width="16" height="16">
+                         </div>
+                         <div>
+                           <h4 class="dashboard-info-greeks-body-item-title">Gamma</h4>
+                           <span>---</span>
+                         </div>
+                       </div>
+                       <div class="dashboard-info-greeks-body-item">
+                         <div class="dashboard-info-greeks-body-item-icon">
+                           <img src="img/greeks.svg" alt="greeks.svg" width="16" height="16">
+                         </div>
+                         <div>
+                           <h4 class="dashboard-info-greeks-body-item-title">Rho</h4>
+                           <span>---</span>
+                         </div>
+                       </div>
+                       <div class="dashboard-info-greeks-body-item">
+                         <div class="dashboard-info-greeks-body-item-icon">
+                           <img src="img/greeks.svg" alt="greeks.svg" width="16" height="16">
+                         </div>
+                         <div>
+                           <h4 class="dashboard-info-greeks-body-item-title">Theta</h4>
+                           <span>---</span>
+                         </div>
+                       </div>
+                     </div>
+                     <div id="dashboard-4" class="dashboard-info-greeks-body tab-content">
+                       <div class="dashboard-info-greeks-body-item">
+                         <div class="dashboard-info-greeks-body-item-icon">
+                           <img src="img/greeks.svg" alt="greeks.svg" width="16" height="16">
+                         </div>
+                         <div>
+                           <h4 class="dashboard-info-greeks-body-item-title">Gamma</h4>
+                           <span>---</span>
+                         </div>
+                       </div>
+                       <div class="dashboard-info-greeks-body-item">
+                         <div class="dashboard-info-greeks-body-item-icon">
+                           <img src="img/greeks.svg" alt="greeks.svg" width="16" height="16">
+                         </div>
+                         <div>
+                           <h4 class="dashboard-info-greeks-body-item-title">Rho</h4>
+                           <span>---</span>
+                         </div>
+                       </div>
+                       <div class="dashboard-info-greeks-body-item">
+                         <div class="dashboard-info-greeks-body-item-icon">
+                           <img src="img/greeks.svg" alt="greeks.svg" width="16" height="16">
+                         </div>
+                         <div>
+                           <h4 class="dashboard-info-greeks-body-item-title">Theta</h4>
+                           <span>---</span>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
 
                <div class="dashboard-equity">
                  <h5 class="dashboard-equity-type">Equity</h5>
@@ -304,7 +460,7 @@
                    <div class="dashboard-table-head-item" style="--w: 15%">Asset</div>
                    <div class="dashboard-table-head-item" style="--w: 15%">APY</div>
                    <div class="dashboard-table-head-item" style="--w: 30%">Composition</div>
-                   <div class="dashboard-table-head-item" style="--w: 10%">Value</div>
+                   <div class="dashboard-table-head-item" style="--w: 10%;min-width: 100px">Value</div>
                    <div class="dashboard-table-head-item" style="--w: 30%">Actions</div>
                  </div>
                  <div class="dashboard-table-content">
@@ -320,7 +476,7 @@
                    <div class="dashboard-table-content-item" style="--w: 30%">
                      0.00%
                    </div>
-                   <div class="dashboard-table-content-item column start-column" style="--w: 10%">
+                   <div class="dashboard-table-content-item column start-column" style="--w: 10%;min-width: 100px">
                      <div class="text-12">+0.0000$</div>
                      <div class="text-12 c-green">+0.0000$</div>
                    </div>
@@ -328,6 +484,26 @@
                      <button class="purple-btn">Earn</button>
                      <button class="purple-btn transparent">Redeem</button>
                    </div>
+                 </div>
+               </div>
+
+               <div class="dashboard-mobile-table">
+                 <div class="dashboard-mobile-table-head">
+                   <div class="dashboard-mobile-table-head-info">
+                     <img src="img/usd-blue.svg" alt="usd-blue.svg" width="33" height="32">
+                     <div>
+                        <h5 class="dashboard-mobile-table-head-info-title">ae USD</h5>
+                        <h5 class="dashboard-mobile-table-head-info-price">+6.50$</h5>
+                     </div>
+                   </div>
+                   <div class="dashboard-mobile-table-head-count">
+                     +0.0000$
+                     <span>+0.0000$</span>
+                   </div>
+                 </div>
+                 <div class="dashboard-mobile-table-buttons">
+                   <button class="purple-btn">Earn</button>
+                   <button class="purple-btn transparent">Redeem</button>
                  </div>
                </div>
 
@@ -339,7 +515,7 @@
                    <div class="dashboard-table-head-item" style="--w: 15%">Asset</div>
                    <div class="dashboard-table-head-item" style="--w: 15%">APY</div>
                    <div class="dashboard-table-head-item" style="--w: 30%">Composition</div>
-                   <div class="dashboard-table-head-item" style="--w: 10%">Value</div>
+                   <div class="dashboard-table-head-item" style="--w: 10%;min-width: 100px">Value</div>
                    <div class="dashboard-table-head-item" style="--w: 30%">Actions</div>
                  </div>
                  <div class="dashboard-table-content">
@@ -355,7 +531,7 @@
                    <div class="dashboard-table-content-item" style="--w: 30%">
                      0.00%
                    </div>
-                   <div class="dashboard-table-content-item column start-column" style="--w: 10%">
+                   <div class="dashboard-table-content-item column start-column" style="--w: 10%;min-width: 100px">
                      <div class="text-12">+0.0000$</div>
                      <div class="text-12 c-green">+0.0000$</div>
                    </div>
@@ -432,8 +608,51 @@
                  </div>
                </div>
 
+               <div class="dashboard-mobile-table">
+                 <div class="dashboard-mobile-table-head">
+                   <div class="dashboard-mobile-table-head-info">
+                     <img src="img/usd-blue.svg" alt="usd-blue.svg" width="33" height="32">
+                     <div>
+                       <h5 class="dashboard-mobile-table-head-info-title">ae USD</h5>
+                     </div>
+                   </div>
+                   <div class="dashboard-mobile-table-head-count">
+                     +0.0000$
+                     <span>+0.0000$</span>
+                   </div>
+                 </div>
+               </div>
+               <div class="dashboard-mobile-table">
+                 <div class="dashboard-mobile-table-head">
+                   <div class="dashboard-mobile-table-head-info">
+                     <img src="img/usd-blue.svg" alt="usd-blue.svg" width="33" height="32">
+                     <div>
+                       <h5 class="dashboard-mobile-table-head-info-title">ae USD</h5>
+                     </div>
+                   </div>
+                   <div class="dashboard-mobile-table-head-count">
+                     +0.0000$
+                     <span>+0.0000$</span>
+                   </div>
+                 </div>
+               </div>
+               <div class="dashboard-mobile-table">
+                 <div class="dashboard-mobile-table-head">
+                   <div class="dashboard-mobile-table-head-info">
+                     <img src="img/usd-blue.svg" alt="usd-blue.svg" width="33" height="32">
+                     <div>
+                       <h5 class="dashboard-mobile-table-head-info-title">ae USD</h5>
+                     </div>
+                   </div>
+                   <div class="dashboard-mobile-table-head-count">
+                     +0.0000$
+                     <span>+0.0000$</span>
+                   </div>
+                 </div>
+               </div>
 
-               <div class="dashboard-info">
+
+               <div class="dashboard-info bottom">
                  <div class="dashboard-info-body">
                    <h4 class="dashboard-info-body-title">Margin health</h4>
 
@@ -556,21 +775,31 @@
 
             <div id="positions" class="dashboard-content-item">
               <h3 class="dashboard-title">Positions</h3>
+              <span style="color: #fff">content</span>
             </div>
             <div id="open-orders" class="dashboard-content-item">
               <h3 class="dashboard-title">Open orders</h3>
+              <span style="color: #fff">content</span>
             </div>
             <div id="order-history" class="dashboard-content-item">
               <h3 class="dashboard-title">Order history</h3>
+              <span style="color: #fff">content</span>
             </div>
             <div id="trade-history" class="dashboard-content-item">
               <h3 class="dashboard-title">Trade history</h3>
+              <span style="color: #fff">content</span>
             </div>
             <div id="funding-history" class="dashboard-content-item">
               <h3 class="dashboard-title">Funding history</h3>
+              <div class="funding-history">
+                <img src="img/si_wallet-duotone.svg" alt="si_wallet-duotone">
+                <h2 class="funding-history-title">Looks like your wallet is not connected</h2>
+                <a href="#" class="purple-btn">Connect Wallet</a>
+              </div>
             </div>
             <div id="transfer-rewards" class="dashboard-content-item">
               <h3 class="dashboard-title">Transfer and rewards</h3>
+              <span style="color: #fff">content</span>
             </div>
           </div>
         </div>

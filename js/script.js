@@ -93,6 +93,9 @@ const tabsButtonsActive = $(".tabs-buttons button.active");
 tabsButtons.on("click", function (e) {
   const btnInfo = this.getBoundingClientRect();
 
+  tabsButtons.removeClass("active");
+  $(this).addClass("active");
+
   $(this)
     .parent()
     .css({
@@ -205,14 +208,27 @@ const dashboardContentItem = $('.dashboard-content-item');
 
 
 dashboardMenuItem.on('click', function () {
-  const getTabID = $(this).data('id');
+  changeTab(this)
+})
+
+
+const tabsButtonsDashboard = $('.tabs-buttons button');
+
+tabsButtonsDashboard.on('click', function () {
+  changeTab(this)
+})
+
+function changeTab(elem){
+  const getTabID = $(elem).data('id');
 
   dashboardMenuItem.removeClass("active");
   dashboardContentItem.removeClass("active");
+  $('[data-mobiletitle]').removeClass("active");
 
 
-  $(this).addClass('active');
+  $(elem).addClass('active');
   $(`#${getTabID}`).addClass('active');
+  $(`[data-mobiletitle="${getTabID}"]`).addClass('active');
 
-  dashboardMenuActive.css('top', `${this.offsetTop}px`)
-})
+  dashboardMenuActive.css('top', `${elem.offsetTop}px`)
+}
