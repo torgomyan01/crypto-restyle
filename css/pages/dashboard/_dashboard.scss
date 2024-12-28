@@ -409,6 +409,15 @@
         font-weight: 500;
         line-height: 125%;
 
+        &.bottom{
+          display: none;
+
+          @media (max-width: 576px){
+            display: flex;
+            justify-content: start;
+          }
+        }
+
         @media (max-width: 576px){
           max-width: 50% !important;
           &:nth-of-type(2),&:nth-of-type(3),{
