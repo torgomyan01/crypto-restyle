@@ -13,7 +13,6 @@ html {
   border-radius: 5px;
 }
 
-
 /* Track */
 ::-webkit-scrollbar-track {
   background: rgba(119, 106, 230, 0.08);
@@ -22,7 +21,7 @@ html {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background: #594DC5;
+  background: #594dc5;
 }
 
 /* Handle on hover */
@@ -95,24 +94,24 @@ a {
   }
 }
 
-.c-gray{
-  color: #7D7D80;
+.c-gray {
+  color: #7d7d80;
 }
 
-.c-white{
-  color: #F5F5F7;
+.c-white {
+  color: #f5f5f7;
 }
 
-.c-green{
-  color: #37B358;
+.c-green {
+  color: #37b358;
 }
 
-.c-purple{
-  color: #37B358;
+.c-purple {
+  color: #37b358;
 }
 
-.green-status{
-  color: #37B358;
+.green-status {
+  color: #37b358;
   font-size: 14px;
   font-weight: 500;
   line-height: 125%;
@@ -150,16 +149,16 @@ a {
     background: lighten(#594dc5, 7%);
   }
 
-  &.transparent{
+  &.transparent {
     background-color: transparent;
     border: 0;
-    color: #594DC5;
+    color: #594dc5;
     box-shadow: unset;
   }
 }
 
-.btn-gray{
-  color: #F5F5F7;
+.btn-gray {
+  color: #f5f5f7;
   font-size: 12px;
   font-weight: 500;
   line-height: 125%;
@@ -169,12 +168,15 @@ a {
   background: rgba(252, 252, 252, 0.02);
   box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.04) inset;
 
-  &.disabled, &:disabled{
+  &.disabled,
+  &:disabled {
     cursor: default;
     opacity: 0.3;
-    color: #F5F5F7;
+    color: #f5f5f7;
     background: rgba(252, 252, 252, 0.02);
-    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.08), 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 0px 0px 0px 0px rgba(255, 255, 255, 0.04) inset;
+    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.08),
+      0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12),
+      0px 0px 0px 0px rgba(255, 255, 255, 0.04) inset;
   }
 }
 
@@ -834,6 +836,133 @@ a {
       min-width: 50px;
       &.purple {
         color: #9a8eed;
+      }
+    }
+  }
+}
+
+.leaderboard-info {
+  max-width: 1170px;
+  width: 100%;
+  padding: 60px 15px 0;
+  margin: 0 auto;
+  .leaderboard-title {
+    font-size: 36px;
+    margin-bottom: 35px;
+    color: #f5f5f7;
+    font-weight: bold;
+  }
+  .tab-content {
+    @media (max-width: 767px) {
+      overflow-x: auto;
+    }
+  }
+  .tabs-buttons {
+    @include inline-flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    button {
+      min-width: 130px;
+      @media (max-width: 767px) {
+        min-width: auto;
+      }
+    }
+  }
+  .table-wrap {
+    @media (max-width: 767px) {
+      min-width: 600px;
+    }
+    .table-top {
+      @include flex;
+      border-radius: 8px 8px 0px 0px;
+      border-bottom: 1px solid rgba(64, 64, 65, 0.12);
+      background: linear-gradient(
+          0deg,
+          rgba(119, 106, 230, 0.12) 0%,
+          rgba(119, 106, 230, 0.12) 100%
+        ),
+        rgba(245, 245, 247, 0.02);
+      padding: 16px;
+      span {
+        font-size: 12px;
+        font-weight: 500;
+        color: #5c5c5e;
+        &.purple {
+          color: #594dc5;
+        }
+      }
+    }
+    .table-item {
+      padding: 16px;
+      @include flex;
+      border-bottom: 1px solid rgba(64, 64, 65, 0.12);
+      background: linear-gradient(
+          0deg,
+          rgba(119, 106, 230, 0.08) 0%,
+          rgba(119, 106, 230, 0.08) 100%
+        ),
+        rgba(245, 245, 247, 0.02);
+      box-shadow: 0.5px 0.5px 1px 0px rgba(0, 0, 0, 0.04),
+        0.25px 0.25px 0.5px 0px rgba(0, 0, 0, 0.04),
+        0px 0px 0px 0px rgba(0, 0, 0, 0.04);
+      span {
+        color: #f5f5f7;
+        font-size: 14px;
+        &.num {
+          img {
+            padding-left: 7px;
+          }
+          b {
+            font-weight: normal;
+            padding-left: 16px;
+          }
+        }
+        &.red {
+          color: #de4d4d;
+        }
+        &.green {
+          color: #37b358;
+        }
+      }
+    }
+  }
+  .top-info {
+    @include flex;
+    @include align-center;
+    @include justify-between;
+
+    .top-texts {
+      position: relative;
+      z-index: 0;
+      @include inline-flex;
+      @include align-center;
+      &:after {
+        content: "";
+        width: 1px;
+        height: 16px;
+        background: #404041;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @media (max-width: 767px) {
+          left: 47%;
+        }
+      }
+      span {
+        padding: 8px;
+        color: #c2c2c6;
+        transition: 0.3s;
+        font-size: 14px;
+        margin-left: 16px;
+        @media (max-width: 767px) {
+          font-size: 12px;
+          margin-left: 8px;
+          padding: 4px;
+        }
+        &.active {
+          color: #776ae6;
+        }
       }
     }
   }

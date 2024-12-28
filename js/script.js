@@ -76,7 +76,6 @@ $(function () {
   $("#slider-value2").val($("#slider-range2").slider("value"));
 });
 
-
 $(".drop-menu").click(function () {
   $(this).toggleClass("is-active");
   $(".menu-wrap").toggleClass("open");
@@ -130,30 +129,24 @@ inputsPrices.forEach(function (input) {
   });
 });
 
-
-
-
-
-
-
-
-
+$(".top-texts span").on("click", function () {
+  $(".top-texts span").removeClass("active");
+  $(this).addClass("active");
+});
 
 // --------------------------------------------------------------
 // ------------------- DASHBOARD PAGE ---------------------------
 // --------------------------------------------------------------
 
-const dashboardDiagramType = $('.dashboard-diagram-type button');
+const dashboardDiagramType = $(".dashboard-diagram-type button");
 
-
-
-dashboardDiagramType.on('click', function () {
+dashboardDiagramType.on("click", function () {
   dashboardDiagramType.removeClass("active");
 
   $(this).addClass("active");
-})
+});
 
-const ctx = document.querySelector('.dashboard-diagram canvas');
+const ctx = document.querySelector(".dashboard-diagram canvas");
 
 // Data for 30 days
 const data = Array.from({ length: 30 }, (_, i) =>
@@ -162,18 +155,18 @@ const data = Array.from({ length: 30 }, (_, i) =>
 
 // Chart configuration
 new Chart(ctx, {
-  type: 'line',
+  type: "line",
   data: {
-    labels: Array(30).fill(''), // No labels for x-axis
+    labels: Array(30).fill(""), // No labels for x-axis
     datasets: [
       {
-        label: 'Value',
+        label: "Value",
         data: data,
-        borderColor: '#594DC5',
+        borderColor: "#594DC5",
         borderWidth: 2,
         pointRadius: 4,
         pointBackgroundColor: (context) =>
-          context.raw === 2806293.94 ? '#FF0000' : '#594DC5',
+          context.raw === 2806293.94 ? "#FF0000" : "#594DC5",
         fill: false,
       },
     ],
@@ -185,8 +178,7 @@ new Chart(ctx, {
       legend: { display: false }, // Hide the legend
       tooltip: {
         callbacks: {
-          label: (tooltipItem) =>
-            `Value: $${tooltipItem.raw.toLocaleString()}`,
+          label: (tooltipItem) => `Value: $${tooltipItem.raw.toLocaleString()}`,
         },
       },
     },
@@ -201,34 +193,30 @@ new Chart(ctx, {
   },
 });
 
+const dashboardMenuItem = $(".dashboard-menu-item");
+const dashboardMenuActive = $(".dashboard-menu-active");
+const dashboardContentItem = $(".dashboard-content-item");
 
-const dashboardMenuItem = $('.dashboard-menu-item');
-const dashboardMenuActive = $('.dashboard-menu-active');
-const dashboardContentItem = $('.dashboard-content-item');
+dashboardMenuItem.on("click", function () {
+  changeTab(this);
+});
 
+const tabsButtonsDashboard = $(".tabs-buttons button");
 
-dashboardMenuItem.on('click', function () {
-  changeTab(this)
-})
+tabsButtonsDashboard.on("click", function () {
+  changeTab(this);
+});
 
-
-const tabsButtonsDashboard = $('.tabs-buttons button');
-
-tabsButtonsDashboard.on('click', function () {
-  changeTab(this)
-})
-
-function changeTab(elem){
-  const getTabID = $(elem).data('id');
+function changeTab(elem) {
+  const getTabID = $(elem).data("id");
 
   dashboardMenuItem.removeClass("active");
   dashboardContentItem.removeClass("active");
-  $('[data-mobiletitle]').removeClass("active");
+  $("[data-mobiletitle]").removeClass("active");
 
+  $(elem).addClass("active");
+  $(`#${getTabID}`).addClass("active");
+  $(`[data-mobiletitle="${getTabID}"]`).addClass("active");
 
-  $(elem).addClass('active');
-  $(`#${getTabID}`).addClass('active');
-  $(`[data-mobiletitle="${getTabID}"]`).addClass('active');
-
-  dashboardMenuActive.css('top', `${elem.offsetTop}px`)
+  dashboardMenuActive.css("top", `${elem.offsetTop}px`);
 }
