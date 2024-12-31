@@ -156,12 +156,10 @@
       padding-right: 10px;
       left: 32px;
       top: 32px;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateX(100%);
       transition: 0.3s;
       overflow-y: auto;
       overflow-X: hidden;
+      display: none;
 
       @media (max-width: 992px){
         top: 141px;
@@ -171,9 +169,7 @@
       }
 
       &.active{
-        opacity: 1;
-        visibility: visible;
-        transform: translateX(0);
+        display: block;
       }
     }
 
