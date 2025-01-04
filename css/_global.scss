@@ -111,8 +111,19 @@ a {
 }
 
 .c-red {
-  color: #DE4D4D;
+  color: #DE4D4D !important;
 }
+
+@mixin generate-font-sizes($start, $step, $count) {
+  @for $i from 0 through $count - 1 {
+    $value: $start + ($step * $i);
+    .fs-#{$value} {
+      font-size: #{$value}px !important;
+    }
+  }
+}
+
+@include generate-font-sizes(0, 4, 16);
 
 .green-status {
   color: #37b358;
