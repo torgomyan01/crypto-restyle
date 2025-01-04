@@ -114,11 +114,11 @@ a:focus {
 }
 
 .c-purple {
-  color: #594DC5;
+  color: #594dc5;
 }
 
 .c-red {
-  color: #DE4D4D;
+  color: #de4d4d;
 }
 
 .green-status {
@@ -1028,6 +1028,349 @@ a:focus {
   color: #776ae6;
 }
 
+.dao-info {
+  max-width: 1170px;
+  width: 100%;
+  padding: 60px 15px 20px;
+  margin: 0 auto;
+}
+.dao-info .dao-title {
+  font-size: 36px;
+  margin-bottom: 35px;
+  color: #f5f5f7;
+  font-weight: bold;
+}
+.dao-info .dao-top-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 767px) {
+  .dao-info .dao-top-info {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+}
+.dao-info .dao-top-info .texts {
+  margin-right: 15px;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 6px;
+}
+@media (max-width: 767px) {
+  .dao-info .dao-top-info .texts {
+    margin: 0;
+    padding: 0;
+  }
+  .dao-info .dao-top-info .texts:nth-child(even) {
+    text-align: right;
+  }
+}
+.dao-info .dao-top-info .texts > .grey {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #a0a0a2;
+  display: block;
+}
+.dao-info .dao-top-info .texts .green {
+  font-size: 18px;
+  font-weight: 600;
+  color: #16b364;
+}
+.dao-info .dao-top-info .texts .white {
+  font-size: 16px;
+  font-weight: 600;
+  color: #f5f5f7;
+}
+.dao-info .info-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+@media (max-width: 1024px) {
+  .dao-info .info-blocks {
+    grid-template-columns: 1fr;
+  }
+}
+.dao-info .info-blocks p {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  color: #f5f5f7;
+}
+.dao-info .info-blocks .grey {
+  font-size: 14px;
+  font-weight: 500;
+  color: #c2c2c6;
+  display: block;
+  margin-bottom: 16px;
+}
+.dao-info .info-blocks .block1 {
+  border-radius: 8px;
+  border: 1px solid rgba(41, 33, 133, 0.12);
+  background: linear-gradient(0deg, #2c293c 0%, #2c293c 100%), rgba(245, 245, 247, 0.02);
+  box-shadow: 0.5px 0.5px 1px 0px rgba(0, 0, 0, 0.04), 0.25px 0.25px 0.5px 0px rgba(0, 0, 0, 0.04), 0px 0px 0px 0px rgba(0, 0, 0, 0.04), 0px 0px 0px 1px rgba(255, 255, 255, 0.02) inset;
+  padding: 16px;
+}
+.dao-info .info-blocks .block1 b {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  color: #f5f5f7;
+  margin-bottom: 16px;
+}
+.dao-info .info-blocks .block1 .info-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.dao-info .info-blocks .block1 .info-item a {
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: underline;
+  color: #7d7d80;
+}
+.dao-info .info-blocks .block1 .info-item .line {
+  font-size: 12px;
+  font-weight: 500;
+  color: #f5f5f7;
+}
+.dao-info .info-blocks .block1 .info-item:last-child {
+  margin-bottom: 0;
+}
+.dao-info .info-blocks .block2 {
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(41, 33, 133, 0.12);
+  background: linear-gradient(0deg, #211f29 0%, #211f29 100%), rgba(245, 245, 247, 0.02);
+  box-shadow: 0.5px 0.5px 1px 0px rgba(0, 0, 0, 0.04), 0.25px 0.25px 0.5px 0px rgba(0, 0, 0, 0.04), 0px 0px 0px 0px rgba(0, 0, 0, 0.04), 0px 0px 0px 1px rgba(255, 255, 255, 0.02) inset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.dao-info .info-blocks .block2 .grey {
+  font-size: 12px;
+}
+.dao-info .info-blocks .block2 .buttons {
+  max-width: 455px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.dao-info .info-blocks .block2 .buttons button {
+  width: calc((100% - 8px) / 2);
+  border-radius: 4px;
+  background: rgba(245, 245, 247, 0.04);
+  box-shadow: 0px -1px 2px 2px rgba(0, 0, 0, 0.08) inset, 0px 1px 2px 2px rgba(255, 255, 255, 0.03) inset, 0px 0px 0px 1px rgba(20, 20, 20, 0.99), 0px 0px 0px 0px rgba(255, 255, 255, 0.04) inset;
+  padding: 8px 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: #c2c2c6;
+}
+.dao-info .info-blocks .block2 .buttons button.active {
+  background: #594dc5;
+  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.08), 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 0px -1px 2px 2px rgba(0, 0, 0, 0.08) inset, 0px 1px 2px 2px rgba(255, 255, 255, 0.08) inset, 0px 0px 0px 1px rgba(20, 20, 20, 0.99), 0px 0px 0px 0px rgba(255, 255, 255, 0.04) inset;
+  color: #f5f5f7;
+}
+.dao-info .info-blocks .block2 .info-texts {
+  margin-top: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.dao-info .info-blocks .block2 .info-texts .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-right: 24px;
+}
+.dao-info .info-blocks .block2 .info-texts .text a {
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: underline;
+  color: #7d7d80;
+  margin-bottom: 8px;
+}
+.dao-info .info-blocks .block2 .info-texts .text span {
+  font-size: 12px;
+  font-weight: 500;
+  color: #f5f5f7;
+}
+.dao-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #f5f5f7;
+}
+.dao-info .info-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 1024px) {
+  .dao-info .info-items {
+    grid-template-columns: 1fr;
+  }
+}
+.dao-info .info-items .info-item {
+  border-radius: 8px;
+  border: 1px solid rgba(41, 33, 133, 0.12);
+  background: linear-gradient(0deg, rgba(119, 106, 230, 0.08) 0%, rgba(119, 106, 230, 0.08) 100%), rgba(245, 245, 247, 0.02);
+  box-shadow: 0.5px 0.5px 1px 0px rgba(0, 0, 0, 0.04), 0.25px 0.25px 0.5px 0px rgba(0, 0, 0, 0.04), 0px 0px 0px 0px rgba(0, 0, 0, 0.04), 0px 0px 0px 1px rgba(255, 255, 255, 0.02) inset;
+  padding: 16px;
+}
+.dao-info .info-items .info-item p {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #f5f5f7;
+}
+.dao-info .info-items .info-item .grey {
+  margin-bottom: 4px;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #c2c2c6;
+}
+.dao-info .info-items .info-item .texts-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 12px;
+}
+@media (max-width: 767px) {
+  .dao-info .info-items .info-item .texts-wrap {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+}
+.dao-info .info-items .info-item .texts-wrap .item {
+  margin-right: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+@media (max-width: 767px) {
+  .dao-info .info-items .info-item .texts-wrap .item {
+    margin: 0;
+    padding: 0;
+  }
+  .dao-info .info-items .info-item .texts-wrap .item:nth-child(even) {
+    text-align: right;
+  }
+}
+.dao-info .info-items .info-item .texts-wrap .item a {
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: underline;
+  color: #7d7d80;
+  margin-bottom: 8px;
+}
+.dao-info .info-items .info-item .texts-wrap .item span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #f5f5f7;
+}
+.dao-info .info-items .info-item .texts-wrap .item span.style {
+  background: linear-gradient(0deg, #776ae6 0%, #f7931a 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#deposit-popup {
+  width: 100%;
+  height: 100vh;
+  background: #211f29;
+}
+#deposit-popup .popup-body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+  padding: 15px;
+  padding-bottom: 60px;
+}
+#deposit-popup .popup-body .mfp-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+  opacity: 1;
+  width: 18px;
+  height: 18px;
+}
+#deposit-popup .popup-body .mfp-close:after {
+  content: "";
+  background: url(../img/close-popup.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#deposit-popup .popup-body .info > p {
+  font-size: 12px;
+  color: #7d7d80;
+  margin-bottom: 8px;
+}
+#deposit-popup .popup-body .info h3 {
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #e6e7ea;
+}
+#deposit-popup .popup-body .info .select-wrap {
+  width: 100%;
+}
+
 .drop-menu {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1812,7 +2155,7 @@ a:focus {
 }
 @media (max-width: 767px) {
   .main .main-info .left-info .wrap .left .top-info .list .right-info-wrap,
-  .main .main-info .left-info .wrap .left .top-info .list .left-info-wrap {
+.main .main-info .left-info .wrap .left .top-info .list .left-info-wrap {
     -ms-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -2066,6 +2409,31 @@ a:focus {
   .main .main-info .right-info {
     display: none;
   }
+}
+.main .main-info .right-info .btns {
+  margin: 16px 0;
+}
+.main .main-info .right-info .btns .btn {
+  border-radius: 4px;
+  border: 1px solid #594dc5;
+  background: rgba(252, 252, 252, 0.02);
+  padding: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: #e6e7ea;
+  margin: 8px 0;
+}
+.main .main-info .right-info .btns .btn:hover {
+  border-color: #e6e7ea;
 }
 .main .main-info .right-info .top-buttons {
   display: grid;

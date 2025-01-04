@@ -82,6 +82,16 @@ $(".drop-menu").click(function () {
   $("body, html").toggleClass("overflow");
 });
 
+$(".block2 .buttons button").on("click", function () {
+  $(".block2 .buttons button").removeClass("active");
+  $(this).addClass("active");
+});
+
+$(".popup").magnificPopup({
+  type: "inline",
+  mainClass: "mfp-fade",
+});
+
 $(".more").on("click", function () {
   $(".drop-menu-wrap").toggleClass("show");
 });

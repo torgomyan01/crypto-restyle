@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="css/select2.min.css" />
     <link rel="stylesheet" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -1834,7 +1835,10 @@
                       Max 8,0%
                     </p>
                   </div>
-                  <a href="#" class="purple-btn">Open position </a>
+                  <div class="btns">
+                    <a href="#deposit-popup" class="btn popup">Deposit</a>
+                    <a href="#withdraw-popup" class="btn popup">Withdraw</a>
+                  </div>
                   <p class="info-title">Account equity</p>
                   <div class="texts">
                     <span class="grey">Spot</span>
@@ -1994,9 +1998,40 @@
     </main>
 
     <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/select2.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/imask.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/select2.min.js"></script>
     <script src="js/script.js"></script>
+
+    <div id="deposit-popup" class="mfp-hide white-popup mfp-with-anim">
+      <div class="popup-body">
+        <button title="Close (Esc)" type="button" class="mfp-close"></button>
+        <div class="info">
+          <h3>Select deposit</h3>
+          <p>Source chain</p>
+          <div class="select-wrap">
+            <select>
+              <option value="1">Arbitrium</option>
+              <option value="2">Arbitrium</option>
+              <option value="3">Arbitrium</option>
+            </select>
+          </div>
+          <div class="select-wrap">
+            <select>
+              <option value="4">USDC</option>
+              <option value="5">USDC</option>
+              <option value="6">USDC</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="withdraw-popup" class="mfp-hide white-popup mfp-with-anim">
+      <div class="popup-body">
+        <button title="Close (Esc)" type="button" class="mfp-close"></button>
+      </div>
+    </div>
   </body>
 </html>
