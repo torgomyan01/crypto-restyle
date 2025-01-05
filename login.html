@@ -1962,7 +1962,10 @@
                       Max 8,0%
                     </p>
                   </div>
-                  <a href="#" class="purple-btn">Open position </a>
+                  <div class="btns">
+                    <a href="#deposit-popup" class="btn popup">Deposit</a>
+                    <a href="#withdraw-popup" class="btn popup">Withdraw</a>
+                  </div>
                   <p class="info-title">Account equity</p>
                   <div class="texts">
                     <span class="grey">Spot</span>
@@ -2003,6 +2006,7 @@
         <div class="info">
           <h3>Select deposit</h3>
           <p>Source chain</p>
+          <form action=""></form>
           <div class="select-wrap">
             <select>
               <option value="1">Arbitrium</option>
@@ -2017,6 +2021,12 @@
               <option value="6">USDC</option>
             </select>
           </div>
+          <div class="input">
+            <input type="text" placeholder="Amount" />
+            <span class="green-text">Max</span>
+          </div>
+          <p>Available to deposit <span>10</span></p>
+          <button type="button" class="purple-btn">Deposit</button>
         </div>
       </div>
     </div>
@@ -2024,6 +2034,23 @@
     <div id="withdraw-popup" class="mfp-hide white-popup mfp-with-anim">
       <div class="popup-body">
         <button title="Close (Esc)" type="button" class="mfp-close"></button>
+        <div class="info-wrap">
+          <img src="img/infinity.svg" alt="" />
+          <b>Sign transactions</b>
+          <p>You will need to sign three transactions to your wallet</p>
+          <div class="info-item">
+            <span class="white">Approve USDT for swap</span>
+            <span class="grey">Not signed</span>
+          </div>
+          <div class="info-item">
+            <span class="white">Approve USDT for USDC</span>
+            <span class="grey">Not signed</span>
+          </div>
+          <div class="info-item">
+            <span class="white">Deposit USDC for Paradoxx</span>
+            <span class="grey">Not signed</span>
+          </div>
+        </div>
       </div>
     </div>
 
