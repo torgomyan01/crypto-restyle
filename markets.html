@@ -167,90 +167,649 @@
       </header>
       <div class="markets leaderboard-info">
         <h3 class="leaderboard-title">Markets</h3>
-        <div class="dashboard-table">
-          <div class="dashboard-table-head">
-            <div class="dashboard-table-head-item" style="--w: 6%;min-width: 50px">
+        <div class="table-body">
+          <div class="dashboard-table">
+            <div class="dashboard-table-head">
+              <div class="dashboard-table-head-item" style="--w: 6%;min-width: 50px">
+              </div>
+              <div class="dashboard-table-head-item" style="--w: 20%;">
+                Market
+                <img src="img/icon-down-bottom.svg" alt="icon-down-bottom">
+              </div>
+              <div class="dashboard-table-head-item" style="--w: 7%">
+                Price
+                <img src="img/icon-down-bottom.svg" alt="icon-down-bottom">
+              </div>
+              <div class="dashboard-table-head-item" style="--w: 11%">
+                Сhange (24h)
+                <img src="img/icon-down-bottom.svg" alt="icon-down-bottom">
+              </div>
+              <div class="dashboard-table-head-item" style="--w: 13%;">
+                Volume (24h)
+                <img src="img/icon-down-bottom.svg" alt="icon-down-bottom">
+              </div>
+              <div class="dashboard-table-head-item" style="--w: 13%">
+                Open interest
+                <img src="img/icon-down-bottom.svg" alt="icon-down-bottom">
+              </div>
+              <div class="dashboard-table-head-item" style="--w: 14%">
+                Funding rate (APR)
+                <img src="img/icon-down-bottom.svg" alt="icon-down-bottom">
+              </div>
+              <div class="dashboard-table-head-item" style="--w: 11%">
+                Market sentiment
+                <img src="img/icon-down-bottom.svg" alt="icon-down-bottom">
+              </div>
+              <div class="dashboard-table-head-item" style="--w: 10%; min-width: 50px">
+              </div>
             </div>
-            <div class="dashboard-table-head-item" style="--w: 20%;">
-              Market
-              <img src="img/icon-down-bottom.svg" alt="icon-down-bottom">
+            <div class="dashboard-table-content">
+              <div class="dashboard-table-content-item" style="--w: 6%;min-width: 50px">
+                <img src="img/icon-star.svg" alt="icon-star" class="icon-star">
+              </div>
+              <div class="dashboard-table-content-item text-12" style="--w: 20%;">
+                <img src="img/cosmos-atom-logo.svg" alt="cosmos-atom-logo" class="logo">
+                <div>
+                  <h5 class="title">ATOM / USD</h5>
+                  <p class="subtitle">Backed by Atom</p>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item text-12" style="--w: 7%">
+                <div>
+                  <h5 class="title">9 USD</h5>
+                  <p class="subtitle">1 Atom</p>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 11%">
+                <span class="change">-7%</span>
+              </div>
+              <div class="dashboard-table-content-item column start-column" style="--w: 13%;">
+                <div>
+                  <h5 class="title">9 USD</h5>
+                  <p class="subtitle">1 Atom</p>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 13%">
+                <div>
+                  <h5 class="title">1000 USD</h5>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 14%">
+                <div class="longs">
+                  <h4>Longs <span>9 USD</span></h4>
+                  <h5>Shorts <span>9 USD</span></h5>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 11%">
+                <div class="sentiment">
+                  <div class="sentiment-line" style="--s:37%;--l:63%"></div>
+                  <div class="sentiment-text">
+                    <span>S <b class="c-red">35%</b></span>
+                    <span>L <b class="c-green">63%</b></span>
+                  </div>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item center" style="--w: 10%; min-width: 50px">
+                <button class="purple-btn trade">Trade</button>
+              </div>
             </div>
-            <div class="dashboard-table-head-item" style="--w: 7%">
-              Price
-              <img src="img/icon-down-bottom.svg" alt="icon-down-bottom">
+            <div class="dashboard-table-content">
+              <div class="dashboard-table-content-item" style="--w: 6%;min-width: 50px">
+                <img src="img/icon-star.svg" alt="icon-star" class="icon-star">
+              </div>
+              <div class="dashboard-table-content-item text-12" style="--w: 20%;">
+                <img src="img/cosmos-atom-logo.svg" alt="cosmos-atom-logo" class="logo">
+                <div>
+                  <h5 class="title">ATOM / USD</h5>
+                  <p class="subtitle">Backed by Atom</p>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item text-12" style="--w: 7%">
+                <div>
+                  <h5 class="title">9 USD</h5>
+                  <p class="subtitle">1 Atom</p>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 11%">
+                <span class="change">-7%</span>
+              </div>
+              <div class="dashboard-table-content-item column start-column" style="--w: 13%;">
+                <div>
+                  <h5 class="title">9 USD</h5>
+                  <p class="subtitle">1 Atom</p>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 13%">
+                <div>
+                  <h5 class="title">1000 USD</h5>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 14%">
+                <div class="longs">
+                  <h4>Longs <span>9 USD</span></h4>
+                  <h5>Shorts <span>9 USD</span></h5>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 11%">
+                <div class="sentiment">
+                  <div class="sentiment-line" style="--s:37%;--l:63%"></div>
+                  <div class="sentiment-text">
+                    <span>S <b class="c-red">35%</b></span>
+                    <span>L <b class="c-green">63%</b></span>
+                  </div>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item center" style="--w: 10%; min-width: 50px">
+                <button class="purple-btn trade">Trade</button>
+              </div>
             </div>
-            <div class="dashboard-table-head-item" style="--w: 11%">
-              Сhange (24h)
-              <img src="img/icon-down-bottom.svg" alt="icon-down-bottom">
+            <div class="dashboard-table-content">
+              <div class="dashboard-table-content-item" style="--w: 6%;min-width: 50px">
+                <img src="img/icon-star.svg" alt="icon-star" class="icon-star">
+              </div>
+              <div class="dashboard-table-content-item text-12" style="--w: 20%;">
+                <img src="img/cosmos-atom-logo.svg" alt="cosmos-atom-logo" class="logo">
+                <div>
+                  <h5 class="title">ATOM / USD</h5>
+                  <p class="subtitle">Backed by Atom</p>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item text-12" style="--w: 7%">
+                <div>
+                  <h5 class="title">9 USD</h5>
+                  <p class="subtitle">1 Atom</p>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 11%">
+                <span class="change">-7%</span>
+              </div>
+              <div class="dashboard-table-content-item column start-column" style="--w: 13%;">
+                <div>
+                  <h5 class="title">9 USD</h5>
+                  <p class="subtitle">1 Atom</p>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 13%">
+                <div>
+                  <h5 class="title">1000 USD</h5>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 14%">
+                <div class="longs">
+                  <h4>Longs <span>9 USD</span></h4>
+                  <h5>Shorts <span>9 USD</span></h5>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 11%">
+                <div class="sentiment">
+                  <div class="sentiment-line" style="--s:37%;--l:63%"></div>
+                  <div class="sentiment-text">
+                    <span>S <b class="c-red">35%</b></span>
+                    <span>L <b class="c-green">63%</b></span>
+                  </div>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item center" style="--w: 10%; min-width: 50px">
+                <button class="purple-btn trade">Trade</button>
+              </div>
             </div>
-            <div class="dashboard-table-head-item" style="--w: 13%;">
-              Volume (24h)
-              <img src="img/icon-down-bottom.svg" alt="icon-down-bottom">
+            <div class="dashboard-table-content">
+              <div class="dashboard-table-content-item" style="--w: 6%;min-width: 50px">
+                <img src="img/icon-star.svg" alt="icon-star" class="icon-star">
+              </div>
+              <div class="dashboard-table-content-item text-12" style="--w: 20%;">
+                <img src="img/cosmos-atom-logo.svg" alt="cosmos-atom-logo" class="logo">
+                <div>
+                  <h5 class="title">ATOM / USD</h5>
+                  <p class="subtitle">Backed by Atom</p>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item text-12" style="--w: 7%">
+                <div>
+                  <h5 class="title">9 USD</h5>
+                  <p class="subtitle">1 Atom</p>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 11%">
+                <span class="change">-7%</span>
+              </div>
+              <div class="dashboard-table-content-item column start-column" style="--w: 13%;">
+                <div>
+                  <h5 class="title">9 USD</h5>
+                  <p class="subtitle">1 Atom</p>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 13%">
+                <div>
+                  <h5 class="title">1000 USD</h5>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 14%">
+                <div class="longs">
+                  <h4>Longs <span>9 USD</span></h4>
+                  <h5>Shorts <span>9 USD</span></h5>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 11%">
+                <div class="sentiment">
+                  <div class="sentiment-line" style="--s:37%;--l:63%"></div>
+                  <div class="sentiment-text">
+                    <span>S <b class="c-red">35%</b></span>
+                    <span>L <b class="c-green">63%</b></span>
+                  </div>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item center" style="--w: 10%; min-width: 50px">
+                <button class="purple-btn trade">Trade</button>
+              </div>
             </div>
-            <div class="dashboard-table-head-item" style="--w: 13%">
-              Open interest
-              <img src="img/icon-down-bottom.svg" alt="icon-down-bottom">
+            <div class="dashboard-table-content">
+              <div class="dashboard-table-content-item" style="--w: 6%;min-width: 50px">
+                <img src="img/icon-star.svg" alt="icon-star" class="icon-star">
+              </div>
+              <div class="dashboard-table-content-item text-12" style="--w: 20%;">
+                <img src="img/cosmos-atom-logo.svg" alt="cosmos-atom-logo" class="logo">
+                <div>
+                  <h5 class="title">ATOM / USD</h5>
+                  <p class="subtitle">Backed by Atom</p>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item text-12" style="--w: 7%">
+                <div>
+                  <h5 class="title">9 USD</h5>
+                  <p class="subtitle">1 Atom</p>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 11%">
+                <span class="change">-7%</span>
+              </div>
+              <div class="dashboard-table-content-item column start-column" style="--w: 13%;">
+                <div>
+                  <h5 class="title">9 USD</h5>
+                  <p class="subtitle">1 Atom</p>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 13%">
+                <div>
+                  <h5 class="title">1000 USD</h5>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 14%">
+                <div class="longs">
+                  <h4>Longs <span>9 USD</span></h4>
+                  <h5>Shorts <span>9 USD</span></h5>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 11%">
+                <div class="sentiment">
+                  <div class="sentiment-line" style="--s:37%;--l:63%"></div>
+                  <div class="sentiment-text">
+                    <span>S <b class="c-red">35%</b></span>
+                    <span>L <b class="c-green">63%</b></span>
+                  </div>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item center" style="--w: 10%; min-width: 50px">
+                <button class="purple-btn trade">Trade</button>
+              </div>
             </div>
-            <div class="dashboard-table-head-item" style="--w: 14%">
-              Funding rate (APR)
-              <img src="img/icon-down-bottom.svg" alt="icon-down-bottom">
+            <div class="dashboard-table-content">
+              <div class="dashboard-table-content-item" style="--w: 6%;min-width: 50px">
+                <img src="img/icon-star.svg" alt="icon-star" class="icon-star">
+              </div>
+              <div class="dashboard-table-content-item text-12" style="--w: 20%;">
+                <img src="img/cosmos-atom-logo.svg" alt="cosmos-atom-logo" class="logo">
+                <div>
+                  <h5 class="title">ATOM / USD</h5>
+                  <p class="subtitle">Backed by Atom</p>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item text-12" style="--w: 7%">
+                <div>
+                  <h5 class="title">9 USD</h5>
+                  <p class="subtitle">1 Atom</p>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 11%">
+                <span class="change">-7%</span>
+              </div>
+              <div class="dashboard-table-content-item column start-column" style="--w: 13%;">
+                <div>
+                  <h5 class="title">9 USD</h5>
+                  <p class="subtitle">1 Atom</p>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 13%">
+                <div>
+                  <h5 class="title">1000 USD</h5>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 14%">
+                <div class="longs">
+                  <h4>Longs <span>9 USD</span></h4>
+                  <h5>Shorts <span>9 USD</span></h5>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 11%">
+                <div class="sentiment">
+                  <div class="sentiment-line" style="--s:37%;--l:63%"></div>
+                  <div class="sentiment-text">
+                    <span>S <b class="c-red">35%</b></span>
+                    <span>L <b class="c-green">63%</b></span>
+                  </div>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item center" style="--w: 10%; min-width: 50px">
+                <button class="purple-btn trade">Trade</button>
+              </div>
             </div>
-            <div class="dashboard-table-head-item" style="--w: 11%">
-              Market sentiment
-              <img src="img/icon-down-bottom.svg" alt="icon-down-bottom">
+            <div class="dashboard-table-content">
+              <div class="dashboard-table-content-item" style="--w: 6%;min-width: 50px">
+                <img src="img/icon-star.svg" alt="icon-star" class="icon-star">
+              </div>
+              <div class="dashboard-table-content-item text-12" style="--w: 20%;">
+                <img src="img/cosmos-atom-logo.svg" alt="cosmos-atom-logo" class="logo">
+                <div>
+                  <h5 class="title">ATOM / USD</h5>
+                  <p class="subtitle">Backed by Atom</p>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item text-12" style="--w: 7%">
+                <div>
+                  <h5 class="title">9 USD</h5>
+                  <p class="subtitle">1 Atom</p>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 11%">
+                <span class="change">-7%</span>
+              </div>
+              <div class="dashboard-table-content-item column start-column" style="--w: 13%;">
+                <div>
+                  <h5 class="title">9 USD</h5>
+                  <p class="subtitle">1 Atom</p>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 13%">
+                <div>
+                  <h5 class="title">1000 USD</h5>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 14%">
+                <div class="longs">
+                  <h4>Longs <span>9 USD</span></h4>
+                  <h5>Shorts <span>9 USD</span></h5>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 11%">
+                <div class="sentiment">
+                  <div class="sentiment-line" style="--s:37%;--l:63%"></div>
+                  <div class="sentiment-text">
+                    <span>S <b class="c-red">35%</b></span>
+                    <span>L <b class="c-green">63%</b></span>
+                  </div>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item center" style="--w: 10%; min-width: 50px">
+                <button class="purple-btn trade">Trade</button>
+              </div>
             </div>
-            <div class="dashboard-table-head-item" style="--w: 10%; min-width: 50px">
+            <div class="dashboard-table-content">
+              <div class="dashboard-table-content-item" style="--w: 6%;min-width: 50px">
+                <img src="img/icon-star.svg" alt="icon-star" class="icon-star">
+              </div>
+              <div class="dashboard-table-content-item text-12" style="--w: 20%;">
+                <img src="img/cosmos-atom-logo.svg" alt="cosmos-atom-logo" class="logo">
+                <div>
+                  <h5 class="title">ATOM / USD</h5>
+                  <p class="subtitle">Backed by Atom</p>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item text-12" style="--w: 7%">
+                <div>
+                  <h5 class="title">9 USD</h5>
+                  <p class="subtitle">1 Atom</p>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 11%">
+                <span class="change">-7%</span>
+              </div>
+              <div class="dashboard-table-content-item column start-column" style="--w: 13%;">
+                <div>
+                  <h5 class="title">9 USD</h5>
+                  <p class="subtitle">1 Atom</p>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 13%">
+                <div>
+                  <h5 class="title">1000 USD</h5>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 14%">
+                <div class="longs">
+                  <h4>Longs <span>9 USD</span></h4>
+                  <h5>Shorts <span>9 USD</span></h5>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item" style="--w: 11%">
+                <div class="sentiment">
+                  <div class="sentiment-line" style="--s:37%;--l:63%"></div>
+                  <div class="sentiment-text">
+                    <span>S <b class="c-red">35%</b></span>
+                    <span>L <b class="c-green">63%</b></span>
+                  </div>
+                </div>
+              </div>
+              <div class="dashboard-table-content-item center" style="--w: 10%; min-width: 50px">
+                <button class="purple-btn trade">Trade</button>
+              </div>
             </div>
           </div>
-          <div class="dashboard-table-content">
-            <div class="dashboard-table-content-item" style="--w: 6%;min-width: 50px">
-              <img src="img/icon-star.svg" alt="icon-star" class="icon-star">
-            </div>
-            <div class="dashboard-table-content-item text-12" style="--w: 20%;">
+        </div>
+
+        <div class="mobile-table">
+          <div class="mobile-table-item">
+            <div class="mobile-table-item-head">
+              <div class="mobile-table-item-head-star">
+                <img src="img/icon-star.svg" alt="icon-star" class="icon-star">
+              </div>
               <img src="img/cosmos-atom-logo.svg" alt="cosmos-atom-logo" class="logo">
               <div>
                 <h5 class="title">ATOM / USD</h5>
                 <p class="subtitle">Backed by Atom</p>
               </div>
             </div>
-            <div class="dashboard-table-content-item text-12" style="--w: 7%">
-              <div>
-                <h5 class="title">9 USD</h5>
-                <p class="subtitle">1 Atom</p>
+            <div class="mobile-table-item-row">
+              <div class="mobile-table-item-row-item">
+                <h5 class="mobile-table-item-row-item-title">Price</h5>
+                <div class="mobile-table-item-row-item-value">1 Atom</div>
+                <div class="mobile-table-item-row-item-value">9 USD</div>
               </div>
-            </div>
-            <div class="dashboard-table-content-item" style="--w: 11%">
-              <span class="change">-7%</span>
-            </div>
-            <div class="dashboard-table-content-item column start-column" style="--w: 13%;">
-              <div>
-                <h5 class="title">9 USD</h5>
-                <p class="subtitle">1 Atom</p>
+              <div class="mobile-table-item-row-item">
+                <h5 class="mobile-table-item-row-item-title">Change</h5>
+                <div class="mobile-table-item-row-item-value c-red fs-16">-7%</div>
               </div>
-            </div>
-            <div class="dashboard-table-content-item" style="--w: 13%">
-              <div>
-                <h5 class="title">1000 USD</h5>
+              <div class="mobile-table-item-row-item">
+                <h5 class="mobile-table-item-row-item-title">Volume (24h)</h5>
+                <div class="mobile-table-item-row-item-value">9 USD</div>
+                <div class="mobile-table-item-row-item-value">1 Atom</div>
               </div>
-            </div>
-            <div class="dashboard-table-content-item" style="--w: 14%">
-              <div class="longs">
-                <h4>Longs <span>9 USD</span></h4>
-                <h5>Shorts <span>9 USD</span></h5>
+              <div class="mobile-table-item-row-item">
+                <h5 class="mobile-table-item-row-item-title">Open interrest</h5>
+                <div class="mobile-table-item-row-item-value">1000 USD</div>
               </div>
-            </div>
-            <div class="dashboard-table-content-item" style="--w: 11%">
-              <div class="sentiment">
-                <div class="sentiment-line" style="--s:37%;--l:63%"></div>
-                <div class="sentiment-text">
-                  <span>S <b class="c-red">35%</b></span>
-                  <span>L <b class="c-green">63%</b></span>
+              <div class="mobile-table-item-row-item">
+                <h5 class="mobile-table-item-row-item-title">Funding rate (APR)</h5>
+                <div class="mobile-table-item-row-item-value">
+                  Longs <span class="c-green">9 USD</span>
+                </div>
+                <div class="mobile-table-item-row-item-value">
+                  Shorts <span class="c-red">9 USD</span>
                 </div>
               </div>
             </div>
-            <div class="dashboard-table-content-item center" style="--w: 10%; min-width: 50px">
-              <button class="purple-btn trade">Trade</button>
+
+            <div class="sentiment">
+              <div class="sentiment-line" style="--s:37%;--l:63%"></div>
+              <div class="sentiment-text">
+                <span>S <b class="c-red">35%</b></span>
+                <span>L <b class="c-green">63%</b></span>
+              </div>
             </div>
+
+            <button class="purple-btn trade">Trade</button>
+          </div>
+          <div class="mobile-table-item">
+            <div class="mobile-table-item-head">
+              <div class="mobile-table-item-head-star">
+                <img src="img/icon-star.svg" alt="icon-star" class="icon-star">
+              </div>
+              <img src="img/cosmos-atom-logo.svg" alt="cosmos-atom-logo" class="logo">
+              <div>
+                <h5 class="title">ATOM / USD</h5>
+                <p class="subtitle">Backed by Atom</p>
+              </div>
+            </div>
+            <div class="mobile-table-item-row">
+              <div class="mobile-table-item-row-item">
+                <h5 class="mobile-table-item-row-item-title">Price</h5>
+                <div class="mobile-table-item-row-item-value">1 Atom</div>
+                <div class="mobile-table-item-row-item-value">9 USD</div>
+              </div>
+              <div class="mobile-table-item-row-item">
+                <h5 class="mobile-table-item-row-item-title">Change</h5>
+                <div class="mobile-table-item-row-item-value c-red fs-16">-7%</div>
+              </div>
+              <div class="mobile-table-item-row-item">
+                <h5 class="mobile-table-item-row-item-title">Volume (24h)</h5>
+                <div class="mobile-table-item-row-item-value">9 USD</div>
+                <div class="mobile-table-item-row-item-value">1 Atom</div>
+              </div>
+              <div class="mobile-table-item-row-item">
+                <h5 class="mobile-table-item-row-item-title">Open interrest</h5>
+                <div class="mobile-table-item-row-item-value">1000 USD</div>
+              </div>
+              <div class="mobile-table-item-row-item">
+                <h5 class="mobile-table-item-row-item-title">Funding rate (APR)</h5>
+                <div class="mobile-table-item-row-item-value">
+                  Longs <span class="c-green">9 USD</span>
+                </div>
+                <div class="mobile-table-item-row-item-value">
+                  Shorts <span class="c-red">9 USD</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sentiment">
+              <div class="sentiment-line" style="--s:37%;--l:63%"></div>
+              <div class="sentiment-text">
+                <span>S <b class="c-red">35%</b></span>
+                <span>L <b class="c-green">63%</b></span>
+              </div>
+            </div>
+
+            <button class="purple-btn trade">Trade</button>
+          </div>
+          <div class="mobile-table-item">
+            <div class="mobile-table-item-head">
+              <div class="mobile-table-item-head-star">
+                <img src="img/icon-star.svg" alt="icon-star" class="icon-star">
+              </div>
+              <img src="img/cosmos-atom-logo.svg" alt="cosmos-atom-logo" class="logo">
+              <div>
+                <h5 class="title">ATOM / USD</h5>
+                <p class="subtitle">Backed by Atom</p>
+              </div>
+            </div>
+            <div class="mobile-table-item-row">
+              <div class="mobile-table-item-row-item">
+                <h5 class="mobile-table-item-row-item-title">Price</h5>
+                <div class="mobile-table-item-row-item-value">1 Atom</div>
+                <div class="mobile-table-item-row-item-value">9 USD</div>
+              </div>
+              <div class="mobile-table-item-row-item">
+                <h5 class="mobile-table-item-row-item-title">Change</h5>
+                <div class="mobile-table-item-row-item-value c-red fs-16">-7%</div>
+              </div>
+              <div class="mobile-table-item-row-item">
+                <h5 class="mobile-table-item-row-item-title">Volume (24h)</h5>
+                <div class="mobile-table-item-row-item-value">9 USD</div>
+                <div class="mobile-table-item-row-item-value">1 Atom</div>
+              </div>
+              <div class="mobile-table-item-row-item">
+                <h5 class="mobile-table-item-row-item-title">Open interrest</h5>
+                <div class="mobile-table-item-row-item-value">1000 USD</div>
+              </div>
+              <div class="mobile-table-item-row-item">
+                <h5 class="mobile-table-item-row-item-title">Funding rate (APR)</h5>
+                <div class="mobile-table-item-row-item-value">
+                  Longs <span class="c-green">9 USD</span>
+                </div>
+                <div class="mobile-table-item-row-item-value">
+                  Shorts <span class="c-red">9 USD</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sentiment">
+              <div class="sentiment-line" style="--s:37%;--l:63%"></div>
+              <div class="sentiment-text">
+                <span>S <b class="c-red">35%</b></span>
+                <span>L <b class="c-green">63%</b></span>
+              </div>
+            </div>
+
+            <button class="purple-btn trade">Trade</button>
+          </div>
+          <div class="mobile-table-item">
+            <div class="mobile-table-item-head">
+              <div class="mobile-table-item-head-star">
+                <img src="img/icon-star.svg" alt="icon-star" class="icon-star">
+              </div>
+              <img src="img/cosmos-atom-logo.svg" alt="cosmos-atom-logo" class="logo">
+              <div>
+                <h5 class="title">ATOM / USD</h5>
+                <p class="subtitle">Backed by Atom</p>
+              </div>
+            </div>
+            <div class="mobile-table-item-row">
+              <div class="mobile-table-item-row-item">
+                <h5 class="mobile-table-item-row-item-title">Price</h5>
+                <div class="mobile-table-item-row-item-value">1 Atom</div>
+                <div class="mobile-table-item-row-item-value">9 USD</div>
+              </div>
+              <div class="mobile-table-item-row-item">
+                <h5 class="mobile-table-item-row-item-title">Change</h5>
+                <div class="mobile-table-item-row-item-value c-red fs-16">-7%</div>
+              </div>
+              <div class="mobile-table-item-row-item">
+                <h5 class="mobile-table-item-row-item-title">Volume (24h)</h5>
+                <div class="mobile-table-item-row-item-value">9 USD</div>
+                <div class="mobile-table-item-row-item-value">1 Atom</div>
+              </div>
+              <div class="mobile-table-item-row-item">
+                <h5 class="mobile-table-item-row-item-title">Open interrest</h5>
+                <div class="mobile-table-item-row-item-value">1000 USD</div>
+              </div>
+              <div class="mobile-table-item-row-item">
+                <h5 class="mobile-table-item-row-item-title">Funding rate (APR)</h5>
+                <div class="mobile-table-item-row-item-value">
+                  Longs <span class="c-green">9 USD</span>
+                </div>
+                <div class="mobile-table-item-row-item-value">
+                  Shorts <span class="c-red">9 USD</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sentiment">
+              <div class="sentiment-line" style="--s:37%;--l:63%"></div>
+              <div class="sentiment-text">
+                <span>S <b class="c-red">35%</b></span>
+                <span>L <b class="c-green">63%</b></span>
+              </div>
+            </div>
+
+            <button class="purple-btn trade">Trade</button>
           </div>
         </div>
       </div>

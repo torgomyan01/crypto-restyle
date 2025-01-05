@@ -6,8 +6,168 @@
   padding-left: 0;
   padding-right: 0;
 
+
+  @media (max-width: 1172px){
+    padding: 56px 16px 0;
+  }
+
+  .mobile-table{
+    display: none;
+    width: 100%;
+    padding: 16px;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(64, 64, 65, 0.12);
+    background: linear-gradient(0deg, rgba(119, 106, 230, 0.08) 0%, rgba(119, 106, 230, 0.08) 100%), rgba(245, 245, 247, 0.02);
+    box-shadow: 0.5px 0.5px 1px 0 rgba(0, 0, 0, 0.04), 0.25px 0.25px 0.5px 0px rgba(0, 0, 0, 0.04), 0px 0px 0px 0px rgba(0, 0, 0, 0.04), 0px 0px 0px 1px rgba(255, 255, 255, 0.02) inset;
+
+    @media (max-width: 768px){
+      display: block;
+    }
+
+
+    &-item{
+      padding-bottom: 16px;
+      border-bottom: 1px solid #292929;
+      padding-top: 10px;
+      &-head{
+        width: 100%;
+        height: 48px;
+        margin-bottom: 8px;
+        @include f('s', 'c');
+
+
+        &-star{
+          width: 32px;
+          height: 48px;
+          @include f('c', 'c');
+          margin-right: 10px;
+        }
+        .logo{
+          margin-right: 8px;
+          width: 28px;
+          height: 28px;
+        }
+
+        .title{
+          color: #F5F5F7;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 125%;
+        }
+
+        .subtitle{
+          color: #A0A0A2;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 125%;
+        }
+      }
+
+      .sentiment{
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      .trade{
+        width: 100%;
+        margin-top: 20px;
+      }
+
+
+      &-row{
+        @include f('s', 's');
+        flex-wrap: wrap;
+
+        &-item{
+          width: calc(100% / 3);
+          margin-bottom: 6px;
+
+          @media (max-width: 350px){
+            width: 50%;
+          }
+
+          &-title{
+            color: #5C5C5E;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 125%;
+            margin-bottom: 4px;
+          }
+
+          &-value{
+            color: #F5F5F7;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 125%;
+            margin-bottom: 4px;
+          }
+        }
+      }
+    }
+
+  }
+
+  .sentiment{
+    width: 100px;
+
+    &-line{
+      width: 100%;
+      height: 4px;
+      border-radius: 4px;
+      @include f('sb', 'c');
+      overflow: hidden;
+
+      &:before{
+        content: '';
+        width: var(--s);
+        height: 100%;
+        background-color: #DE4D4D;
+      }
+      &:after{
+        content: '';
+        width: var(--l);
+        height: 100%;
+        background-color: #16B364;
+      }
+    }
+
+    &-text{
+      width: 100%;
+      @include f('sb', 'c');
+      margin-top: 4px;
+      span{
+        color: #F5F5F7;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 125%;
+
+        b{
+          display: inline-block;
+          margin-left: 2px;
+        }
+      }
+    }
+  }
+
+  .table-body{
+    width: 100%;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+  }
+
   .dashboard-table{
     max-width: 100%;
+
+    @media (max-width: 992px){
+      min-width: 1000px;
+    }
+    @media (max-width: 768px){
+     display: none;
+    }
 
     .icon-star{
       margin-left: 20px;
@@ -55,47 +215,7 @@
       }
     }
 
-    .sentiment{
-      width: 100px;
 
-      &-line{
-        width: 100%;
-        height: 4px;
-        border-radius: 4px;
-        @include f('sb', 'c');
-        overflow: hidden;
-
-        &:before{
-          content: '';
-          width: var(--s);
-          height: 100%;
-          background-color: #DE4D4D;
-        }
-        &:after{
-          content: '';
-          width: var(--l);
-          height: 100%;
-          background-color: #16B364;
-        }
-      }
-
-      &-text{
-        width: 100%;
-        @include f('sb', 'c');
-        margin-top: 4px;
-        span{
-          color: #F5F5F7;
-          font-size: 12px;
-          font-weight: 400;
-          line-height: 125%;
-
-          b{
-            display: inline-block;
-            margin-left: 2px;
-          }
-        }
-      }
-    }
 
 
     .trade{
