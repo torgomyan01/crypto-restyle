@@ -1,5 +1,5 @@
 $(".select-wrap select").select2({
-  minimumResultsForSearch: 6,
+  minimumResultsForSearch: -1,
 });
 
 $(".drop-btn").on("click", function (event) {
@@ -163,45 +163,48 @@ const data = Array.from({ length: 30 }, (_, i) =>
   i === 29 ? 2806293.94 : Math.random() * 9900000 + 1000000
 );
 
-// Chart configuration
-new Chart(ctx, {
-  type: "line",
-  data: {
-    labels: Array(30).fill(""), // No labels for x-axis
-    datasets: [
-      {
-        label: "Value",
-        data: data,
-        borderColor: "#594DC5",
-        borderWidth: 2,
-        pointRadius: 4,
-        pointBackgroundColor: (context) =>
-          context.raw === 2806293.94 ? "#FF0000" : "#594DC5",
-        fill: false,
+if (ctx) {
+  // Chart configuration
+  new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: Array(30).fill(""), // No labels for x-axis
+      datasets: [
+        {
+          label: "Value",
+          data: data,
+          borderColor: "#594DC5",
+          borderWidth: 2,
+          pointRadius: 4,
+          pointBackgroundColor: (context) =>
+            context.raw === 2806293.94 ? "#FF0000" : "#594DC5",
+          fill: false,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false }, // Hide the legend
+        tooltip: {
+          callbacks: {
+            label: (tooltipItem) =>
+              `Value: $${tooltipItem.raw.toLocaleString()}`,
+          },
+        },
       },
-    ],
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: { display: false }, // Hide the legend
-      tooltip: {
-        callbacks: {
-          label: (tooltipItem) => `Value: $${tooltipItem.raw.toLocaleString()}`,
+      scales: {
+        x: {
+          display: false, // Hide x-axis (dates)
+        },
+        y: {
+          display: false, // Hide y-axis (values)
         },
       },
     },
-    scales: {
-      x: {
-        display: false, // Hide x-axis (dates)
-      },
-      y: {
-        display: false, // Hide y-axis (values)
-      },
-    },
-  },
-});
+  });
+}
 
 const dashboardMenuItem = $(".dashboard-menu-item");
 const dashboardMenuActive = $(".dashboard-menu-active");
