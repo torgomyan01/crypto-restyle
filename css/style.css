@@ -2389,7 +2389,7 @@ a:focus {
 }
 @media (max-width: 767px) {
   .main .main-info .left-info .wrap .left .top-info .list .right-info-wrap,
-.main .main-info .left-info .wrap .left .top-info .list .left-info-wrap {
+  .main .main-info .left-info .wrap .left .top-info .list .left-info-wrap {
     -ms-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
