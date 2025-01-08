@@ -96,8 +96,18 @@ $(".more").on("click", function () {
   $(".drop-menu-wrap").toggleClass("show");
 });
 
+// Закрытие попапа
 function closePopup() {
   document.getElementById("pin-popup").style.display = "none";
+  clearInputs();
+}
+
+// Очистка всех полей ввода PIN
+function clearInputs() {
+  const inputs = document.querySelectorAll(".pin-input input");
+  inputs.forEach((input) => {
+    input.value = "";
+  });
 }
 
 // Переход к следующему полю
@@ -107,10 +117,23 @@ function moveToNext(current, nextId) {
   }
 }
 
-// Автоматическое закрытие при вводе последнего символа
-function completeInput(current) {
-  if (current.value.length === 1) {
-    closePopup();
+// Переход к предыдущему полю и очистка
+function moveToPrevious(current, prevId) {
+  if (current.value === "") {
+    const prevInput = document.getElementById(prevId);
+    if (prevInput) {
+      prevInput.value = "";
+      prevInput.focus();
+    }
+  }
+}
+
+// Обработчик ввода
+function handleInput(event, currentId, prevId, nextId) {
+  if (event.key === "Backspace") {
+    moveToPrevious(document.getElementById(currentId), prevId);
+  } else if (event.target.value.length === 1) {
+    moveToNext(document.getElementById(currentId), nextId);
   }
 }
 
