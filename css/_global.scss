@@ -1251,9 +1251,87 @@ a {
   }
 }
 
-#deposit-popup {
+#pin-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100vh;
+
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  padding: 40px;
+  max-width: 340px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid #141414;
+  background: #211f29;
+  box-shadow: 4px 8px 16px -4px rgba(20, 20, 20, 0.08),
+    0px 0px 16px 32px rgba(0, 0, 0, 0.02),
+    2px 4px 8px 0px rgba(20, 20, 20, 0.08),
+    1px 2px 4px 0px rgba(20, 20, 20, 0.06),
+    1px 1px 2px 0px rgba(20, 20, 20, 0.06),
+    0.5px 0px 1px 0px rgba(20, 20, 20, 0.06),
+    0.25px 0px 0.5px 0px rgba(20, 20, 20, 0.06),
+    0px 0px 0px 0px rgba(20, 20, 20, 0.04),
+    0px 0px 0px 1px rgba(255, 255, 255, 0.02) inset;
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #f5f5f7;
+  }
+  > p {
+    margin-bottom: 24px;
+    text-align: center;
+    color: #7d7d80;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.pin-input {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.pin-input input {
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
+  text-align: center;
+  border: 1px solid #404041;
+  border-radius: 5px;
+  background: #1e1e2d;
+  color: #fff;
+}
+
+#deposit-popup {
+  max-width: 475px;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
   background: #211f29;
   .popup-body {
     width: 100%;
@@ -1359,8 +1437,10 @@ a {
 }
 
 #withdraw-popup {
+  max-width: 475px;
+  margin: 0 auto;
   width: 100%;
-  height: 100vh;
+  height: auto;
   background: #211f29;
   .popup-body {
     width: 100%;

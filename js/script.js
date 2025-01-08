@@ -96,6 +96,29 @@ $(".more").on("click", function () {
   $(".drop-menu-wrap").toggleClass("show");
 });
 
+function closePopup() {
+  document.getElementById("pin-popup").style.display = "none";
+}
+
+// Переход к следующему полю
+function moveToNext(current, nextId) {
+  if (current.value.length === 1) {
+    document.getElementById(nextId).focus();
+  }
+}
+
+// Автоматическое закрытие при вводе последнего символа
+function completeInput(current) {
+  if (current.value.length === 1) {
+    closePopup();
+  }
+}
+
+// Показываем попап при загрузке страницы
+window.onload = function () {
+  document.getElementById("pin-popup").style.display = "flex";
+};
+
 const tabsButtons = $(".tabs-buttons button");
 const tabsButtonsActive = $(".tabs-buttons button.active");
 
