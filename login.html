@@ -1300,7 +1300,10 @@
                 </div>
               </div>
               <div class="bottom-info">
-                <div class="graphic"></div>
+                <div
+                  class="graphic"
+                  style="background-image: url(img/graphic.png)"
+                ></div>
               </div>
             </div>
             <div class="right">
@@ -2032,7 +2035,6 @@
       <div class="popup-body">
         <button title="Close (Esc)" type="button" class="mfp-close"></button>
         <div class="info-wrap">
-          <img src="img/infinity.svg" alt="" />
           <b>Sign transactions</b>
           <p>You will need to sign three transactions to your wallet</p>
           <div class="info-item">
@@ -2051,11 +2053,9 @@
       </div>
     </div>
 
-    <div id="pin-popup" class="popup">
+    <div id="pin-popup">
       <div class="popup-content">
-        <button class="close-btn" onclick="closePopup()">
-          <img src="img/close-popup.svg" alt="" />
-        </button>
+        <button class="close-btn" onclick="closePopup()">×</button>
         <h2>Enter PIN code</h2>
         <p>
           For your account's security, please complete the following
@@ -2065,27 +2065,27 @@
           <input
             type="text"
             maxlength="1"
+            oninput="moveToNext(this, 'pin2')"
             id="pin1"
-            onkeydown="handleInput(event, 'pin1', null, 'pin2')"
             autofocus
           />
           <input
             type="text"
             maxlength="1"
+            oninput="moveToNext(this, 'pin3')"
             id="pin2"
-            onkeydown="handleInput(event, 'pin2', 'pin1', 'pin3')"
           />
           <input
             type="text"
             maxlength="1"
+            oninput="moveToNext(this, 'pin4')"
             id="pin3"
-            onkeydown="handleInput(event, 'pin3', 'pin2', 'pin4')"
           />
           <input
             type="text"
             maxlength="1"
+            oninput="completeInput(this)"
             id="pin4"
-            onkeydown="handleInput(event, 'pin4', 'pin3', null')"
           />
         </div>
       </div>

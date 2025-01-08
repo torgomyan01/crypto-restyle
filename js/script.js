@@ -96,18 +96,9 @@ $(".more").on("click", function () {
   $(".drop-menu-wrap").toggleClass("show");
 });
 
-// Закрытие попапа
+// Функция закрытия попапа
 function closePopup() {
   document.getElementById("pin-popup").style.display = "none";
-  clearInputs();
-}
-
-// Очистка всех полей ввода PIN
-function clearInputs() {
-  const inputs = document.querySelectorAll(".pin-input input");
-  inputs.forEach((input) => {
-    input.value = "";
-  });
 }
 
 // Переход к следующему полю
@@ -117,25 +108,39 @@ function moveToNext(current, nextId) {
   }
 }
 
-// Переход к предыдущему полю и очистка
-function moveToPrevious(current, prevId) {
-  if (current.value === "") {
-    const prevInput = document.getElementById(prevId);
-    if (prevInput) {
-      prevInput.value = "";
-      prevInput.focus();
-    }
+// Автоматическое закрытие при вводе последнего символа
+function completeInput(current) {
+  if (current.value.length === 1) {
+    closePopup();
   }
 }
 
-// Обработчик ввода
-function handleInput(event, currentId, prevId, nextId) {
+// Обработчик события на клавишу Backspace
+document.addEventListener("keydown", function (event) {
   if (event.key === "Backspace") {
-    moveToPrevious(document.getElementById(currentId), prevId);
-  } else if (event.target.value.length === 1) {
-    moveToNext(document.getElementById(currentId), nextId);
+    const focusedInput = document.activeElement;
+
+    // Если активное поле пустое, очищаем его и двигаем фокус к предыдущему
+    if (!focusedInput.value && focusedInput.previousElementSibling) {
+      focusedInput.previousElementSibling.value = ""; // Очищаем предыдущий input
+      focusedInput.previousElementSibling.focus(); // Ставим фокус на предыдущий input
+    } else {
+      focusedInput.value = ""; // Очищаем текущее поле
+    }
   }
-}
+});
+
+// Обработчик события на кнопке "назад" на телефоне (на изменение состояния истории)
+window.addEventListener("popstate", function (event) {
+  // Очищаем поля по одному с конца
+  const inputs = document.querySelectorAll(".pin-input input");
+  for (let i = inputs.length - 1; i >= 0; i--) {
+    if (inputs[i].value) {
+      inputs[i].value = ""; // Очищаем input
+      break; // Останавливаем после первого очищенного поля
+    }
+  }
+});
 
 // Показываем попап при загрузке страницы
 window.onload = function () {
