@@ -142,11 +142,6 @@ window.addEventListener("popstate", function (event) {
   }
 });
 
-// Показываем попап при загрузке страницы
-window.onload = function () {
-  document.getElementById("pin-popup").style.display = "flex";
-};
-
 const tabsButtons = $(".tabs-buttons button");
 const tabsButtonsActive = $(".tabs-buttons button.active");
 
@@ -162,6 +157,13 @@ tabsButtons.on("click", function (e) {
       "--solidWidth": `${btnInfo.width}px`,
       "--solidLeft": `${this.offsetLeft}px`,
     });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const popup = document.getElementById("pin-popup");
+  if (popup) {
+    popup.style.display = "flex";
+  }
 });
 
 tabsButtonsActive.each((index, element) => {
