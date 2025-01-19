@@ -2078,6 +2078,7 @@ a:focus {
   border-radius: 8px;
   border: 2px solid #292929;
   background: #fff;
+  text-transform: capitalize;
   box-shadow: 0px 24px 48px -12px rgba(0, 0, 0, 0.06), 0px 16px 32px -8px rgba(0, 0, 0, 0.06), 0px 0px 16px 16px rgba(71, 57, 202, 0.04);
 }
 @media (max-width: 1024px) {
@@ -2102,6 +2103,11 @@ a:focus {
     top: 60px;
   }
 }
+@media (max-width: 767px) {
+  .defi-block .defi-items .defi-item:nth-child(1) {
+    order: -8;
+  }
+}
 .defi-block .defi-items .defi-item:nth-child(2) {
   left: 25%;
   top: 48px;
@@ -2109,6 +2115,11 @@ a:focus {
 @media (max-width: 1024px) {
   .defi-block .defi-items .defi-item:nth-child(2) {
     top: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .defi-block .defi-items .defi-item:nth-child(2) {
+    order: -4;
   }
 }
 .defi-block .defi-items .defi-item:nth-child(3) {
@@ -2120,6 +2131,11 @@ a:focus {
     top: 60px;
   }
 }
+@media (max-width: 767px) {
+  .defi-block .defi-items .defi-item:nth-child(3) {
+    order: -6;
+  }
+}
 .defi-block .defi-items .defi-item:nth-child(4) {
   left: 75%;
   top: 48px;
@@ -2129,6 +2145,11 @@ a:focus {
     top: 60px;
   }
 }
+@media (max-width: 767px) {
+  .defi-block .defi-items .defi-item:nth-child(4) {
+    order: -5;
+  }
+}
 .defi-block .defi-items .defi-item:nth-child(5) {
   left: 14%;
   bottom: 48px;
@@ -2136,6 +2157,11 @@ a:focus {
 @media (max-width: 1024px) {
   .defi-block .defi-items .defi-item:nth-child(5) {
     bottom: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .defi-block .defi-items .defi-item:nth-child(5) {
+    order: -7;
   }
 }
 .defi-block .defi-items .defi-item:nth-child(5):after {
@@ -2152,6 +2178,11 @@ a:focus {
     bottom: 35px;
   }
 }
+@media (max-width: 767px) {
+  .defi-block .defi-items .defi-item:nth-child(6) {
+    order: -5;
+  }
+}
 .defi-block .defi-items .defi-item:nth-child(6):after {
   top: inherit;
   bottom: 100%;
@@ -2166,6 +2197,11 @@ a:focus {
     bottom: 60px;
   }
 }
+@media (max-width: 767px) {
+  .defi-block .defi-items .defi-item:nth-child(7) {
+    order: 0;
+  }
+}
 .defi-block .defi-items .defi-item:nth-child(7):after {
   top: inherit;
   bottom: 100%;
@@ -2178,6 +2214,11 @@ a:focus {
 @media (max-width: 1024px) {
   .defi-block .defi-items .defi-item:nth-child(8) {
     bottom: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .defi-block .defi-items .defi-item:nth-child(8) {
+    order: 0;
   }
 }
 .defi-block .defi-items .defi-item:nth-child(8):after {
