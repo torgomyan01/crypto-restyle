@@ -201,6 +201,15 @@ $(".top-texts span").on("click", function () {
 // ------------------- DASHBOARD PAGE ---------------------------
 // --------------------------------------------------------------
 
+
+
+$('.land-banner').ripples({
+  resolution: 256,  // Чем больше — тем детальнее волны
+  dropRadius: 12,    // Радиус волн
+  perturbance: 0.02, // Деформация (0 - плавно, 1 - резко)
+  interactive: true, // Включает эффект от курсора
+  imageUrl: "img/banner-bg.png",
+});
 const dashboardDiagramType = $(".dashboard-diagram-type button");
 
 dashboardDiagramType.on("click", function () {
