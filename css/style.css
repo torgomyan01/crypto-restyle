@@ -2121,7 +2121,7 @@ a:focus {
   }
 }
 .defi-block .defi-items .defi-item:nth-child(2) {
-  left: 22%;
+  left: 20%;
   top: 48px;
 }
 @media (max-width: 1024px) {
@@ -2135,7 +2135,7 @@ a:focus {
   }
 }
 .defi-block .defi-items .defi-item:nth-child(3) {
-  left: 48%;
+  left: 44%;
   top: 48px;
 }
 @media (max-width: 1024px) {
@@ -2149,7 +2149,7 @@ a:focus {
   }
 }
 .defi-block .defi-items .defi-item:nth-child(4) {
-  left: 68%;
+  left: 64%;
   top: 48px;
 }
 @media (max-width: 1024px) {
@@ -2163,7 +2163,7 @@ a:focus {
   }
 }
 .defi-block .defi-items .defi-item:nth-child(5) {
-  left: 12%;
+  left: 10%;
   bottom: 48px;
 }
 @media (max-width: 1024px) {
@@ -2182,7 +2182,7 @@ a:focus {
   transform: rotate(180deg);
 }
 .defi-block .defi-items .defi-item:nth-child(6) {
-  left: 33%;
+  left: 30%;
   bottom: 27px;
 }
 @media (max-width: 1024px) {
@@ -2201,7 +2201,7 @@ a:focus {
   transform: rotate(180deg);
 }
 .defi-block .defi-items .defi-item:nth-child(7) {
-  left: 59%;
+  left: 55%;
   bottom: 48px;
 }
 @media (max-width: 1024px) {
@@ -2220,7 +2220,7 @@ a:focus {
   transform: rotate(180deg);
 }
 .defi-block .defi-items .defi-item:nth-child(8) {
-  right: 120px;
+  right: 170px;
   bottom: 48px;
 }
 @media (max-width: 1024px) {
@@ -2249,7 +2249,8 @@ a:focus {
 }
 @media (max-width: 767px) {
   .defi-block .defi-items .defi-item:nth-child(9) {
-    order: 0;
+    order: 2;
+    margin-top: 32px;
   }
 }
 .defi-block .defi-items .defi-item:nth-child(9):after {
@@ -2258,7 +2259,7 @@ a:focus {
   transform: rotate(180deg);
 }
 .defi-block .defi-items .defi-item:nth-child(10) {
-  right: 28px;
+  right: 85px;
   top: 48px;
 }
 @media (max-width: 1024px) {
@@ -2268,12 +2269,12 @@ a:focus {
 }
 @media (max-width: 767px) {
   .defi-block .defi-items .defi-item:nth-child(10) {
-    order: -5;
+    order: 1;
   }
 }
 
 .user-centered {
-  padding: 70px 0 200px;
+  padding: 100px 0 120px;
   border-radius: 16px;
   background: url(../img/user-centered-bg.jpg);
   background-size: cover;
