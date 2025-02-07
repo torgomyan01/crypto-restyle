@@ -201,7 +201,9 @@ $(".top-texts span").on("click", function () {
 // ------------------- DASHBOARD PAGE ---------------------------
 // --------------------------------------------------------------
 
-
+setTimeout(() => {
+  document.querySelector(".land-banner").style.backgroundImage = "url('img2.jpg')";
+}, 3000); // через 3 секунды сменится фон
 
 const dashboardDiagramType = $(".dashboard-diagram-type button");
 

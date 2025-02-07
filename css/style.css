@@ -1681,12 +1681,21 @@ a:focus {
   color: #7d7d80;
 }
 
+@keyframes changeBackground {
+  0% {
+    background-image: url("../img/banner-bg.png");
+  }
+  100% {
+    background-image: url("../img/banner-bg2.png");
+  }
+}
 .land-banner {
   height: 100vh;
   background: url(../img/banner-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  animation: changeBackground 4s ease-in-out forwards;
 }
 .land-banner .wrapper {
   display: flex;
