@@ -1681,21 +1681,167 @@ a:focus {
   color: #7d7d80;
 }
 
-@keyframes changeBackground {
-  0% {
-    background-image: url("../img/banner-bg.png");
-  }
-  100% {
-    background-image: url("../img/banner-bg2.png");
-  }
+#place-triggers-popup {
+  max-width: 390px;
+  width: 100%;
+  margin: 0 auto;
 }
+#place-triggers-popup .popup-body {
+  position: relative;
+  z-index: 0;
+  padding: 20px;
+  background: #141414;
+  border-radius: 12px;
+}
+#place-triggers-popup .popup-body .mfp-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 1;
+  opacity: 1;
+  width: 32px;
+  height: 32px;
+}
+#place-triggers-popup .popup-body .mfp-close:after {
+  content: "";
+  background: url(../img/close.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#place-triggers-popup .popup-body .purple-btn {
+  width: 100%;
+  text-align: center;
+}
+#place-triggers-popup .popup-body h2 {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #211F29;
+  font-size: 16px;
+  font-weight: 600;
+  color: #E6E7EA;
+  margin-bottom: 15px;
+}
+#place-triggers-popup .popup-body .items {
+  border-radius: 4px;
+  background: rgba(245, 245, 247, 0.02);
+  padding: 8px 10px;
+  margin-bottom: 16px;
+}
+#place-triggers-popup .popup-body .items .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+#place-triggers-popup .popup-body .items .item span {
+  font-size: 12px;
+  font-weight: 500;
+  color: #7D7D80;
+  height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+#place-triggers-popup .popup-body .items .item b {
+  font-size: 13px;
+  font-weight: 500;
+  color: #E6E7EA;
+}
+#place-triggers-popup .popup-body .top-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+#place-triggers-popup .popup-body .top-info > span {
+  font-size: 12px;
+  font-weight: 500;
+  color: #A0A0A2;
+}
+#place-triggers-popup .popup-body .top-info .texts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+#place-triggers-popup .popup-body .top-info .texts .grey {
+  font-size: 12px;
+  color: #7D7D80;
+}
+#place-triggers-popup .popup-body .top-info .texts img {
+  margin: 0 5px;
+}
+#place-triggers-popup .popup-body .top-info .texts .red {
+  font-size: 12px;
+  color: #DE4D4D;
+}
+#place-triggers-popup .popup-body .bottom-info {
+  display: grid;
+  margin-bottom: 16px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+#place-triggers-popup .popup-body .bottom-info .item1 {
+  border-radius: 4px;
+  background: rgba(245, 245, 247, 0.02);
+  padding: 6px;
+}
+#place-triggers-popup .popup-body .bottom-info .item1 b {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 5px;
+}
+#place-triggers-popup .popup-body .bottom-info .item1 b .text {
+  font-size: 12px;
+  text-decoration: underline;
+  color: #7D7D80;
+  display: block;
+}
+#place-triggers-popup .popup-body .bottom-info .item1 b .style {
+  text-decoration: none;
+  color: #A0A0A2;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 3px 4px;
+  background: rgba(245, 245, 247, 0.12);
+  border-radius: 4px;
+  margin-left: 5px;
+}
+#place-triggers-popup .popup-body .bottom-info .item1 span {
+  font-size: 13px;
+  font-weight: 500;
+  color: #7D7D80;
+}
+
 .land-banner {
   height: 100vh;
   background: url(../img/banner-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  animation: changeBackground 4s ease-in-out forwards;
 }
 .land-banner .wrapper {
   display: flex;

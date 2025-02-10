@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="css/select2.min.css" />
     <link rel="stylesheet" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -22,7 +23,7 @@
           <a href="home.html" class="logo">
             <img src="img/logo.svg" alt="" />
           </a>
-          <a href="#" class="launch-btn">Launch app</a>
+          <a href="#place-triggers-popup" class="launch-btn popup">Launch app</a>
         </div>
         <div class="info">
           <h1>Decentralized spot & features platform</h1>
@@ -35,7 +36,7 @@
       </div>
     </div>
 
-    <div class="user-centered">
+    <!-- <div class="user-centered">
       <div class="wrapper">
         <div class="info-top">
           <button class="user-centered-btn" type="button">
@@ -171,10 +172,10 @@
           <div class="defi-item"><span> DEX options</span></div>
           <div class="defi-item"><span> DAO ecosystem</span></div>
           <div class="defi-item"><span> L1 Blockchain</span></div>
-          <div class="defi-item"><span>EVM Wallet</span></div>
+          <div class="defi-item"><span>EVM  Wallet</span></div>
         </div>
       </div>
-    </div>
+    </div> -->
 
 
     <script src="js/jquery-3.4.1.min.js"></script>
@@ -183,5 +184,70 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/imask.js"></script>
     <script src="js/script.js"></script>
+
+
+    <div id="place-triggers-popup" class="mfp-hide white-popup mfp-with-anim">
+      <div class="popup-body">
+        <button title="Close (Esc)" type="button" class="mfp-close"></button>
+        <h2>Place triggers</h2>
+        <div class="info">
+          <div class="items">
+            <div class="item">
+              <span>Avg. Entry Price</span>
+              <b>2,092$</b>
+            </div>
+            <div class="item">
+              <span>Oracle Price</span>
+              <b>2,091$</b>
+            </div>
+          </div>
+          <div class="top-info">
+            <span>Take profit</span>
+            <div class="texts">
+              <span class="grey">Profit:</span>
+              <img src="img/place-triggers-icon.svg" alt="">
+              <span class="red">Clear</span>
+            </div>
+          </div>
+          <div class="bottom-info">
+            <div class="item1">
+              <b><span class="text">TP Price</span> <span class="style">WLD</span></b>
+              <span>1,100$</span>
+            </div>
+            <div class="item1">
+              <b><span class="text">Gain</span></b>
+              <span>0,000%</span>
+            </div>
+            <div class="item1">
+              <b><span class="text">Gain</span></b>
+              <span>0,000%</span>
+            </div>
+          </div>
+          <div class="top-info">
+            <span>Take profit</span>
+            <div class="texts">
+              <span class="grey">Profit:</span>
+              <img src="img/place-triggers-icon.svg" alt="">
+              <span class="red">Clear</span>
+            </div>
+          </div>
+          <div class="bottom-info">
+            <div class="item1">
+              <b><span class="text">Stop Loss</span> <span class="style">WLD</span></b>
+              <span>1,100$</span>
+            </div>
+            <div class="item1">
+              <b><span class="text">Gain</span></b>
+              <span>0,000%</span>
+            </div>
+            <div class="item1">
+              <b><span class="text">Gain</span></b>
+              <span>0,000%</span>
+            </div>
+          </div>
+        </div>
+        <button class="purple-btn" type="button">Add trigger(s)</button>
+      </div>
+    </div>
   </body>
 </html>
