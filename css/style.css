@@ -1849,11 +1849,6 @@ a:focus {
   background-repeat: no-repeat;
   background-position: center center;
 }
-@media (max-width: 1024px) {
-  .land-banner {
-    height: 600px;
-  }
-}
 .land-banner .wrapper {
   display: flex;
   flex-direction: column;
@@ -1947,9 +1942,9 @@ a:focus {
 @media (max-width: 767px) {
   .land-banner .info h1 {
     margin-bottom: 10px;
-    max-width: 220px;
+    max-width: 270px;
     line-height: 120%;
-    font-size: 30px;
+    font-size: 36px;
     margin-bottom: 10px;
   }
 }
