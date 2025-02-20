@@ -1835,6 +1835,12 @@ a:focus {
   font-weight: 500;
   color: #7D7D80;
 }
+#place-triggers-popup .popup-body .bottom-info input {
+  font-size: 13px;
+  font-weight: 500;
+  color: #7D7D80;
+  width: 100px;
+}
 
 .land-banner {
   height: 100vh;
@@ -1842,6 +1848,11 @@ a:focus {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+@media (max-width: 1024px) {
+  .land-banner {
+    height: 600px;
+  }
 }
 .land-banner .wrapper {
   display: flex;
@@ -1936,8 +1947,10 @@ a:focus {
 @media (max-width: 767px) {
   .land-banner .info h1 {
     margin-bottom: 10px;
-    max-width: 290px;
+    max-width: 220px;
     line-height: 120%;
+    font-size: 30px;
+    margin-bottom: 10px;
   }
 }
 .land-banner .info p {
@@ -2145,7 +2158,7 @@ a:focus {
   .defi-block h2 {
     font-size: 32px;
     margin-bottom: 32px;
-    max-width: 300px;
+    max-width: 290px;
   }
 }
 .defi-block .defi-items-wrap {

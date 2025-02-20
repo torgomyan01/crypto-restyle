@@ -1654,12 +1654,18 @@ a {
             border-radius: 4px;
             margin-left: 5px;
           }
-}
-span{
-  font-size: 13px;
-  font-weight: 500;
-  color: #7D7D80;
-}
+          }
+          span{
+            font-size: 13px;
+            font-weight: 500;
+            color: #7D7D80;
+          }
+      }
+      input{
+        font-size: 13px;
+        font-weight: 500;
+        color: #7D7D80;
+        width: 100px;
       }
     }
   }
@@ -1672,6 +1678,9 @@ span{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  @media (max-width: 1024px) {
+    height: 600px;
+  }
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -1748,8 +1757,10 @@ span{
       }
       @media (max-width: 767px) {
         margin-bottom: 10px;
-        max-width: 290px;
+        max-width: 220px;
         line-height: 120%;
+        font-size: 30px;
+        margin-bottom: 10px;
       }
     }
     p {
@@ -1931,7 +1942,7 @@ span{
     @media (max-width: 767px) {
       font-size: 32px;
       margin-bottom: 32px;
-      max-width: 300px;
+      max-width: 290px;
     }
   }
   .defi-items-wrap {
