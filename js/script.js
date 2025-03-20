@@ -202,12 +202,16 @@ $(".top-texts span").on("click", function () {
 // --------------------------------------------------------------
 
 
-$('.without-slider').slick({
+let directionForward = true;
+const slider = $('.without-slider');
+
+slider.slick({
   dots: false,
   arrows: false,
-  infinite: true,
+  infinite: false,
   slidesToShow: 3,
   slidesToScroll: 1,
+  swipe: true,
   responsive: [
     {
       breakpoint: 1024,
@@ -218,6 +222,33 @@ $('.without-slider').slick({
     },
   ]
 });
+
+slider.on('afterChange', function(event, slick, currentSlide){
+  const lastSlideIndex = slick.slideCount - slick.options.slidesToShow;
+  
+  if (currentSlide >= lastSlideIndex) {
+    directionForward = false; // в конце - менять направление
+  }
+  
+  if (currentSlide <= 0) {
+    directionForward = true; // в начале - менять направление
+  }
+});
+
+// Переопределяем свайп-жест
+slider.on('swipe', function(event, slick, direction){
+  if (!directionForward && direction === 'left') {
+    // если направление уже обратное, и свайп влево — двигаем влево
+    slider.slick('slickPrev');
+  } else if (directionForward && direction === 'right') {
+    // если идём вперед и свайп вправо — двигаем вперед
+    slider.slick('slickNext');
+  }
+  // Отменяем дефолтное поведение, чтобы не было двойного движения
+  event.preventDefault();
+});
+
+
 
 const dashboardMenuItem = $(".dashboard-menu-item");
 const dashboardMenuActive = $(".dashboard-menu-active");
