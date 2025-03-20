@@ -1730,6 +1730,8 @@ a {
   .info {
     text-align: center;
     margin: auto;
+    position: relative;
+    top: -50px;
     @media (max-width: 767px) {
       padding: 150px 0;
     }
@@ -1744,7 +1746,7 @@ a {
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      max-width: 600px;
+      max-width: 640px;
       width: 100%;
       margin: 0 auto 20px;
       text-align: center;
@@ -2448,8 +2450,8 @@ a {
       margin-bottom: 30px;
     }
     @media (max-width: 767px) {
-      font-size: 24px;
-      margin-bottom: 10px;
+      font-size: 28px;
+      margin-bottom: 15px;
     }
   }
   .without-slider{
@@ -2475,7 +2477,11 @@ a {
         width: 350px;
       }
       @media (max-width: 767px) {
-       width: 320px;
+       width: 390px;
+       padding: 20px;
+      }
+      @media (max-width: 430px) {
+       width: 347px;
        padding: 20px;
       }
       .top{
@@ -2579,3 +2585,5 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
     }
   }
 }
+
+

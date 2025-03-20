@@ -202,16 +202,12 @@ $(".top-texts span").on("click", function () {
 // --------------------------------------------------------------
 
 
-let directionForward = true;
-const slider = $('.without-slider');
-
-slider.slick({
+$('.without-slider').slick({
   dots: false,
   arrows: false,
   infinite: false,
   slidesToShow: 3,
   slidesToScroll: 1,
-  swipe: true,
   responsive: [
     {
       breakpoint: 1024,
@@ -222,9 +218,6 @@ slider.slick({
     },
   ]
 });
-
-
-
 
 const dashboardMenuItem = $(".dashboard-menu-item");
 const dashboardMenuActive = $(".dashboard-menu-active");
