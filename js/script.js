@@ -202,6 +202,23 @@ $(".top-texts span").on("click", function () {
 // --------------------------------------------------------------
 
 
+$('.without-slider').slick({
+  dots: false,
+  arrows: false,
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        variableWidth: true,
+      }
+    },
+  ]
+});
+
 const dashboardMenuItem = $(".dashboard-menu-item");
 const dashboardMenuActive = $(".dashboard-menu-active");
 const dashboardContentItem = $(".dashboard-content-item");
