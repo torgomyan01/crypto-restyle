@@ -202,21 +202,36 @@ $(".top-texts span").on("click", function () {
 // --------------------------------------------------------------
 
 
-$('.without-slider').slick({
-  dots: false,
-  arrows: false,
-  infinite: false,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 1,
-        variableWidth: true,
-      }
+// $('.without-slider').slick({
+//   dots: false,
+//   arrows: false,
+//   infinite: false,
+//   slidesToShow: 3,
+//   slidesToScroll: 1,
+//   responsive: [
+//     {
+//       breakpoint: 1024,
+//       settings: {
+//         slidesToShow: 1,
+//         variableWidth: true,
+//       }
+//     },
+//   ]
+// });
+
+const swiper = new Swiper('.swiper', {
+  slidesPerView: 'auto',
+  spaceBetween: 20,
+  breakpoints: {
+    0: {
+      slidesPerView: 'auto',
+      spaceBetween: 10,
     },
-  ]
+    1025: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    }
+  }
 });
 
 const dashboardMenuItem = $(".dashboard-menu-item");
