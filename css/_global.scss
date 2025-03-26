@@ -1771,12 +1771,13 @@ a {
       font-size: 20px;
       font-style: normal;
       font-weight: 400;
-      line-height: 130%;
+      line-height: 150%;
       opacity: 0.7;
       text-align: center;
       @media (max-width: 767px) {
         font-size: 16px;
-        margin-bottom: 16px;
+        margin-bottom: 20px;
+        margin-top: 5px;
       }
       b{
         font-weight: bold;
@@ -1839,15 +1840,15 @@ a {
       font-size: 38px;
       font-style: normal;
       font-weight: 500;
-      line-height: 100%;
+      line-height: 120%;
       letter-spacing: -1.52px;
       background: linear-gradient(158deg, #fff 8.57%, #999 127.57%);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       @media (max-width: 767px) {
-        font-size: 24px;
-        max-width: 380px;
+        font-size: 22px;
+        max-width: 360px;
         margin-bottom: 24px;
       }
     }
@@ -2181,7 +2182,7 @@ a {
 .user-centered{
   padding: 100px 0 120px;
   border-radius: 16px 16px 0 0;
-  background: url(../img/user-centered-bg.jpg);
+  background: url(../img/user-centered-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -2217,7 +2218,7 @@ a {
       img{
         margin-right: 6px;
       }
-    }
+    } 
     h2{
       max-width: 600px;
       width: 100%;
@@ -2239,6 +2240,7 @@ a {
         max-width: 255px;
       }
     }
+
     p{
       color: #594DC5;
       text-align: center;
@@ -2280,31 +2282,47 @@ a {
       0px 24px 48px -12px rgba(0, 0, 0, 0.06), 
       0px 16px 32px -8px rgba(0, 0, 0, 0.06),
       0px 0px 16px 16px rgba(71, 57, 202, 0.04);
+      position: relative;
+      z-index: 0;
+      @include flex;
       @media (max-width: 767px) {
        width: 100%;
        margin-bottom: 16px;
-       min-height: 400px;
+       min-height: 320px;
       }
       img{
         width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
       }
       p{
+        font-size: 16px;
+        font-weight: 500;
+        color: #404041;
+        @media (max-width: 1024px) {
+         font-size: 14px;
+        }
+       }
+      .texts{
         padding: 30px;
-        padding-bottom: 20px;
-        padding-top: 0;
-        margin-top: -120px;
+        margin-top: auto;
         @media (max-width: 1024px) {
           padding: 20px;
-          margin-top: -100px;
         }
-        @media (max-width: 767px) {
-          margin-top: 0;
-        }
+      }
+      h3{
+        font-size: 20px;
+        font-weight: bold;
+        color: #404041;
+        margin-bottom: 12px;
       }
     }
     .right{
       width: calc(57% - 8px);
       border-radius: 16px;
+      min-height: 380px;
       background: #FFF;
       box-shadow: 0px 0px 0px 1px #FFF inset,
       0px 24px 48px -12px rgba(0, 0, 0, 0.06), 
@@ -2312,15 +2330,37 @@ a {
       0px 0px 16px 16px rgba(71, 57, 202, 0.04);
       @include flex;
       @include dir-col;
+      position: relative;
+      z-index: 0;
       @media (max-width: 767px) {
        width: 100%;
-       min-height: 400px;
+       min-height: 320px;
       }
       p{
+       font-size: 16px;
+       font-weight: 500;
+       color: #404041;
+       @media (max-width: 1024px) {
+        font-size: 14px;
+       }
+      }
+      .texts{
         padding: 30px;
+        @media (max-width: 1024px) {
+          padding: 20px;
+         }
+      }
+      h3{
+        font-size: 20px;
+        font-weight: bold;
+        color: #404041;
+        margin-bottom: 12px;
       }
       img{
-        margin-top: auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
         width: 100%;
         border-radius: 0 0 16px 16px;
       }
@@ -2344,22 +2384,43 @@ a {
       0px 0px 16px 16px rgba(71, 57, 202, 0.04);
       @include flex;
       @include dir-col;
+      position: relative;
+      z-index: 0;
+      min-height: 380px;
       @media (max-width: 767px) {
         width: 100%;
-        min-height: 400px;
+        min-height: 320px;
       }
       img{
         width: 100%;
-        margin-top: -140px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
         @media (max-width: 767px) {
           margin-top: 0;
         }
       }
       p{
-        padding: 30px;
         padding-top: 0;
         max-width: 570px;
         margin-top: auto;
+        @media (max-width: 1024px) {
+          font-size: 14px;
+         }
+      }
+      .texts{
+        padding: 30px;
+        margin-top: auto;
+        @media (max-width: 1024px) {
+          padding: 20px;
+         }
+      }
+      h3{
+        font-size: 20px;
+        font-weight: bold;
+        color: #404041;
+        margin-bottom: 12px;
       }
     }
     .right{
@@ -2375,7 +2436,7 @@ a {
          @include dir-col;
          @media (max-width: 767px) {
           width: 100%;
-          min-height: 400px;
+          min-height: 320px;
           margin-top: 16px;
         }
          p{
@@ -2388,12 +2449,21 @@ a {
           @media (max-width: 1024px) {
             font-size: 16px;
             line-height: 130%;
+            font-weight: 500;
           }
           @media (max-width: 767px) {
-            font-size: 20px;
             padding-left: 30px;
           }
          }
+         .texts{
+          padding: 30px;
+        }
+        h3{
+          font-size: 16px;
+          font-weight: bold;
+          color: #404041;
+          margin-bottom: 10px;
+        }
          .social{
           @include flex;
           margin-top: auto;
@@ -2485,9 +2555,7 @@ a {
 
 .swiper-wrapper{
     width: 98%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 16px;
+    margin-left: -20px;
     @media (max-width: 1024px) {
       display: flex;
       gap: 0px;
@@ -2497,8 +2565,8 @@ a {
 
 .swiper-slide {
   width: 320px;
-
   margin: 10px 0 !important; 
+  margin-left: 20px !important;
   @media (max-width: 1024px) {
     margin-left: 15px !important;
     width: 330px;
