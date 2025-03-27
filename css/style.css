@@ -1957,7 +1957,7 @@ a:focus {
 .land-banner .info p {
   margin-bottom: 30px;
   color: #fff;
-  font-size: 20px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
@@ -2929,7 +2929,7 @@ a:focus {
 }
 .swiper-slide .item {
   padding: 25px;
-  height: 462px;
+  height: 505px;
   border-radius: 16px;
   border: 1px solid rgba(245, 245, 247, 0.8);
   background: linear-gradient(180deg, #FFF -57.66%, #F5F5F7 116.39%);
