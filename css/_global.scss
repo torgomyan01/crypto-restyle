@@ -2583,8 +2583,12 @@ a {
     0px 1px 2px 0px rgba(0, 0, 0, 0.12);
     @include flex;
     @include dir-col;
+    @media (max-width: 1200px) {
+      padding: 20px;
+      height: 515px;
+    }
     @media (max-width: 767px) {
-      height: 380px;
+      height: 410px;
       padding: 20px;
     }
     .top{
@@ -2643,7 +2647,7 @@ a {
         @include flex;
         @include align-center;
         font-size: 16px;
-        line-height: 140%;
+        line-height: 130%;
         color: #A0A0A2;
         margin-bottom: 10px;
         @media (max-width: 767px) {

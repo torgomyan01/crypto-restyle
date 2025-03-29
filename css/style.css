@@ -2942,9 +2942,15 @@ a:focus {
   -ms-flex-direction: column;
   flex-direction: column;
 }
+@media (max-width: 1200px) {
+  .swiper-slide .item {
+    padding: 20px;
+    height: 515px;
+  }
+}
 @media (max-width: 767px) {
   .swiper-slide .item {
-    height: 380px;
+    height: 410px;
     padding: 20px;
   }
 }
@@ -3021,7 +3027,7 @@ a:focus {
   -ms-flex-align: center;
   align-items: center;
   font-size: 16px;
-  line-height: 140%;
+  line-height: 130%;
   color: #A0A0A2;
   margin-bottom: 10px;
 }
