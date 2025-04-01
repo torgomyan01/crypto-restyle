@@ -197,6 +197,10 @@ $(".top-texts span").on("click", function () {
   $(this).addClass("active");
 });
 
+$(document).on("click", ".upgrade-items .upgrade-item", function(){
+  $(this).toggleClass("active");
+});
+
 // --------------------------------------------------------------
 // ------------------- DASHBOARD PAGE ---------------------------
 // --------------------------------------------------------------
@@ -210,7 +214,7 @@ const swiper = new Swiper('.swiper', {
   breakpoints: {
     0: {
       slidesPerView: 'auto',
-      spaceBetween: 10,
+      spaceBetween: 5,
     },
     1025: {
       slidesPerView: 4,

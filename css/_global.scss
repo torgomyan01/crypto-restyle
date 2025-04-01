@@ -2393,10 +2393,14 @@ a {
       }
       img{
         width: 100%;
+        height: 100%;
         position: absolute;
         top: 0;
         left: 0;
         z-index: -1;
+        @media (max-width: 1024px) {
+          height: auto;
+        }
         @media (max-width: 767px) {
           margin-top: 0;
         }
@@ -2510,6 +2514,7 @@ a {
   .wrapper{
     @media (max-width: 1024px) {
       padding-right: 0;
+      padding-left: 0;
     }
   }
   h2{
@@ -2553,13 +2558,14 @@ a {
   }
 }
 
+
 .swiper-wrapper{
     width: 98%;
     margin-left: -20px;
     @media (max-width: 1024px) {
       display: flex;
       gap: 0px;
-      margin-left: -15px;
+      margin-left: 0px;
     }
 }
 
@@ -2572,8 +2578,8 @@ a {
     width: 330px;
   }
   .item{
-    padding: 25px;
-    height: 505px;
+    padding: 16px;
+    height: 410px;
     border-radius: 16px;
     border: 1px solid rgba(245, 245, 247, 0.80);
     background: linear-gradient(180deg, #FFF -57.66%,
@@ -2584,12 +2590,7 @@ a {
     @include flex;
     @include dir-col;
     @media (max-width: 1200px) {
-      padding: 20px;
-      height: 515px;
-    }
-    @media (max-width: 767px) {
-      height: 410px;
-      padding: 20px;
+      padding: 14px;
     }
     .top{
       @include flex;
@@ -2625,10 +2626,10 @@ a {
       }
       .price{
         color: #1A1A1A;
-        font-size: 44px;
+        font-size: 38px;
         font-weight: 500;
         @media (max-width: 767px) {
-          font-size: 34px;
+          font-size: 30px;
         }
         &.purple{
           color: #776AE6;
@@ -2636,8 +2637,8 @@ a {
       }
     }
     .texts{
-      padding: 25px 0;
-      margin-top: 25px;
+      padding: 16px 0;
+      margin-top: 16px;
       border-top: 1px solid #E6E7EA;
       @media (max-width: 767px) {
         padding: 15px 0;
@@ -2646,12 +2647,21 @@ a {
       p{
         @include flex;
         @include align-center;
-        font-size: 16px;
+        flex-wrap: wrap;
+        font-size: 14px;
+        font-weight: 500;
         line-height: 130%;
         color: #A0A0A2;
-        margin-bottom: 10px;
-        @media (max-width: 767px) {
+        margin-bottom: 5px;
+        .purple{
+          color: #776AE6;
           font-size: 14px;
+          font-weight: 500;
+          display: block;
+          padding-left: 26px;
+          width: 100%;
+          margin-top: 5px;
+         
         }
         img{
           margin-right: 10px;
@@ -2684,6 +2694,128 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
 @media (min-width: 1025px) {
   .swiper-slide {
     width: auto; /* на больших экранах ширина автоматическая */
+  }
+}
+
+#upgrade-popup{
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+  .popup-body{
+    position: relative;
+    z-index: 0;
+    padding: 16px;
+    padding-top: 20px;
+    background: #141414;
+    border-radius: 12px;
+    .mfp-close{
+      position: absolute;
+      right: 15px;  
+      top: 15px;
+      z-index: 1;
+      opacity: 1;
+      width: 32px;
+      height: 32px;
+      &:after{
+        content: "";
+        background: url(../img/close.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 32px;
+        height: 32px;
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    .purple-btn{
+      width: 100%;
+      text-align: center;
+      margin-top: 6px;
+    }
+    h2{
+      margin-bottom: 20px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #E6E7EA;
+    }
+    .upgrade-items{
+      .upgrade-item, .upgrade-item2{
+        border-radius: 12px;
+        border: 1px solid rgba(245, 245, 247, 0.06);
+        padding: 12px 16px;
+        margin-bottom: 10px;
+        transition: .3s;
+        cursor: pointer;
+        &:hover{
+          background: rgba(255, 255, 255, 0.08);
+        }
+        &.active{
+          border-color: #776AE6;
+          background: rgba(255, 255, 255, 0.08);
+        }
+        ul{
+          li{
+            @include flex;
+            @include justify-between;
+            margin-bottom: 4px;
+            padding-left: 16px;
+            position: relative;
+            z-index: 0;
+            &:after{
+              content: "";
+              border-radius: 50%;
+              width: 6px;
+              height: 6px;
+              position: absolute;
+              top: 7px;
+              left: 0px;
+              background: #7D7D80;
+            }
+            &:last-child{
+              margin-bottom: 0;
+            }
+            p{
+              padding-right: 10px;
+              font-size: 14px;
+              color: #7D7D80;
+              .purple{
+                color: #776AE6;
+                font-size: 14px;
+                margin-left: 5px;
+                @media (max-width: 767px) {
+                  display: block;
+                  margin-left: 0;
+                }
+              }
+            }
+            .text{
+              color: #F5F5F7;
+              font-size: 16px;
+              white-space: nowrap;
+              &.grey{
+                color: #7D7D80;
+              }
+            }
+          }
+        }
+      }
+      .upgrade-item2{
+        position: relative;
+        z-index: 0;
+        .style{
+          position: absolute;
+          top: -10px;
+          left: 25px;
+          z-index: 10;
+        }
+        &:hover{
+          background: none;
+        }
+      }
+    }
   }
 }
 

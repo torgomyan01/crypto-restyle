@@ -2713,10 +2713,16 @@ a:focus {
 }
 .user-centered .bottom-items .left img {
   width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
+}
+@media (max-width: 1024px) {
+  .user-centered .bottom-items .left img {
+    height: auto;
+  }
 }
 @media (max-width: 767px) {
   .user-centered .bottom-items .left img {
@@ -2853,6 +2859,7 @@ a:focus {
 @media (max-width: 1024px) {
   .without-block .wrapper {
     padding-right: 0;
+    padding-left: 0;
   }
 }
 .without-block h2 {
@@ -2912,7 +2919,7 @@ a:focus {
   .swiper-wrapper {
     display: flex;
     gap: 0px;
-    margin-left: -15px;
+    margin-left: 0px;
   }
 }
 
@@ -2928,8 +2935,8 @@ a:focus {
   }
 }
 .swiper-slide .item {
-  padding: 25px;
-  height: 505px;
+  padding: 16px;
+  height: 410px;
   border-radius: 16px;
   border: 1px solid rgba(245, 245, 247, 0.8);
   background: linear-gradient(180deg, #FFF -57.66%, #F5F5F7 116.39%);
@@ -2944,14 +2951,7 @@ a:focus {
 }
 @media (max-width: 1200px) {
   .swiper-slide .item {
-    padding: 20px;
-    height: 515px;
-  }
-}
-@media (max-width: 767px) {
-  .swiper-slide .item {
-    height: 410px;
-    padding: 20px;
+    padding: 14px;
   }
 }
 .swiper-slide .item .top {
@@ -2997,20 +2997,20 @@ a:focus {
 }
 .swiper-slide .item .price-wrap .price {
   color: #1A1A1A;
-  font-size: 44px;
+  font-size: 38px;
   font-weight: 500;
 }
 @media (max-width: 767px) {
   .swiper-slide .item .price-wrap .price {
-    font-size: 34px;
+    font-size: 30px;
   }
 }
 .swiper-slide .item .price-wrap .price.purple {
   color: #776AE6;
 }
 .swiper-slide .item .texts {
-  padding: 25px 0;
-  margin-top: 25px;
+  padding: 16px 0;
+  margin-top: 16px;
   border-top: 1px solid #E6E7EA;
 }
 @media (max-width: 767px) {
@@ -3026,15 +3026,21 @@ a:focus {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 16px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  font-weight: 500;
   line-height: 130%;
   color: #A0A0A2;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
-@media (max-width: 767px) {
-  .swiper-slide .item .texts p {
-    font-size: 14px;
-  }
+.swiper-slide .item .texts p .purple {
+  color: #776AE6;
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  padding-left: 26px;
+  width: 100%;
+  margin-top: 5px;
 }
 .swiper-slide .item .texts p img {
   margin-right: 10px;
@@ -3073,6 +3079,130 @@ a:focus {
     /* на больших экранах ширина автоматическая */
   }
 }
+#upgrade-popup {
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+}
+#upgrade-popup .popup-body {
+  position: relative;
+  z-index: 0;
+  padding: 16px;
+  padding-top: 20px;
+  background: #141414;
+  border-radius: 12px;
+}
+#upgrade-popup .popup-body .mfp-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 1;
+  opacity: 1;
+  width: 32px;
+  height: 32px;
+}
+#upgrade-popup .popup-body .mfp-close:after {
+  content: "";
+  background: url(../img/close.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#upgrade-popup .popup-body .purple-btn {
+  width: 100%;
+  text-align: center;
+  margin-top: 6px;
+}
+#upgrade-popup .popup-body h2 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #E6E7EA;
+}
+#upgrade-popup .popup-body .upgrade-items .upgrade-item, #upgrade-popup .popup-body .upgrade-items .upgrade-item2 {
+  border-radius: 12px;
+  border: 1px solid rgba(245, 245, 247, 0.06);
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+#upgrade-popup .popup-body .upgrade-items .upgrade-item:hover, #upgrade-popup .popup-body .upgrade-items .upgrade-item2:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+#upgrade-popup .popup-body .upgrade-items .upgrade-item.active, #upgrade-popup .popup-body .upgrade-items .upgrade-item2.active {
+  border-color: #776AE6;
+  background: rgba(255, 255, 255, 0.08);
+}
+#upgrade-popup .popup-body .upgrade-items .upgrade-item ul li, #upgrade-popup .popup-body .upgrade-items .upgrade-item2 ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  padding-left: 16px;
+  position: relative;
+  z-index: 0;
+}
+#upgrade-popup .popup-body .upgrade-items .upgrade-item ul li:after, #upgrade-popup .popup-body .upgrade-items .upgrade-item2 ul li:after {
+  content: "";
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  top: 7px;
+  left: 0px;
+  background: #7D7D80;
+}
+#upgrade-popup .popup-body .upgrade-items .upgrade-item ul li:last-child, #upgrade-popup .popup-body .upgrade-items .upgrade-item2 ul li:last-child {
+  margin-bottom: 0;
+}
+#upgrade-popup .popup-body .upgrade-items .upgrade-item ul li p, #upgrade-popup .popup-body .upgrade-items .upgrade-item2 ul li p {
+  padding-right: 10px;
+  font-size: 14px;
+  color: #7D7D80;
+}
+#upgrade-popup .popup-body .upgrade-items .upgrade-item ul li p .purple, #upgrade-popup .popup-body .upgrade-items .upgrade-item2 ul li p .purple {
+  color: #776AE6;
+  font-size: 14px;
+  margin-left: 5px;
+}
+@media (max-width: 767px) {
+  #upgrade-popup .popup-body .upgrade-items .upgrade-item ul li p .purple, #upgrade-popup .popup-body .upgrade-items .upgrade-item2 ul li p .purple {
+    display: block;
+    margin-left: 0;
+  }
+}
+#upgrade-popup .popup-body .upgrade-items .upgrade-item ul li .text, #upgrade-popup .popup-body .upgrade-items .upgrade-item2 ul li .text {
+  color: #F5F5F7;
+  font-size: 16px;
+  white-space: nowrap;
+}
+#upgrade-popup .popup-body .upgrade-items .upgrade-item ul li .text.grey, #upgrade-popup .popup-body .upgrade-items .upgrade-item2 ul li .text.grey {
+  color: #7D7D80;
+}
+#upgrade-popup .popup-body .upgrade-items .upgrade-item2 {
+  position: relative;
+  z-index: 0;
+}
+#upgrade-popup .popup-body .upgrade-items .upgrade-item2 .style {
+  position: absolute;
+  top: -10px;
+  left: 25px;
+  z-index: 10;
+}
+#upgrade-popup .popup-body .upgrade-items .upgrade-item2:hover {
+  background: none;
+}
+
 .drop-menu {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;

@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="css/select2.min.css" />
     <link rel="stylesheet" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -160,7 +161,7 @@
               <option value="3">BNB 3</option>
             </select>
           </div>
-          <a href="#" class="purple-btn">Connect Wallet</a>
+          <a href="#upgrade-popup" class="purple-btn popup">Connect Wallet</a>
         </div>
       </header>
       <div class="main-info">
@@ -2150,5 +2151,65 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <script src="js/script.js"></script>
+
+    <div id="upgrade-popup" class="mfp-hide white-popup mfp-with-anim">
+      <div class="popup-body">
+        <button title="Close (Esc)" type="button" class="mfp-close"></button>
+        <h2>Upgrade</h2>
+        <div class="upgrade-items">
+          <div class="upgrade-item2">
+            <img src="img/default-icon.svg" alt="" class="style">
+            <ul>
+              <li>
+                <p>Trade volume untll <span class="purple">10,000$ / mounth</span></p>
+                <span class="text grey">0$/month</span>
+                
+              </li>
+              <li>
+                <p>Deposit MM pool</p>
+              </li>
+            </ul>
+          </div>
+          <div class="upgrade-item">
+            <ul>
+              <li>
+                <p>Trade volume untll <span class="purple">1,000,000$ / mounth</span></p>
+                <span class="text">5$ / month</span>
+
+              </li>
+              <li><p>Deposit MM pool</p></li>
+              <li><p>Create / Deposit Vault</p></li>
+            </ul>
+          </div>
+          <div class="upgrade-item">
+            <ul>
+              <li>
+                <p>Trade volume untll <span class="purple">10,000,000$ / mounth</span></p>
+                <span class="text">15$ / month</span>
+
+              </li>
+              <li><p>Deposit MM pool</p></li>
+              <li><p>Create / Deposit Vault</p></li>
+              <li><p>Sub accounts</p></li>
+              <li><p>API access</p></li>
+            </ul>
+          </div>
+          <div class="upgrade-item">
+            <ul>
+              <li>
+                <p>Trade volume untll <span class="purple">100,000,000$ / mounth</span></p>
+                <span class="text">99$ / month</span>
+                <li><p>Deposit MM pool</p></li>
+                <li><p>Create / Deposit Vault</p></li>
+                <li><p>Sub accounts</p></li>
+                <li><p>API access</p></li>
+                <li><p>Historical data</p></li>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button class="purple-btn" type="button">Upgrade</button>
+      </div>
+    </div>
   </body>
 </html>
