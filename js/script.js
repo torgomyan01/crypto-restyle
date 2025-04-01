@@ -197,8 +197,8 @@ $(".top-texts span").on("click", function () {
   $(this).addClass("active");
 });
 
-$(document).on("click", ".upgrade-items .upgrade-item", function(){
-  $(this).toggleClass("active");
+$(document).on("click", ".upgrade-items .upgrade-item", function() {
+  $(this).addClass("active").siblings().removeClass("active");
 });
 
 // --------------------------------------------------------------

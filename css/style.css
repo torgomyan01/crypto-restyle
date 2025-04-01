@@ -3138,7 +3138,6 @@ a:focus {
 }
 #upgrade-popup .popup-body .upgrade-items .upgrade-item.active, #upgrade-popup .popup-body .upgrade-items .upgrade-item2.active {
   border-color: #776AE6;
-  background: rgba(255, 255, 255, 0.08);
 }
 #upgrade-popup .popup-body .upgrade-items .upgrade-item ul li, #upgrade-popup .popup-body .upgrade-items .upgrade-item2 ul li {
   display: -webkit-box;
