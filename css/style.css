@@ -3133,9 +3133,6 @@ a:focus {
   transition: 0.3s;
   cursor: pointer;
 }
-#upgrade-popup .popup-body .upgrade-items .upgrade-item:hover, #upgrade-popup .popup-body .upgrade-items .upgrade-item2:hover {
-  background: rgba(255, 255, 255, 0.08);
-}
 #upgrade-popup .popup-body .upgrade-items .upgrade-item.active, #upgrade-popup .popup-body .upgrade-items .upgrade-item2.active {
   border-color: #776AE6;
 }
