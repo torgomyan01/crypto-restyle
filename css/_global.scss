@@ -1177,6 +1177,7 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
+    margin-bottom: 20px;
     @media (max-width: 1024px) {
       grid-template-columns: 1fr;
     }
@@ -1246,6 +1247,56 @@ a {
             }
           }
         }
+      }
+    }
+    .info-list{
+      list-style-type: disc;
+      padding-left: 15px;
+      li{
+        margin-bottom: 5px;
+        font-size: 12px;
+        color: #C2C2C6;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.tokenomics-wrap{
+  @include flex;
+  margin-left: 50px;
+  @include align-center;
+  .chart-img{
+    margin-right: 16px;
+  }
+  .list{
+    .item{
+      @include flex;
+      @include align-center;
+      margin-bottom: 10px;
+      .circle{
+        border-radius: 50%;
+        width: 8px;
+        height: 8px;
+        margin-right: 8px;
+        &.color1{
+          background: #776AE6;
+        }
+        &.color2{
+          background: #CEC6F9;
+        }
+        &.color3{
+          background: #E5E1FC;
+        }
+        &.color4{
+          background: #B1A6F3;
+        }
+      }
+      .text{
+        font-size: 14px;
+        color: #C2C2C6;
       }
     }
   }

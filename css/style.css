@@ -1309,6 +1309,7 @@ a:focus {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
+  margin-bottom: 20px;
 }
 @media (max-width: 1024px) {
   .dao-info .info-items {
@@ -1385,6 +1386,62 @@ a:focus {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.dao-info .info-items .info-list {
+  list-style-type: disc;
+  padding-left: 15px;
+}
+.dao-info .info-items .info-list li {
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #C2C2C6;
+}
+.dao-info .info-items .info-list li:last-child {
+  margin-bottom: 0;
+}
+
+.tokenomics-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 50px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.tokenomics-wrap .chart-img {
+  margin-right: 16px;
+}
+.tokenomics-wrap .list .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.tokenomics-wrap .list .item .circle {
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+}
+.tokenomics-wrap .list .item .circle.color1 {
+  background: #776AE6;
+}
+.tokenomics-wrap .list .item .circle.color2 {
+  background: #CEC6F9;
+}
+.tokenomics-wrap .list .item .circle.color3 {
+  background: #E5E1FC;
+}
+.tokenomics-wrap .list .item .circle.color4 {
+  background: #B1A6F3;
+}
+.tokenomics-wrap .list .item .text {
+  font-size: 14px;
+  color: #C2C2C6;
 }
 
 #pin-popup {
