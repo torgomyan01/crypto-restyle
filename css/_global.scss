@@ -1269,7 +1269,10 @@ a {
   margin-left: 50px;
   @include align-center;
   .chart-img{
-    margin-right: 16px;
+    margin-top: -20px;
+    @media (max-width: 1024px) {
+      margin: 0 auto;
+    }
   }
   .list{
     .item{

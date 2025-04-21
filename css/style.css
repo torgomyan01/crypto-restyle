@@ -1410,7 +1410,12 @@ a:focus {
   align-items: center;
 }
 .tokenomics-wrap .chart-img {
-  margin-right: 16px;
+  margin-top: -20px;
+}
+@media (max-width: 1024px) {
+  .tokenomics-wrap .chart-img {
+    margin: 0 auto;
+  }
 }
 .tokenomics-wrap .list .item {
   display: -webkit-box;
