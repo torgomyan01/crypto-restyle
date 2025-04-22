@@ -1196,7 +1196,7 @@ a {
         0px 0px 0px 1px rgba(255, 255, 255, 0.02) inset;
       padding: 16px;
       p {
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 500;
         margin-bottom: 16px;
         color: #f5f5f7;
@@ -1254,7 +1254,7 @@ a {
       padding-left: 15px;
       li{
         margin-bottom: 5px;
-        font-size: 12px;
+        font-size: 14px;
         color: #C2C2C6;
         &:last-child{
           margin-bottom: 0;
@@ -1266,10 +1266,9 @@ a {
 
 .tokenomics-wrap{
   @include flex;
-  margin-left: 50px;
   @include align-center;
   .chart-img{
-    margin-top: -20px;
+    margin: -20px auto 0;
     @media (max-width: 1024px) {
       margin: 0 auto;
     }

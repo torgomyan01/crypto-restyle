@@ -1324,7 +1324,7 @@ a:focus {
   padding: 16px;
 }
 .dao-info .info-items .info-item p {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   margin-bottom: 16px;
   color: #f5f5f7;
@@ -1393,7 +1393,7 @@ a:focus {
 }
 .dao-info .info-items .info-list li {
   margin-bottom: 5px;
-  font-size: 12px;
+  font-size: 14px;
   color: #C2C2C6;
 }
 .dao-info .info-items .info-list li:last-child {
@@ -1404,13 +1404,12 @@ a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 50px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
 .tokenomics-wrap .chart-img {
-  margin-top: -20px;
+  margin: -20px auto 0;
 }
 @media (max-width: 1024px) {
   .tokenomics-wrap .chart-img {
