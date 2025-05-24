@@ -2986,6 +2986,31 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
   }
 }
 
+.progress{
+  @include flex;
+  @include align-center;
+  margin-bottom: 6px;
+  .persent{
+    font-size: 12px;
+    margin-right: 5px;
+    color: #8b81e1;
+    font-weight: 600;
+  }
+  .progress-line{
+    flex-grow: 1;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    @include flex;
+    background: #5C5C5E;
+    span{
+      background: #8b81e1;
+      display: inline-block;
+    }
+  }
+}
+
 .dashboard-content{
 
   .dashboard-content-item{
@@ -3009,8 +3034,11 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
     }
     .items{
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       gap: 20px;
+      @media (max-width: 1920px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
       @media (max-width: 1500px) {
         grid-template-columns: 1fr 1fr 1fr;
       }
@@ -3027,6 +3055,8 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
         background: linear-gradient(0deg, #2C293C 0%, #2C293C 100%), rgba(245, 245, 247, 0.02);
         box-shadow: 0.5px 0.5px 1px 0px rgba(0, 0, 0, 0.04), 0.25px 0.25px 0.5px 0px rgba(0, 0, 0, 0.04), 0px 0px 0px 0px rgba(0, 0, 0, 0.04), 0px 0px 0px 1px rgba(255, 255, 255, 0.02) inset;
         padding: 16px;
+        @include flex;
+        @include dir-col;
         .purple-btn{
           width: 100%;
           text-align: center;
@@ -3055,30 +3085,7 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
               color: #F5F5F7;
               font-weight: 600;
             }
-            .progress{
-              @include flex;
-              @include align-center;
-              margin-bottom: 6px;
-              .persent{
-                font-size: 12px;
-                margin-right: 5px;
-                color: #3CCB7F;
-                font-weight: 600;
-              }
-              .progress-line{
-                flex-grow: 1;
-                height: 4px;
-                width: 100%;
-                border-radius: 10px;
-                overflow: hidden;
-                @include flex;
-                background: #5C5C5E;
-                span{
-                  background: #73CA8A;
-                  display: inline-block;
-                }
-              }
-            }
+
             .date{
               @include flex;
               span{
@@ -3090,36 +3097,86 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
             }
           }
           .icon{
+            margin-right: 30px;
             width: 32px;
             height: 32px;
-            border-radius: 8px;
+            max-width: 32px;
+            border-radius: 50%;
             border: 1px solid rgba(41, 33, 133, 0.12);
             background: linear-gradient(0deg, rgba(119, 106, 230, 0.08) 0%, rgba(119, 106, 230, 0.08) 100%), rgba(245, 245, 247, 0.02);
             box-shadow: 0.5px 0.5px 1px 0px rgba(0, 0, 0, 0.04), 0.25px 0.25px 0.5px 0px rgba(0, 0, 0, 0.04), 0px 0px 0px 0px rgba(0, 0, 0, 0.04), 0px 0px 0px 1px rgba(255, 255, 255, 0.02) inset;
             @include flex;
             margin-left: auto;
+            position: relative;
+            span{
+              color: white;
+              font-size: 10px;
+              bottom: -30px;
+              position: absolute;
+              left: 0;
+            }
             img{
-              margin: auto;
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+              object-fit: cover;
             }
           }
         }
         > p{
           color: #A0A0A2;
-          font-size: 14px;
-          line-height: 145%;
+          font-size: 13px;
+          line-height: 140%;
         }
         .infos{
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          gap: 20px;
-          margin: 16px 0;
+          @include flex;
+          @include justify-between;
+          margin: 16px 0 30px;
           .info-texts{
+            margin-right: 10px;
             span{
               display: block;
               margin-top: 4px;
-              font-size: 14px;
+              font-size: 12px;
               font-weight: 500;
-              color: #7D7D80;
+              color: #A0A0A2;
+            }
+            b{
+              font-size: 10px;
+              font-weight: 500;
+              color: white;
+              &.red{
+                color: red;
+              }
+              &.green{
+                color: green;
+              }
+            }
+          }
+        }
+        .btn-wrap{
+          @include flex;
+          @include align-center;
+          @include justify-between;
+          margin-top: auto;
+          .purple-btn{
+            width: 59%;
+          }
+          .price{
+            width: 39%;
+            font-size: 12px;
+            color: #A0A0A2;
+            font-weight: normal;
+            span{
+              color: #9185f8;
+              font-size: 11px;
+              font-weight: normal;
+              margin-top: 5px;
+              display: inline-block;
+              &.white{
+                margin-left: 5px;
+                color: white;
+              }
             }
           }
         }
@@ -3195,10 +3252,9 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
       font-weight: 600;
       color: #E6E7EA;
     }
-    span{
-      font-size: 12px;
-      color: #7D7D80;
-      line-height: 100%;
+    .progress{
+      margin-top: 2px;
+      margin-bottom: 0;
     }
   }
   > img{
