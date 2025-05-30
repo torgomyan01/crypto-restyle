@@ -3631,7 +3631,6 @@ a:focus {
   color: #9185f8;
   font-size: 15px;
   font-weight: normal;
-  margin-top: 5px;
   display: inline-block;
 }
 .dashboard-content .dashboard-content-item .items .item .btn-wrap .price span.white {
@@ -3658,7 +3657,7 @@ a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 150px;
+  width: 100%;
 }
 .dashboard2 .menu-wrap .information-block .img-wrap img {
   width: 100%;
@@ -3666,7 +3665,7 @@ a:focus {
 .dashboard2 .menu-wrap .information-block p {
   font-size: 10px;
   color: #A0A0A2;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 .dashboard2 .menu-wrap .information-block h4 {
   font-weight: 500;
@@ -3717,7 +3716,7 @@ a:focus {
     width: 100%;
     z-index: 100;
     background: #211F29;
-    padding: 2px 0;
+    padding: 5px 0 1px;
   }
 }
 .dashboard-menu.show .dashboard-menu-active {
@@ -3797,7 +3796,7 @@ a:focus {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    margin: 0 10px;
+    margin: 0 14px;
     margin-bottom: 0 !important;
   }
   .dashboard-menu-item .dashboard-menu-item-icon {
