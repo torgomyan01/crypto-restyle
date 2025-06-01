@@ -3239,13 +3239,12 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
   @media (max-width: 992px) {
     @include flex;
     @include align-center;
-    @include justify-center;;
+    @include justify-around;;
     height: auto;
     width: 100%;
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%;
     z-index: 100;
     background: #211F29;
     padding: 5px 0 1px;
@@ -3254,6 +3253,7 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
     top: 10px;
     @media (max-width: 992px) {
       background: none;
+      display: none;
     }
   }
 }
@@ -3310,15 +3310,27 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
     @include dir-col;
     margin: 0 14px;
     margin-bottom: 0 !important;
+    transition: .3s;
     .dashboard-menu-item-icon{
       width: 24px;
       height: 24px;
       background: none;
       padding: 0;
+      svg{
+        fill: #F5F5F7;
+      }
     }
     &.active{
+      color: #776AE6 !important;
       .dashboard-menu-item-icon{
         background: none !important;
+        svg{
+          transition: .3s;
+          path{
+            stroke: #776AE6;
+            transition: .3s;
+          }
+        }
       }
     }
   }
