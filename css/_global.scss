@@ -3247,7 +3247,7 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
     left: 0;
     z-index: 100;
     background: #211F29;
-    padding: 5px 0 1px;
+    padding: 10px 0 1px;
   }
   .dashboard-menu-active{
     top: 10px;
@@ -3304,6 +3304,44 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
 }
 
 .dashboard-menu-item{
+  .dashboard-menu-item-icon{
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    @include flex;
+    position: relative;
+    .icon{
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      &.icon1{
+        background: url(../img/func-icon1.png);
+        width: 14px;
+        height: 11px;
+      }
+      &.icon2{
+        background: url(../img/func-icon2.png);
+        width: 20px;
+        height: 16px;
+      }
+      &.icon3{
+        background: url(../img/func-icon3.png);
+        width: 18px;
+        height: 14px;
+      }
+      &.icon4{
+        background: url(../img/func-icon4.png);
+        width: 19px;
+        height: 16px;
+      }
+      &.icon5{
+        background: url(../img/func-icon5.png);
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
   @media (max-width: 992px) {
     @include flex;
     min-height: 60px;
@@ -3316,19 +3354,70 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
       height: 24px;
       background: none;
       padding: 0;
-      svg{
-        fill: #F5F5F7;
+      @include flex;
+      .icon{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        &.icon1{
+          background: url(../img/func-icon1-grey.png);
+          width: 14px;
+          height: 11px;
+        }
+        &.icon2{
+          background: url(../img/func-icon2-grey.png);
+          width: 20px;
+          height: 16px;
+        }
+        &.icon3{
+          background: url(../img/func-icon3-grey.png);
+          width: 18px;
+          height: 14px;
+        }
+        &.icon4{
+          background: url(../img/func-icon4-grey.png);
+          width: 19px;
+          height: 16px;
+        }
+        &.icon5{
+          background: url(../img/func-icon5-grey.png);
+          width: 16px;
+          height: 16px;
+        }
       }
     }
     &.active{
       color: #776AE6 !important;
       .dashboard-menu-item-icon{
         background: none !important;
-        svg{
-          transition: .3s;
-          path{
-            stroke: #776AE6;
-            transition: .3s;
+        .icon{
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &.icon1{
+            background: url(../img/func-icon1-purple.png);
+            width: 15px;
+            height: 11px;
+          }
+          &.icon2{
+            background: url(../img/func-icon2-purple.png);
+            width: 20px;
+            height: 16px;
+          }
+          &.icon3{
+            background: url(../img/func-icon3-purple.png);
+            width: 18px;
+            height: 14px;
+          }
+          &.icon4{
+            background: url(../img/func-icon4-purple.png);
+            width: 19px;
+            height: 16px;
+          }
+          &.icon5{
+            background: url(../img/func-icon5-purple.png);
+            width: 16px;
+            height: 16px;
           }
         }
       }

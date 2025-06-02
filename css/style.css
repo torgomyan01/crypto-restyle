@@ -3714,7 +3714,7 @@ a:focus {
     left: 0;
     z-index: 100;
     background: #211F29;
-    padding: 5px 0 1px;
+    padding: 10px 0 1px;
   }
 }
 .dashboard-menu.show .dashboard-menu-active {
@@ -3785,6 +3785,45 @@ a:focus {
   margin-left: auto;
 }
 
+.dashboard-menu-item .dashboard-menu-item-icon {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+.dashboard-menu-item .dashboard-menu-item-icon .icon {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.dashboard-menu-item .dashboard-menu-item-icon .icon.icon1 {
+  background: url(../img/func-icon1.png);
+  width: 14px;
+  height: 11px;
+}
+.dashboard-menu-item .dashboard-menu-item-icon .icon.icon2 {
+  background: url(../img/func-icon2.png);
+  width: 20px;
+  height: 16px;
+}
+.dashboard-menu-item .dashboard-menu-item-icon .icon.icon3 {
+  background: url(../img/func-icon3.png);
+  width: 18px;
+  height: 14px;
+}
+.dashboard-menu-item .dashboard-menu-item-icon .icon.icon4 {
+  background: url(../img/func-icon4.png);
+  width: 19px;
+  height: 16px;
+}
+.dashboard-menu-item .dashboard-menu-item-icon .icon.icon5 {
+  background: url(../img/func-icon5.png);
+  width: 16px;
+  height: 16px;
+}
 @media (max-width: 992px) {
   .dashboard-menu-item {
     display: -webkit-box;
@@ -3804,9 +3843,39 @@ a:focus {
     height: 24px;
     background: none;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
-  .dashboard-menu-item .dashboard-menu-item-icon svg {
-    fill: #F5F5F7;
+  .dashboard-menu-item .dashboard-menu-item-icon .icon {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .dashboard-menu-item .dashboard-menu-item-icon .icon.icon1 {
+    background: url(../img/func-icon1-grey.png);
+    width: 14px;
+    height: 11px;
+  }
+  .dashboard-menu-item .dashboard-menu-item-icon .icon.icon2 {
+    background: url(../img/func-icon2-grey.png);
+    width: 20px;
+    height: 16px;
+  }
+  .dashboard-menu-item .dashboard-menu-item-icon .icon.icon3 {
+    background: url(../img/func-icon3-grey.png);
+    width: 18px;
+    height: 14px;
+  }
+  .dashboard-menu-item .dashboard-menu-item-icon .icon.icon4 {
+    background: url(../img/func-icon4-grey.png);
+    width: 19px;
+    height: 16px;
+  }
+  .dashboard-menu-item .dashboard-menu-item-icon .icon.icon5 {
+    background: url(../img/func-icon5-grey.png);
+    width: 16px;
+    height: 16px;
   }
   .dashboard-menu-item.active {
     color: #776AE6 !important;
@@ -3814,12 +3883,35 @@ a:focus {
   .dashboard-menu-item.active .dashboard-menu-item-icon {
     background: none !important;
   }
-  .dashboard-menu-item.active .dashboard-menu-item-icon svg {
-    transition: 0.3s;
+  .dashboard-menu-item.active .dashboard-menu-item-icon .icon {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
-  .dashboard-menu-item.active .dashboard-menu-item-icon svg path {
-    stroke: #776AE6;
-    transition: 0.3s;
+  .dashboard-menu-item.active .dashboard-menu-item-icon .icon.icon1 {
+    background: url(../img/func-icon1-purple.png);
+    width: 15px;
+    height: 11px;
+  }
+  .dashboard-menu-item.active .dashboard-menu-item-icon .icon.icon2 {
+    background: url(../img/func-icon2-purple.png);
+    width: 20px;
+    height: 16px;
+  }
+  .dashboard-menu-item.active .dashboard-menu-item-icon .icon.icon3 {
+    background: url(../img/func-icon3-purple.png);
+    width: 18px;
+    height: 14px;
+  }
+  .dashboard-menu-item.active .dashboard-menu-item-icon .icon.icon4 {
+    background: url(../img/func-icon4-purple.png);
+    width: 19px;
+    height: 16px;
+  }
+  .dashboard-menu-item.active .dashboard-menu-item-icon .icon.icon5 {
+    background: url(../img/func-icon5-purple.png);
+    width: 16px;
+    height: 16px;
   }
 }
 
