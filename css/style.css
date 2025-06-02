@@ -3913,6 +3913,9 @@ a:focus {
     width: 16px;
     height: 16px;
   }
+  .dashboard-menu-item:hover {
+    background: transparent !important;
+  }
 }
 
 .drop-menu {
