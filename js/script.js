@@ -87,6 +87,10 @@ $(".block2 .buttons button").on("click", function () {
   $(this).addClass("active");
 });
 
+$(".like .icon").on("click", function () {
+  $(this).toggleClass("add");
+});
+
 $(".popup").magnificPopup({
   type: "inline",
   mainClass: "mfp-fade",
