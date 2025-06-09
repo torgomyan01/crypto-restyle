@@ -91,6 +91,14 @@ $(".like .icon").on("click", function () {
   $(this).toggleClass("add");
 });
 
+$(".comment1").on("click", function () {
+  $(".post-item-wrap.style2").toggleClass("hide");
+});
+
+$(".comment2").on("click", function () {
+  $(".post-item-wrap.style3").toggleClass("hide");
+});
+
 $(".popup").magnificPopup({
   type: "inline",
   mainClass: "mfp-fade",

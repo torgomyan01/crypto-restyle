@@ -3973,6 +3973,66 @@ a:focus {
   margin-bottom: 30px;
 }
 
+.post-bottom-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  padding: 16px;
+  border-radius: 8px;
+  background: linear-gradient(0deg, rgba(119, 106, 230, 0.08) 0%, rgba(119, 106, 230, 0.08) 100%), rgba(245, 245, 247, 0.02);
+  position: relative;
+}
+.post-bottom-info .close {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.post-bottom-info .img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 6px;
+  margin-bottom: 6px;
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.post-bottom-info .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.post-bottom-info b {
+  font-size: 16px;
+  font-weight: normal;
+  color: #F5F5F7;
+  display: inline-block;
+  margin: 0 2px;
+}
+.post-bottom-info span {
+  display: inline-block;
+  margin: 0 4px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #5C5C5E;
+}
+.post-bottom-info span.green {
+  color: #3ccb7f;
+}
+
 .posts-wrap {
   max-width: 640px;
   width: 100%;
@@ -3989,6 +4049,9 @@ a:focus {
 .posts-wrap .post-item-wrap {
   margin-bottom: 16px;
 }
+.posts-wrap .post-item-wrap.hide {
+  display: none;
+}
 .posts-wrap .post-item-wrap.style2 {
   margin-left: 50px;
 }
@@ -3996,6 +4059,34 @@ a:focus {
   .posts-wrap .post-item-wrap.style2 {
     margin-left: 20px;
   }
+}
+.posts-wrap .post-item-wrap.style2 .top {
+  margin-left: -35px;
+  margin-bottom: 12px;
+}
+.posts-wrap .post-item-wrap.style2 .top .img-wrap {
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  border-radius: 8px;
+}
+.posts-wrap .post-item-wrap.style2 .top .texts b {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+.posts-wrap .post-item-wrap.style2 .top .texts b span {
+  margin-left: 4px;
+  font-size: 14px;
+}
+.posts-wrap .post-item-wrap.style2 .top .texts p {
+  font-size: 12px;
+  color: #A0A0A2;
+}
+.posts-wrap .post-item-wrap.style2 .top .texts p span {
+  font-size: 12px;
+  color: #5C5C5E;
+  font-weight: normal;
 }
 .posts-wrap .post-item-wrap .bottom-info {
   display: -webkit-box;
@@ -4007,7 +4098,7 @@ a:focus {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 10px;
+  padding: 10px 20px;
 }
 .posts-wrap .post-item-wrap .bottom-info .like {
   display: -webkit-box;
@@ -4059,12 +4150,7 @@ a:focus {
   border-bottom: 1px solid #7D7D80;
   cursor: pointer;
 }
-.posts-wrap .post-item {
-  padding: 12px;
-  background: linear-gradient(0deg, rgba(119, 106, 230, 0.08) 0%, rgba(119, 106, 230, 0.08) 100%), rgba(245, 245, 247, 0.02);
-  border-radius: 8px;
-}
-.posts-wrap .post-item .top {
+.posts-wrap .post-item-wrap .top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4073,7 +4159,7 @@ a:focus {
   align-items: center;
   margin-bottom: 16px;
 }
-.posts-wrap .post-item .top .img-wrap {
+.posts-wrap .post-item-wrap .top .img-wrap {
   width: 46px;
   height: 46px;
   border-radius: 4px;
@@ -4084,32 +4170,37 @@ a:focus {
   margin-right: 10px;
   overflow: hidden;
 }
-.posts-wrap .post-item .top .img-wrap img {
+.posts-wrap .post-item-wrap .top .img-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.posts-wrap .post-item .top .texts b {
+.posts-wrap .post-item-wrap .top .texts b {
   font-size: 16px;
   font-weight: 600;
   color: #E6E7EA;
   display: block;
   margin-bottom: 4px;
 }
-.posts-wrap .post-item .top .texts b span {
+.posts-wrap .post-item-wrap .top .texts b span {
   margin-left: 5px;
   font-size: 16px;
   color: #5C5C5E;
   font-weight: normal;
 }
-.posts-wrap .post-item .top .texts p {
+.posts-wrap .post-item-wrap .top .texts p {
   font-size: 14px;
   color: #A0A0A2;
 }
-.posts-wrap .post-item .top .texts p span {
+.posts-wrap .post-item-wrap .top .texts p span {
   font-size: 14px;
   color: #5C5C5E;
   font-weight: normal;
+}
+.posts-wrap .post-item {
+  padding: 12px;
+  background: linear-gradient(0deg, rgba(119, 106, 230, 0.08) 0%, rgba(119, 106, 230, 0.08) 100%), rgba(245, 245, 247, 0.02);
+  border-radius: 8px;
 }
 .posts-wrap .post-item > p {
   font-size: 14px;
