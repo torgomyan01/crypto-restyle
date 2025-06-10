@@ -92,11 +92,11 @@ $(".like .icon").on("click", function () {
 });
 
 $(".comment1").on("click", function () {
-  $(".post-item-wrap.style2").toggleClass("hide");
+  $(".post-item-wrap.click").toggleClass("hide");
 });
 
 $(".comment2").on("click", function () {
-  $(".post-item-wrap.style3").toggleClass("hide");
+  $(".post-item-wrap.click").toggleClass("hide");
 });
 
 $(".popup").magnificPopup({
