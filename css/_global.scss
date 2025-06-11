@@ -3332,13 +3332,13 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
       }
       &.icon3{
         background: url(../img/func-icon3.png);
-        width: 18px;
-        height: 14px;
+        width: 16px;
+        height: 16px;
       }
       &.icon4{
         background: url(../img/func-icon4.png);
-        width: 19px;
-        height: 16px;
+        width: 18px;
+        height: 18px;
       }
       &.icon5{
         background: url(../img/func-icon5.png);
@@ -3376,13 +3376,13 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
         }
         &.icon3{
           background: url(../img/func-icon3-grey.png);
-          width: 18px;
-          height: 14px;
+          width: 16px;
+          height: 16px;
         }
         &.icon4{
           background: url(../img/func-icon4-grey.png);
-          width: 19px;
-          height: 16px;
+          width: 20px;
+          height: 20px;
         }
         &.icon5{
           background: url(../img/func-icon5-grey.png);
@@ -3412,12 +3412,12 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
           &.icon3{
             background: url(../img/func-icon3-purple.png);
             width: 18px;
-            height: 14px;
+            height: 18px;
           }
           &.icon4{
             background: url(../img/func-icon4-purple.png);
-            width: 19px;
-            height: 16px;
+            width: 20px;
+            height: 20px;
           }
           &.icon5{
             background: url(../img/func-icon5-purple.png);
@@ -3538,6 +3538,13 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
     &.hide{
       display: none;
     }
+    &.style1{
+      &.after{
+        &:after{
+          content: none;
+        }
+      }
+    }
     &.style2{
       margin-left: 50px;
       position: relative;
@@ -3550,6 +3557,11 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
         width: 1px;
         height: 80%;
         background: #404041;
+      }
+      &.after{
+        &:after{
+          content: none;
+        }
       }
       .top{
         margin-left: -35px;
@@ -3709,4 +3721,8 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
     }
 
   }
+}
+
+.hide2 {
+  display: none !important;
 }

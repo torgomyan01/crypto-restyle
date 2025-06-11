@@ -3818,13 +3818,13 @@ a:focus {
 }
 .dashboard-menu-item .dashboard-menu-item-icon .icon.icon3 {
   background: url(../img/func-icon3.png);
-  width: 18px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
 }
 .dashboard-menu-item .dashboard-menu-item-icon .icon.icon4 {
   background: url(../img/func-icon4.png);
-  width: 19px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
 }
 .dashboard-menu-item .dashboard-menu-item-icon .icon.icon5 {
   background: url(../img/func-icon5.png);
@@ -3871,13 +3871,13 @@ a:focus {
   }
   .dashboard-menu-item .dashboard-menu-item-icon .icon.icon3 {
     background: url(../img/func-icon3-grey.png);
-    width: 18px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
   }
   .dashboard-menu-item .dashboard-menu-item-icon .icon.icon4 {
     background: url(../img/func-icon4-grey.png);
-    width: 19px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
   }
   .dashboard-menu-item .dashboard-menu-item-icon .icon.icon5 {
     background: url(../img/func-icon5-grey.png);
@@ -3908,12 +3908,12 @@ a:focus {
   .dashboard-menu-item.active .dashboard-menu-item-icon .icon.icon3 {
     background: url(../img/func-icon3-purple.png);
     width: 18px;
-    height: 14px;
+    height: 18px;
   }
   .dashboard-menu-item.active .dashboard-menu-item-icon .icon.icon4 {
     background: url(../img/func-icon4-purple.png);
-    width: 19px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
   }
   .dashboard-menu-item.active .dashboard-menu-item-icon .icon.icon5 {
     background: url(../img/func-icon5-purple.png);
@@ -4057,6 +4057,9 @@ a:focus {
 .posts-wrap .post-item-wrap.hide {
   display: none;
 }
+.posts-wrap .post-item-wrap.style1.after:after {
+  content: none;
+}
 .posts-wrap .post-item-wrap.style2 {
   margin-left: 50px;
   position: relative;
@@ -4070,6 +4073,9 @@ a:focus {
   width: 1px;
   height: 80%;
   background: #404041;
+}
+.posts-wrap .post-item-wrap.style2.after:after {
+  content: none;
 }
 .posts-wrap .post-item-wrap.style2 .top {
   margin-left: -35px;
@@ -4233,6 +4239,10 @@ a:focus {
   cursor: pointer;
   font-size: 14px;
   color: #776AE6;
+}
+
+.hide2 {
+  display: none !important;
 }
 
 .drop-menu {

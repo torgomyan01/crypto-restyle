@@ -92,12 +92,20 @@ $(".like .icon").on("click", function () {
 });
 
 $(".comment1").on("click", function () {
-  $(".post-item-wrap.click").toggleClass("hide");
+  // Скрывает только ближайший .post-item-wrap.style2
+  $(this).closest(".post-item-wrap").nextAll(".post-item-wrap.style2").first().toggleClass("hide");
 });
 
 $(".comment2").on("click", function () {
-  $(".post-item-wrap.click").toggleClass("hide");
+  // Скрывает только ближайший .post-item-wrap.style3
+  $(this).closest(".post-item-wrap").nextAll(".post-item-wrap.style3").first().slideToggle();
+
+  // Добавляет/удаляет .after у ближайшего предыдущего style1 (если нужно визуально изменить линию)
+  $(this).closest(".post-item-wrap").prevAll(".post-item-wrap.style1").first().toggleClass("after");
 });
+
+$(".post-item-wrap.style3").toggleClass("hide2");
+
 
 $(".popup").magnificPopup({
   type: "inline",
