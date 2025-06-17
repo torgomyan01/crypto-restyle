@@ -19,6 +19,30 @@ $(".drop-hide").on("click", function (event) {
   event.stopPropagation();
 });
 
+$('.trade-slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  variableWidth: true,
+});
+
+const tabWrapper = document.querySelector(".tab-mobile");
+const tabButtons = tabWrapper.querySelectorAll(".tab-btn");
+const tabPanels = tabWrapper.querySelectorAll(".tab-panel");
+
+tabButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const target = btn.dataset.tab;
+
+    // Убираем active у всех
+    tabButtons.forEach(b => b.classList.remove("active"));
+    tabPanels.forEach(p => p.classList.remove("active"));
+
+    // Активируем нужную вкладку
+    btn.classList.add("active");
+    tabWrapper.querySelector(`#${target}`).classList.add("active");
+  });
+});
+
 const tabGroups = document.querySelectorAll(".tabs");
 
 tabGroups.forEach((tabs) => {

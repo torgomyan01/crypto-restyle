@@ -3942,7 +3942,7 @@ a:focus {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  max-width: 1640px;
+  max-width: 1120px;
   width: 100%;
 }
 @media (max-width: 1200px) {
@@ -4121,6 +4121,56 @@ a:focus {
   background: #16B364;
   height: 100%;
 }
+#positions .tab-mobile {
+  max-width: 600px;
+  margin: 0 auto;
+  display: none;
+}
+@media (max-width: 992px) {
+  #positions .tab-mobile {
+    display: block;
+  }
+}
+#positions .tab-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #333;
+}
+#positions .tab-btn {
+  flex: 1;
+  padding: 15px 20px;
+  border-bottom: 2px solid transparent;
+  background: none;
+  cursor: pointer;
+  transition: 0.3s;
+  color: rgba(230, 231, 234, 0.56);
+}
+#positions .tab-btn.active {
+  border-color: #594DC5;
+  color: white;
+}
+#positions .tab-content2 {
+  position: relative;
+  min-height: 100px;
+}
+#positions .tab-panel {
+  opacity: 0;
+  transform: translateY(10px);
+  position: absolute;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  width: 100%;
+}
+#positions .tab-panel .trading-history {
+  display: block;
+}
+#positions .tab-panel.active {
+  opacity: 1;
+  transform: translateY(0);
+  position: relative;
+  pointer-events: auto;
+}
 
 .info3 {
   display: -webkit-box;
@@ -4130,7 +4180,7 @@ a:focus {
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-top: 24px;
-  max-width: 1640px;
+  max-width: 1120px;
   width: 100%;
 }
 @media (max-width: 1250px) {
@@ -4144,6 +4194,11 @@ a:focus {
 @media (max-width: 1250px) {
   .info3 .left-sect {
     width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  .info3 .left-sect {
+    display: none;
   }
 }
 .info3 .left-sect .title-wrap {
@@ -4168,6 +4223,21 @@ a:focus {
   .info3 .right-sect {
     width: 100%;
     margin-bottom: 24px;
+  }
+}
+.info3 .right-sect .trade-slider {
+  display: none;
+}
+@media (max-width: 767px) {
+  .info3 .right-sect .trade-slider {
+    display: block;
+  }
+  .info3 .right-sect .trade-slider .item {
+    margin-right: 16px;
+    width: 320px;
+  }
+  .info3 .right-sect .trade-slider .item .trade-item {
+    display: block;
   }
 }
 .info3 .right-sect .title-wrap {
@@ -4198,6 +4268,11 @@ a:focus {
   border-radius: 8px;
   border: solid 1pxrgba 41, 33, 133, 0.12;
   background: linear-gradient(0deg, rgba(119, 106, 230, 0.08) 0%, rgba(119, 106, 230, 0.08) 100%), rgba(245, 245, 247, 0.02);
+}
+@media (max-width: 767px) {
+  .info3 .right-sect .trade-item {
+    display: none;
+  }
 }
 .info3 .right-sect .trade-item .tops {
   display: -webkit-box;
@@ -4272,13 +4347,24 @@ a:focus {
   font-weight: 500;
   font-size: 16px;
 }
-.info3 .right-sect .trading-history {
+@media (max-width: 992px) {
+  .info3 .right-sect h5 {
+    display: none;
+  }
+}
+
+.trading-history {
   border-radius: 12px;
   border: solid 1pxrgba 41, 33, 133, 0.12;
   background: linear-gradient(0deg, rgba(119, 106, 230, 0.08) 0%, rgba(119, 106, 230, 0.08) 100%), rgba(245, 245, 247, 0.02);
   padding: 12px;
 }
-.info3 .right-sect .trading-history .trading-history-item {
+@media (max-width: 992px) {
+  .trading-history {
+    display: none;
+  }
+}
+.trading-history .trading-history-item {
   margin-bottom: 8px;
   border-radius: 4px;
   padding: 8px 16px;
@@ -4290,7 +4376,7 @@ a:focus {
   -ms-flex-align: center;
   align-items: center;
 }
-.info3 .right-sect .trading-history .trading-history-item .icon {
+.trading-history .trading-history-item .icon {
   width: 24px;
   margin-right: 16px;
   min-width: 24px;
@@ -4298,7 +4384,7 @@ a:focus {
   display: -ms-flexbox;
   display: flex;
 }
-.info3 .right-sect .trading-history .trading-history-item .texts2 {
+.trading-history .trading-history-item .texts2 {
   margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4308,39 +4394,39 @@ a:focus {
   -ms-flex-direction: column;
   flex-direction: column;
 }
-.info3 .right-sect .trading-history .trading-history-item .texts2 .green {
+.trading-history .trading-history-item .texts2 .green {
   font-size: 14px;
   font-weight: 600;
   color: #3CCB7F;
   display: block;
   margin-bottom: 4px;
 }
-.info3 .right-sect .trading-history .trading-history-item .texts2 .grey {
+.trading-history .trading-history-item .texts2 .grey {
   font-size: 12px;
   font-weight: 500;
   color: #A0A0A2;
 }
-.info3 .right-sect .trading-history .trading-history-item .texts b {
+.trading-history .trading-history-item .texts b {
   display: block;
   font-size: 14px;
   font-weight: 600;
   color: #F5F5F7;
   margin-bottom: 4px;
 }
-.info3 .right-sect .trading-history .trading-history-item .texts .text {
+.trading-history .trading-history-item .texts .text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.info3 .right-sect .trading-history .trading-history-item .texts .text span {
+.trading-history .trading-history-item .texts .text span {
   margin-right: 8px;
   font-size: 12px;
   color: #A0A0A2;
 }
-.info3 .right-sect .trading-history .trading-history-item.active {
+.trading-history .trading-history-item.active {
   background: linear-gradient(0deg, rgba(119, 106, 230, 0.08) 0%, rgba(119, 106, 230, 0.08) 100%), rgba(245, 245, 247, 0.02);
 }
-.info3 .right-sect .trading-history .trading-history-item:hover {
+.trading-history .trading-history-item:hover {
   background: linear-gradient(0deg, rgba(119, 106, 230, 0.08) 0%, rgba(119, 106, 230, 0.08) 100%), rgba(245, 245, 247, 0.02);
 }
 
@@ -4352,6 +4438,7 @@ a:focus {
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 24px;
+  max-width: 1120px;
 }
 @media (max-width: 1450px) {
   .positions-top-info {
@@ -4366,6 +4453,12 @@ a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: auto;
+}
+@media (max-width: 1450px) {
+  .positions-top-info .positions-items {
+    margin-left: 0;
+  }
 }
 @media (max-width: 767px) {
   .positions-top-info .positions-items {
