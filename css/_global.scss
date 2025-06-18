@@ -3240,11 +3240,12 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
 
 
 .dashboard-menu.show{
-  height: calc(100vh - 126px);
+  min-height: calc(100vh - 70px);
   @media (max-width: 992px) {
     @include flex;
     @include align-center;
     @include justify-around;;
+    min-height: auto;
     height: auto;
     width: 100%;
     position: fixed;

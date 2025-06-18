@@ -3702,7 +3702,7 @@ a:focus {
 }
 
 .dashboard-menu.show {
-  height: calc(100vh - 126px);
+  min-height: calc(100vh - 70px);
 }
 @media (max-width: 992px) {
   .dashboard-menu.show {
@@ -3714,6 +3714,7 @@ a:focus {
     align-items: center;
     -ms-flex-pack: distribute;
     justify-content: space-around;
+    min-height: auto;
     height: auto;
     width: 100%;
     position: fixed;
