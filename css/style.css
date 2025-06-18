@@ -3801,10 +3801,20 @@ a:focus {
   display: flex;
   position: relative;
 }
+@media (max-width: 992px) {
+  .dashboard-menu-item .dashboard-menu-item-icon {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+  }
+}
 .dashboard-menu-item .dashboard-menu-item-icon .icon {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .dashboard-menu-item .dashboard-menu-item-icon .icon.icon1 {
   background: url(../img/func-icon1.png);
@@ -4129,6 +4139,7 @@ a:focus {
 @media (max-width: 992px) {
   #positions .tab-mobile {
     display: block;
+    overflow: hidden;
   }
 }
 #positions .tab-buttons {

@@ -3315,11 +3315,17 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
     min-width: 36px;
     @include flex;
     position: relative;
+    @media (max-width: 992px) {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+    }
     .icon{
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
 
+      @include flex;
       &.icon1{
         background: url(../img/func-icon1.png);
         width: 14px;
@@ -3605,6 +3611,7 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
     display: none;
     @media (max-width: 992px) {
       display: block;
+      overflow: hidden;
     }
   }
   
