@@ -3446,6 +3446,21 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
     position: static;
     padding-bottom: 70px;
   }
+  .wrap{
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+    > h2{
+      color: #F5F5F7;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      @media (max-width: 992px) {
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
+    }
+  }
   .info2{
     @include flex;
     @include justify-between;
@@ -3549,7 +3564,7 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
               position: absolute;
               top: 0;
               left: 0;
-              background: #776AE6;
+              background: #E6AA00;
               height: 100%;
             }
           }
@@ -3582,6 +3597,9 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
               font-weight: 600;
               margin-left: 10px;
               margin-top: -2px;
+              &.yellow{
+                color: #E6AA00;
+              }
             }
           }
           .progress-line{
@@ -3599,6 +3617,9 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
               left: 0;
               background: #16B364;
               height: 100%;
+              &.yellow{
+                background: #E6AA00;
+              }
             }
           }
         }
@@ -3896,6 +3917,10 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
     
     @media (max-width: 1450px) {
       margin-left: 0;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 20px;
     }
     @media (max-width: 767px) {
       display: grid;
@@ -3914,8 +3939,7 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
       @include dir-col;
       min-width: 125px;
       @media (max-width: 1450px) {
-       margin-left: 0;
-       margin-right: 24px;
+       margin: 0;
       }
       @media (max-width: 767px) {
         margin: 0;
@@ -4028,6 +4052,9 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
           @include flex;
           @include align-center;
           margin-bottom: 10px;
+          @media (max-width: 767px) {
+           margin-bottom: 0;
+           }
           .circle{
             width: 6px;
             height: 6px;
