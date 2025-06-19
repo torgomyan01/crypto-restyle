@@ -3695,6 +3695,8 @@ a:focus {
   }
   .dashboard2 .menu-wrap .dashboard-menu-item {
     position: static !important;
+    min-width: 42px;
+    font-size: 10px;
   }
   .dashboard2 .dashboard-content {
     height: auto;
@@ -3706,14 +3708,9 @@ a:focus {
 }
 @media (max-width: 992px) {
   .dashboard-menu.show {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 2px;
     min-height: auto;
     height: auto;
     width: 100%;
@@ -4248,8 +4245,52 @@ a:focus {
   font-weight: 500;
   color: #F5F5F7;
 }
-.info3 .left-sect .title-wrap img {
+.info3 .left-sect .title-wrap .search {
   margin-left: 16px;
+}
+.info3 .left-sect .title-wrap .search.hide {
+  display: none;
+}
+.info3 .left-sect .title-wrap form {
+  margin-left: 16px;
+  max-width: 320px;
+  width: 100%;
+  transform: scale(0);
+  transition: 0.3s;
+  opacity: 0;
+}
+.info3 .left-sect .title-wrap form.open {
+  opacity: 1;
+  transform: scale(1);
+}
+.info3 .left-sect .title-wrap form input {
+  width: 100%;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  padding: 10px;
+  padding-top: 0;
+  border-bottom: 1px solid #404041;
+}
+.info3 .left-sect .title-wrap form input::-webkit-input-placeholder {
+  font-size: 12px;
+  font-weight: 500;
+  color: #7D7D80;
+}
+.info3 .left-sect .title-wrap form input::-moz-placeholder {
+  font-size: 12px;
+  font-weight: 500;
+  color: #7D7D80;
+}
+.info3 .left-sect .title-wrap form input:-ms-input-placeholder {
+  font-size: 12px;
+  font-weight: 500;
+  color: #7D7D80;
+}
+.info3 .left-sect .title-wrap form input:-moz-placeholder {
+  font-size: 12px;
+  font-weight: 500;
+  color: #7D7D80;
 }
 .info3 .right-sect {
   width: 39%;

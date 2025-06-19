@@ -3229,6 +3229,8 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
 
       .dashboard-menu-item{
         position: static !important;
+        min-width: 42px;
+        font-size: 10px;
       }
     }
     .dashboard-content{
@@ -3242,9 +3244,9 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
 .dashboard-menu.show{
   min-height: calc(100vh - 70px);
   @media (max-width: 992px) {
-    @include flex;
-    @include align-center;
-    @include justify-around;;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 2px;
     min-height: auto;
     height: auto;
     width: 100%;
@@ -3712,8 +3714,37 @@ box-shadow: 0.5px 0.5px 0.5px 0px rgba(0, 0, 0, 0.12), 1px 1px 1px 0px rgba(0, 0
       font-size: 16px;
       font-weight: 500;
       color: #F5F5F7;
-      img{
+      .search{
         margin-left: 16px;
+        &.hide{
+          display: none;
+        }
+      }
+      form{
+        margin-left: 16px;
+        max-width: 320px;
+        width: 100%;
+        transform: scale(0);
+        transition: .3s;
+        opacity: 0;
+        &.open{
+          opacity: 1;
+          transform: scale(1);
+        }
+        input{
+          width: 100%;
+          font-size: 12px;
+          font-weight: 500;
+          color: #fff;
+          padding: 10px;
+          padding-top: 0;
+          border-bottom: 1px solid #404041;
+          @include placeholder{
+            font-size: 12px;
+            font-weight: 500;
+            color: #7D7D80;
+          }
+        }
       }
     }
   }

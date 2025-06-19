@@ -19,6 +19,11 @@ $(".drop-hide").on("click", function (event) {
   event.stopPropagation();
 });
 
+$(".left-sect .search").on("click", function () {
+  $(this).addClass("hide");
+  $(".search-form").addClass("open");
+});
+
 $('.trade-slider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
