@@ -3651,6 +3651,11 @@ a:focus {
   overflow-y: auto;
   background: linear-gradient(0deg, rgba(119, 106, 230, 0.08) 0%, rgba(119, 106, 230, 0.08) 100%), rgba(245, 245, 247, 0.02);
 }
+@media (max-width: 992px) {
+  .dashboard2 .menu-wrap {
+    height: auto;
+  }
+}
 .dashboard2 .menu-wrap .information-block {
   position: absolute;
   left: 20px;
